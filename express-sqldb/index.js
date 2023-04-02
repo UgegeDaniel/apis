@@ -2,9 +2,10 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 const morgan = require("morgan");
+const pool = require('./connectDB');
 
 //CONSTANTS
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.SERVER_PORT || 5000;
 const reqEndpoints = {
     base: '/'
 }
@@ -25,8 +26,14 @@ function errorHandler() {
     }
 }
 
-app.get(base, (req, res)=>{
-    res.status(200).json({success: true, message:"Base Route"})
+app.get(base, async (req, res)=>{
+    try{
+        const allTodos = await pool.query("SELECT * FROM subjects")
+        res.json(allTodos.rows)
+      }catch(err){
+        console.error(err.message)
+      }
+    // res.status(200).json({success: true, message:"Base Route"})
 })
 
 
