@@ -1,15 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../connectDB');
-//GET ALL SUBJECTS //USER ACCESS
-router.get('/subjects', async (req, res)=>{
-    try{
-        const allTodos = await pool.query("SELECT * FROM subjects")
-        res.json(allTodos.rows)
-      }catch(err){
-        console.error(err.message)
-      }
-})
+const {
+  getAllSubjects,
+  addNewSubject
+} = require('../controllers/questionsController')
 
-//POST A SUBJECT //ADMIN ACCESS
+
+//METHOD: get
+//METHOD: user
+//DESCRIPTION: get all questions
+router.get('/subjects', getAllSubjects)
+
+//METHOD: post
+//ACCESS: admin
+//DESCRIPTION: add new subjects
+router.post('/subjects/new', addNewSubject)
+
 module.exports = router;
