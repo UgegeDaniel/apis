@@ -3,7 +3,7 @@ const querries = require('./querries');
 
 const getAllSubjects = async (req, res) => {
     try {
-        const allSubjects = await pool.query(querries.getAllSubjects)
+        const allSubjects = await pool.query(querries.getAllSubjectsQuery)
         res.json(allSubjects.rows)
     } catch (error) {
         console.error(error.message)
@@ -14,7 +14,7 @@ const getAllSubjects = async (req, res) => {
 const addNewSubject = async (req, res) => {
     try {
         const { subject } = req.body;
-        const newSubject = await pool.query(querries.addNewSubjects, [subject]);
+        const newSubject = await pool.query(querries.addNewSubjectsQuery, [subject]);
         return res.status(201).json(newSubject.rows[0])
     } catch (error) {
         console.error(error.message)
