@@ -1,6 +1,6 @@
 const crypto = require('crypto'); //default to nodeJS 
 const pool = require('../connectDB');
-const { signupQuery, signInQuery } = require('./querries');
+const { signupQuery, signinQuery } = require('./querries');
 const { createToken } = require('../middlewares/auth')
 
 const errMsg = {
@@ -38,7 +38,7 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const { rows } = await pool.query(signInQuery, [email]);
+        const { rows } = await pool.query(signinQuery, [email]);
         if (!rows[0]) {
             return res.status(404).json({ success: false, message: `User with email: ${email} not found` })
         }

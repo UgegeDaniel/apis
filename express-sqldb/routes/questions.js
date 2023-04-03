@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const {
   getAllSubjects,
-  addNewSubject
+  addNewSubject,
+  addNewQuestions
 } = require('../controllers/questionsController')
 
 
@@ -15,5 +16,10 @@ router.get('/subjects', getAllSubjects)
 //ACCESS: admin
 //DESCRIPTION: add new subjects
 router.post('/subjects/new', addNewSubject)
+
+//METHOD: post
+//ACCESS: admin
+//DESCRIPTION: add new questions
+router.post('/new', addNewQuestions)
 
 module.exports = router;
