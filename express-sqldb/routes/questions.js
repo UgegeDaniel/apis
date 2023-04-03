@@ -12,7 +12,7 @@ const {requireAuth} = require('../middlewares/auth')
 //METHOD: get
 //METHOD: user
 //DESCRIPTION: get all questions
-router.get('/subjects', getAllSubjects)
+router.get('/subjects', requireAuth, getAllSubjects)
 
 //METHOD: post
 //ACCESS: admin
