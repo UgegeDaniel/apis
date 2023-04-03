@@ -3,8 +3,10 @@ const router = express.Router();
 const {
   getAllSubjects,
   addNewSubject,
-  addNewQuestions
-} = require('../controllers/questionsController')
+  addNewQuestions,
+  getQuestions
+} = require('../controllers/questionsController');
+const {requireAuth} = require('../middlewares/auth')
 
 
 //METHOD: get
@@ -21,5 +23,10 @@ router.post('/subjects/new', addNewSubject)
 //ACCESS: admin
 //DESCRIPTION: add new questions
 router.post('/new', addNewQuestions)
+
+//METHOD: get
+//ACCESS: authorised user
+//DESCRIPTION: get questions for a particular year and subject
+router.get('/', requireAuth, getQuestions)
 
 module.exports = router;
