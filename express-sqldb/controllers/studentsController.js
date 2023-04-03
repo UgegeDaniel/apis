@@ -1,15 +1,28 @@
+const crypto = require('crypto'); //default to nodeJS 
 const pool = require('../connectDB');
-const { addStudentQuery } = require('./querries');
-const {createToken} = require('../middlewares/auth')
+const { signupQuery, signInQuery } = require('./querries');
+const { createToken } = require('../middlewares/auth')
 
 const errMsg = {
     userExists: "duplicate key value violates unique constraint \"students_email_key\""
 }
 
+const salt = crypto.randomBytes(32).toString('hex');
+const genPassword = (password) => {
+    const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'SHA1').toString('hex');
+    return hash
+};
+
+const validatePassword = (password, hash) => {
+    const verifyHash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'SHA1').toString('hex');
+    return hash === verifyHash;
+};
+
 const signUp = async (req, res) => {
     const { email, password, name, admin } = req.body;
+    const hash = genPassword(password)
     try {
-        const { rows } = await pool.query(addStudentQuery, [name, email, password, admin]);
+        const { rows } = await pool.query(signupQuery, [name, email, hash, admin]);
         const studentId = rows[0].student_uid;
         const token = createToken({ studentId })
         return res.status(201).json({ newStudent: rows[0], token })
@@ -25,13 +38,15 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const { rows } = await pool.query("SELECT * FROM students WHERE email = $1;", [email]);
-        if(!rows[0]){
-            return res.status(404).json({ success: false, message: `User with email: ${email} not found`})
+        const { rows } = await pool.query(signInQuery, [email]);
+        if (!rows[0]) {
+            return res.status(404).json({ success: false, message: `User with email: ${email} not found` })
         }
         const studentId = rows[0].student_uid;
         const token = createToken({ studentId })
-        return res.status(201).json({ newStudent: rows[0], token })
+        return validatePassword(password, rows[0].password, salt)
+            ? res.status(403).json({ success: false, message: "Password incorrect" }) 
+            : res.status(201).json({ newStudent: rows[0], token })
     } catch (error) {
         console.error(error.message)
         return res.status(500).json({ success: false, message: error.message })
