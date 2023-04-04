@@ -20,8 +20,8 @@ const validatePassword = (password, hash) => {
 
 const signUp = async (req, res) => {
     const { email, password, name, admin } = req.body;
-    const hash = genPassword(password)
     try {
+        const hash = genPassword(password)
         const { rows } = await pool.query(signupQuery, [name, email, hash, admin]);
         const studentId = rows[0].student_uid;
         const token = createToken({ studentId })
@@ -44,9 +44,9 @@ const signIn = async (req, res) => {
         }
         const studentId = rows[0].student_uid;
         const token = createToken({ studentId })
-        return validatePassword(password, rows[0].password, salt)
-            ? res.status(403).json({ success: false, message: "Password incorrect" }) 
-            : res.status(201).json({ newStudent: rows[0], token })
+        return validatePassword(password, rows[0].password)
+            ? res.status(201).json({ newStudent: rows[0], token })
+            : res.status(403).json({ success: false, message: "Password incorrect" }) 
     } catch (error) {
         console.error(error.message)
         return res.status(500).json({ success: false, message: error.message })
