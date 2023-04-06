@@ -13,8 +13,9 @@ const requireAuth = (req, res, next) => {
     if (!authorization) return res.status(401).json({ success: false, msg: "Token required" })
     const token = authorization.split(' ')[1];
     try {
-        const { studentId } = jwt.verify(token, secret)
+        const { studentId, role } = jwt.verify(token, secret)
         req.studentId = studentId;
+        req.role = role;
         next();
     } catch (error) {
         console.log(error);

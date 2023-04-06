@@ -12,26 +12,32 @@ const getAllSubjects = async (req, res) => {
 }
 
 const addNewSubject = async (req, res) => {
-    try {
-        const { subject } = req.body;
-        const newSubject = await pool.query(querries.addNewSubjectsQuery, [subject.toLowerCase()]);
-        return res.status(201).json(newSubject.rows[0])
-    } catch (error) {
-        console.error(error.message)
-        return res.status(500).json({ success: false, message: error.message })
+    if (req.role === 'Admin') {
+        try {
+            const { subject } = req.body;
+            const newSubject = await pool.query(querries.addNewSubjectsQuery, [subject.toLowerCase()]);
+            return res.status(201).json(newSubject.rows[0])
+        } catch (error) {
+            console.error(error.message)
+            return res.status(500).json({ success: false, message: error.message })
+        }
     }
+    return res.status(403).json({ success: false, message: "You are not authorized make this request" })
 }
 
 const addNewQuestions = async (req, res) => {
-    try {
-        const { exam_year, question, instruction, option_a, option_b, option_c, option_d, option_e, subject_id } = req.body;
-        const questionFields = [exam_year, question, instruction, option_a, option_b, option_c, option_d, option_e, subject_id]
-        const newQuestion = await pool.query(querries.addNewQuestionsQuery, questionFields);
-        return res.status(201).json(newQuestion.rows[0])
-    } catch (error) {
-        console.error(error.message)
-        return res.status(500).json({ success: false, message: error.message })
+    if (req.role === 'Admin') {
+        try {
+            const { exam_year, question, instruction, option_a, option_b, option_c, option_d, option_e, subject_id } = req.body;
+            const questionFields = [exam_year, question, instruction, option_a, option_b, option_c, option_d, option_e, subject_id]
+            const newQuestion = await pool.query(querries.addNewQuestionsQuery, questionFields);
+            return res.status(201).json(newQuestion.rows[0])
+        } catch (error) {
+            console.error(error.message)
+            return res.status(500).json({ success: false, message: error.message })
+        }
     }
+    return res.status(403).json({ success: false, message: "You are not authorized make this request" })
 }
 
 const getQuestions = async (req, res) => {
