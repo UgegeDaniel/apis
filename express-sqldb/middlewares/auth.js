@@ -10,7 +10,7 @@ const createToken = (id) => {
 
 const requireAuth = (req, res, next) => {
     const { authorization } = req.headers;
-    if (!authorization) return res.status(401).json({ msg: "Token required" })
+    if (!authorization) return res.status(401).json({ success: false, msg: "Token required" })
     const token = authorization.split(' ')[1];
     try {
         const { studentId } = jwt.verify(token, secret)
@@ -18,7 +18,7 @@ const requireAuth = (req, res, next) => {
         next();
     } catch (error) {
         console.log(error);
-        res.status(401).json({ msg: "Invalid token" })
+        res.status(401).json({ success: false, msg: "Invalid token" })
     }
 }
 

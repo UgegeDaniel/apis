@@ -14,7 +14,7 @@ const getAllSubjects = async (req, res) => {
 const addNewSubject = async (req, res) => {
     try {
         const { subject } = req.body;
-        const newSubject = await pool.query(querries.addNewSubjectsQuery, [subject]);
+        const newSubject = await pool.query(querries.addNewSubjectsQuery, [subject.toLowerCase()]);
         return res.status(201).json(newSubject.rows[0])
     } catch (error) {
         console.error(error.message)
@@ -37,7 +37,7 @@ const addNewQuestions = async (req, res) => {
 const getQuestions = async (req, res) => {
     const { subject, year } = req.query;
     try {
-        const { rows } = await pool.query(querries.getSubjectQuery, [subject.toUpperCase()])
+        const { rows } = await pool.query(querries.getSubjectQuery, [subject.toLowerCase()])
         const subject_id = rows[0].subject_uid;
         const questions = await pool.query(querries.getQuestionsQuerry, [subject_id, year])
         const withSubjectName = questions.rows.map((question) => {
