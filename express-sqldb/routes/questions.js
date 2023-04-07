@@ -8,11 +8,13 @@ const {
 } = require('../controllers/questionsController');
 const {requireAuth} = require('../middlewares/auth')
 
+router.use(requireAuth)
+
 
 //METHOD: get
-//METHOD: user
+//METHOD: authenticated user
 //DESCRIPTION: get all questions
-router.get('/subjects', requireAuth, getAllSubjects)
+router.get('/subjects', getAllSubjects)
 
 //METHOD: post
 //ACCESS: admin
@@ -25,8 +27,8 @@ router.post('/subjects/new', addNewSubject)
 router.post('/new', addNewQuestions)
 
 //METHOD: get
-//ACCESS: authorised user
+//ACCESS: authenticated user
 //DESCRIPTION: get questions for a particular year and subject
-router.get('/', requireAuth, getQuestions)
+router.get('/', getQuestions)
 
 module.exports = router;
