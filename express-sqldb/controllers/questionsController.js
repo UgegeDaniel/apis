@@ -9,7 +9,7 @@ const {getQuestionsField} = require('../utils');
 const getAllSubjects = async (req, res) => {
     try {
         const allSubjects = await pool.query(getAllSubjectsQuery)
-        res.json(allSubjects.rows)
+        res.status(200).res.json(allSubjects.rows)
     } catch (error) {
         console.error(error.message)
         return res.status(500).json({ success: false, message: error.message })
