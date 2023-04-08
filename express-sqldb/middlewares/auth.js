@@ -8,7 +8,7 @@ const createToken = (id) => {
 }
 
 
-const requireAuth = (req, res, next) => {
+const authMiddleware = (req, res, next) => {
     const { authorization } = req.headers;
     if (!authorization) return res.status(401).json({ success: false, msg: "Token required" })
     const token = authorization.split(' ')[1];
@@ -24,5 +24,5 @@ const requireAuth = (req, res, next) => {
 }
 
 module.exports = {
-    createToken, requireAuth
+    createToken, authMiddleware
 }

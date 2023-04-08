@@ -6,13 +6,13 @@ const {
   addNewQuestions,
   getQuestions
 } = require('../controllers/questionsController');
-const {requireAuth} = require('../middlewares/auth')
+const {authMiddleware} = require('../middlewares/auth')
 
-router.use(requireAuth)
+router.use(authMiddleware)
 
 
 //METHOD: get
-//METHOD: authenticated user
+//ACCESS: authenticated user
 //DESCRIPTION: get all questions
 router.get('/subjects', getAllSubjects)
 
