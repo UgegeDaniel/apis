@@ -10,18 +10,20 @@ const errMsg = {
 
 const signUp = async (req, res) => {
     const { email, password, name } = req.body;
-    const hashedPassword = await hashPassword(password)
+    const hashedPassword = await hashPassword(password);
+    
     try {
         const { rows } = await pool.query(signupQuery, [name, email, hashedPassword]);
         const {rows: roleRows} = await pool.query(roleQuery, [rows[0].role_id]);
         const token = createToken({ studentId: rows[0].student_uid, role: roleRows[0].name })
         return res.status(201).json({ newStudent: rows[0], token, role: roleRows[0].name })
     } catch (error) {
-        if (error.message === errMsg.userExists) {
-            return errorResponse(res, 500, `User with email: "${email}" already exists`)
+        console.log(error)
+        // if (error.message === errMsg.userExists) {
+            // return errorResponse(res, 500, `User with email: "${email}" already exists`)
         }
-        return errorResponse(res, 500, error.message)
-    }
+        // return errorResponse(res, 500, error.message)
+    // }
 }
 
 const signIn = async (req, res) => {
