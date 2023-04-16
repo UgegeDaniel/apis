@@ -1,4 +1,5 @@
-const { body, validationResult } = require('express-validator');
+import { body, validationResult } from 'express-validator';
+import {Request, Response, NextFunction} from 'express'
 
 const nameValidation = body('name').isLength({ min: 5 }).withMessage('Name must be 5 chars long')
 const fieldCheck = [
@@ -8,7 +9,7 @@ const fieldCheck = [
         .matches(/\d/)
         .withMessage('Password must contain a number'),
 ]
-const validateMiddleware = (req, res, next) => {
+const validateMiddleware = (req: Request, res:Response, next: NextFunction) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         const errMsgs = errors.array().map((err)=> err.msg)
@@ -17,10 +18,5 @@ const validateMiddleware = (req, res, next) => {
     next();
 }
 
-const signUpValidators = [nameValidation, ...fieldCheck, validateMiddleware]
-const signInValidators = [...fieldCheck, validateMiddleware]
-
-module.exports = {
-    signUpValidators,
-    signInValidators
-}
+export const signUpValidators = [nameValidation, ...fieldCheck, validateMiddleware]
+export const signInValidators = [...fieldCheck, validateMiddleware]

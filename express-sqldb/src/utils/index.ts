@@ -1,6 +1,7 @@
-const bcrypt = require('bcrypt');
+import bcrypt from 'bcrypt';
+import {Request} from 'express'
 
-const getQuestionsField = (req) => {
+export const getQuestionsField = (req: Request) => {
     const { exam_year, question, instruction, option_a, 
         option_b, option_c, option_d, option_e, subject_id } = req.body;
     const questionFields = [exam_year, question, 
@@ -8,29 +9,20 @@ const getQuestionsField = (req) => {
         return questionFields
 }
 
-const errorResponse = (res, code, msg) => {
-    console.error(msg)
-    return res.status(code).json({ success: false, msg })
+type Error = {
+    message: string
 }
-
-const hashPassword = async (password) => {
+export const hashPassword = async (password: string) => {
     try {
         const salt = await bcrypt.genSalt(10)
         const hash = await bcrypt.hash(password, salt)
         return hash
-    } catch (error) {
-        console.error(err.message)
+    } catch (error: Error | unknown) {
+        console.error(error)
     }
 }
 
-const validatePassword = async (password, hashedPassword) => {
+export const validatePassword = async (password: string, hashedPassword: string) => {
     const match = await bcrypt.compare(password, hashedPassword)
     return match;
-}
-
-module.exports ={
-    getQuestionsField,
-    errorResponse,
-    hashPassword,
-    validatePassword
 }
