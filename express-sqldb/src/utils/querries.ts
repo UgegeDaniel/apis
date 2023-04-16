@@ -8,5 +8,4 @@ const querries = {
     getQuestionsQuerry: "SELECT * FROM questions WHERE subject_id = $1 AND exam_year = $2",
     roleQuery: "SELECT * FROM roles WHERE role_uid = $1"
 }
-
-module.exports = querries
+export default querries;
