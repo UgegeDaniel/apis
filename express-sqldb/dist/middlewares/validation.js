@@ -1,11 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.signInValidators = exports.signUpValidators = void 0;
+/* eslint-disable consistent-return */
 const express_validator_1 = require("express-validator");
-const nameValidation = (0, express_validator_1.body)('name').isLength({ min: 5 }).withMessage('Name must be 5 chars long');
+const nameValidation = (0, express_validator_1.body)('name')
+    .isLength({ min: 5 })
+    .withMessage('Name must be 5 chars long');
 const fieldCheck = [
     (0, express_validator_1.body)('email').isEmail().withMessage('Please provide a valid email'),
-    (0, express_validator_1.body)('password').isLength({ min: 5 })
+    (0, express_validator_1.body)('password')
+        .isLength({ min: 5 })
         .withMessage('Password must be at least 5 chars long')
         .matches(/\d/)
         .withMessage('Password must contain a number'),
@@ -18,5 +22,9 @@ const validateMiddleware = (req, res, next) => {
     }
     next();
 };
-exports.signUpValidators = [nameValidation, ...fieldCheck, validateMiddleware];
+exports.signUpValidators = [
+    nameValidation,
+    ...fieldCheck,
+    validateMiddleware,
+];
 exports.signInValidators = [...fieldCheck, validateMiddleware];

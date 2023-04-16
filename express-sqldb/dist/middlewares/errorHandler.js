@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//ERROR HANDLER
-const errorHandler = (err, req, res, next) => {
+// ERROR HANDLER
+const errorHandler = (err, req, res) => {
     if (err) {
         res.locals.error = err;
         const status = err.status || 500;

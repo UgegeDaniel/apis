@@ -6,9 +6,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.validatePassword = exports.hashPassword = exports.getQuestionsField = void 0;
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const getQuestionsField = (req) => {
-    const { exam_year, question, instruction, option_a, option_b, option_c, option_d, option_e, subject_id } = req.body;
-    const questionFields = [exam_year, question,
-        instruction, option_a, option_b, option_c, option_d, option_e, subject_id];
+    const { examYear, question, instruction, optionA, optionB, optionC, optionD, optionE, subjectId, } = req.body;
+    const questionFields = [
+        examYear,
+        question,
+        instruction,
+        optionA,
+        optionB,
+        optionC,
+        optionD,
+        optionE,
+        subjectId,
+    ];
     return questionFields;
 };
 exports.getQuestionsField = getQuestionsField;
@@ -19,7 +28,7 @@ const hashPassword = async (password) => {
         return hash;
     }
     catch (error) {
-        console.error(error);
+        throw new Error(error.message);
     }
 };
 exports.hashPassword = hashPassword;

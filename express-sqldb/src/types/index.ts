@@ -1,19 +1,19 @@
-import { Request } from "express";
+import { Request } from 'express';
 
 export interface TokenPayload {
-    studentId: string,
-    role: string
+  studentId: string;
+  role: string;
 }
 
 interface RequestTypeExtension {
-    studentId: string;
-    role: string
+  studentId: string;
+  role: string;
 }
 
-export type CustomRequest = Request & RequestTypeExtension
+export type CustomRequest = Request & RequestTypeExtension;
 
 export interface ErrorType {
-    code: number;
-    msg: string;
-    status: number
+  code: number;
+  msg: string;
+  status: number;
 }

@@ -2,7 +2,8 @@
     "extends": "@tsconfig/node16/tsconfig.json",
     "compileOptions": {
         "outDir": "dist",
-        "useUnknownInCatchVariables": false
+        "useUnknownInCatchVariables": false,
+        "allowImportingTsExtensions" : true
     },
     "exclude": ["node_modules"],
     "include": ["src", "environment.d.ts"]

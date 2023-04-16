@@ -20,15 +20,15 @@ DROP TABLE IF EXISTS students;
 -- QUESTIONS 
 CREATE TABLE public.questions (
     questions_uid uuid NOT NULL,
-    exam_year integer,
+    examYear integer,
     question character varying(300),
     instruction character varying(150),
-    option_a character varying(250),
-    option_b character varying(250),
-    option_c character varying(250),
-    option_d character varying(250),
-    option_e character varying(250),
-    subject_id uuid NOT NULL
+    optionA character varying(250),
+    optionB character varying(250),
+    optionC character varying(250),
+    optionD character varying(250),
+    optionE character varying(250),
+    subjectId uuid NOT NULL
 );
 ALTER TABLE public.questions OWNER TO fykrxlou;
 
@@ -46,7 +46,7 @@ ALTER TABLE public.students OWNER TO fykrxlou;
 CREATE TABLE public.scores (
     time_of_test character varying(150) NOT NULL,
     student_id uuid NOT NULL,
-    subject_id uuid NOT NULL,
+    subjectId uuid NOT NULL,
     score DECIMAL(5,2) NOT NULL
 );
 ALTER TABLE public.scores OWNER TO fykrxlou;
@@ -86,15 +86,15 @@ ALTER TABLE ONLY public.students
     ADD CONSTRAINT unique_student_id UNIQUE (student_uid);
 
 ALTER TABLE ONLY public.subjects
-    ADD CONSTRAINT unique_subject_id UNIQUE (subject_uid);
+    ADD CONSTRAINT unique_subjectId UNIQUE (subject_uid);
 
 ALTER TABLE ONLY public.subjects
     ADD CONSTRAINT subjects_name_key UNIQUE (name);
 
 -- CONSTAINTS (FOREIGN KEYS)
 ALTER TABLE ONLY public.questions
-    ADD CONSTRAINT questions_subject_id_fkey 
-    FOREIGN KEY (subject_id) REFERENCES public.subjects(subject_uid) ON DELETE CASCADE;
+    ADD CONSTRAINT questions_subjectId_fkey 
+    FOREIGN KEY (subjectId) REFERENCES public.subjects(subject_uid) ON DELETE CASCADE;
 
 ALTER TABLE public.students 
     ADD FOREIGN KEY(role_id) REFERENCES roles(role_uid) ON DELETE CASCADE;
@@ -103,7 +103,7 @@ ALTER TABLE public.scores
     ADD FOREIGN KEY(student_id) REFERENCES students(student_uid) ON DELETE CASCADE;
 
 ALTER TABLE public.scores
-    ADD FOREIGN KEY(subject_id) REFERENCES subjects(subject_uid) ON DELETE CASCADE;
+    ADD FOREIGN KEY(subjectId) REFERENCES subjects(subject_uid) ON DELETE CASCADE;
 
 ALTER TABLE public.roles 
     ADD CONSTRAINT role_type CHECK(name= 'Admin' OR name = 'User');

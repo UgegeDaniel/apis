@@ -1,5 +1,9 @@
 {
-    "extends": ["eslint: recommended", "plugin:eslint@typescript-eslint/recommended"],
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
     "parser": "@typescript-eslint/parser",
-    "root": true
+    "root": true,
+    "ignorePatterns": ["**/*.js"]
 }
