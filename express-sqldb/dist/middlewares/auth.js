@@ -14,17 +14,17 @@ exports.createToken = createToken;
 const authMiddleware = (req, res, next) => {
     const { authorization } = req.headers;
     if (!authorization)
-        return next({ code: 401, msg: 'Token required' });
+        return res.status(401).json({ msg: 'Token required' });
     const token = authorization.split(' ')[1];
     try {
-        const { studentId, role } = jsonwebtoken_1.default.verify(token, secret);
-        req.studentId = studentId;
+        const { userId, role } = jsonwebtoken_1.default.verify(token, secret);
+        req.userId = userId;
         req.role = role;
         next();
         return;
     }
     catch (error) {
-        next({ code: 401, msg: 'Invalid Token' });
+        return res.status(401).json({ msg: 'Invalid Token' });
     }
 };
 exports.authMiddleware = authMiddleware;

@@ -4,10 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validatePassword = exports.hashPassword = exports.getQuestionsField = void 0;
+/* eslint-disable camelcase */
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const getQuestionsField = (req) => {
-    const { examYear, question, instruction, optionA, optionB, optionC, optionD, optionE, subjectId, } = req.body;
-    const questionFields = [
+    const { examYear, question, instruction, optionA, optionB, optionC, optionD, optionE, subjectId, answer, } = req.body;
+    const questionFields = {
         examYear,
         question,
         instruction,
@@ -17,7 +18,8 @@ const getQuestionsField = (req) => {
         optionD,
         optionE,
         subjectId,
-    ];
+        answer,
+    };
     return questionFields;
 };
 exports.getQuestionsField = getQuestionsField;

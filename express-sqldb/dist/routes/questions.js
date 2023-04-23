@@ -12,6 +12,7 @@ const questionsController_1 = require("../controllers/questionsController");
 const auth_1 = require("../middlewares/auth");
 const router = express_1.default.Router();
 router.use(auth_1.authMiddleware);
+// METHOD: get
 // ACCESS: authenticated user
 // DESCRIPTION: get all questions
 router.get('/subjects', questionsController_1.getAllSubjects);

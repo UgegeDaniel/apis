@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const questions_1 = __importDefault(require("./routes/questions"));
-const students_1 = __importDefault(require("./routes/students"));
+const users_1 = __importDefault(require("./routes/users"));
 const errorHandler_1 = __importDefault(require("./middlewares/errorHandler"));
 require('dotenv').config();
 // CONSTANTS
@@ -20,7 +20,7 @@ app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 // ROUTES
 app.use('/api/questions', questions_1.default);
-app.use('/api/students', students_1.default);
+app.use('/api/users', users_1.default);
 app.get('/', (req, res) => {
     res.status(200).json({ success: true, msg: 'Base Route' });
 });
