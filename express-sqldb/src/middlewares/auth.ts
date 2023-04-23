@@ -19,8 +19,8 @@ export const authMiddleware = (
   if (!authorization) return next({ code: 401, msg: 'Token required' });
   const token = authorization.split(' ')[1];
   try {
-    const { studentId, role } = jwt.verify(token, secret) as TokenPayload;
-    req.studentId = studentId;
+    const { userId, role } = jwt.verify(token, secret) as TokenPayload;
+    req.userId = userId;
     req.role = role;
     next();
     return;

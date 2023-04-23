@@ -1,4 +1,6 @@
-import  { Secret } from 'jsonwebtoken';
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+import { Secret } from 'jsonwebtoken';
 
 declare global {
   namespace NodeJS {
@@ -16,4 +18,4 @@ declare global {
   }
 }
 
-export { }
+export { };

@@ -5,6 +5,7 @@ import { Request, Response, NextFunction } from 'express';
 const nameValidation = body('name')
   .isLength({ min: 5 })
   .withMessage('Name must be 5 chars long');
+
 const fieldCheck = [
   body('email').isEmail().withMessage('Please provide a valid email'),
   body('password')
@@ -13,6 +14,7 @@ const fieldCheck = [
     .matches(/\d/)
     .withMessage('Password must contain a number'),
 ];
+
 const validateMiddleware = (
   req: Request,
   res: Response,

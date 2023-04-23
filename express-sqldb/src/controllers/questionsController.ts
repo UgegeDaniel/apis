@@ -2,30 +2,35 @@
 /* eslint-disable import/extensions */
 /* eslint-disable consistent-return */
 import { NextFunction, Request, Response } from 'express';
-import pool from '../connectDB';
-import querries from '../utils/querries';
-import { getQuestionsField } from '../utils';
+import { getQuestionsField } from '../utils/index';
 import { CustomRequest } from '../types';
+import { SubjectModel, QuestionModel } from '../models/index';
 
-const {
-  addNewQuestionsQuery,
-  getAllSubjectsQuery,
-  addNewSubjectsQuery,
-  getSubjectQuery,
-  getQuestionsQuerry,
-} = querries;
+type Question = {
+  questions_uid: string;
+  examyear: number;
+  question: string;
+  instruction: string;
+  number: number;
+  optionA: string;
+  optionB: string;
+  optionC: string;
+  optionD: string;
+  optionE: string;
+  answer: string;
+  subjectId: string;
+  subject: string;
+  subjects_name: string;
+}
 
 export const getAllSubjects = async (
   req: Request,
   res: Response,
-  next: NextFunction,
 ) => {
-  try {
-    const allSubjects = await pool.query(getAllSubjectsQuery);
-    res.status(200).json(allSubjects.rows);
-  } catch (error: any) {
-    next({ code: 500, msg: error?.message });
-  }
+  const { data, error } = await SubjectModel.getAll();
+  return !error
+    ? res.status(201).json({ data })
+    : res.status(500).json({ code: 500, msg: error.detail });
 };
 
 export const addNewSubject = async (
@@ -33,22 +38,18 @@ export const addNewSubject = async (
   res: Response,
   next: NextFunction,
 ) => {
-  if (req.role === 'Admin') {
-    try {
-      const { subject } = req.body;
-      const newSubject = await pool.query(addNewSubjectsQuery, [
-        subject.toLowerCase(),
-      ]);
-      return res.status(201).json(newSubject.rows[0]);
-    } catch (error: any) {
-      next({ code: 500, msg: error?.message });
-      return;
-    }
+  if (req) {
+    const { subject } = req.body;
+    const { data, error } = await SubjectModel.insert({ name: subject.toLowerCase() });
+    const msg = error?.code === '23505' ? 'Subject already exists' : error?.detail;
+    return !error
+      ? res.status(201).json({ data })
+      : res.status(500).json({
+        code: error.code,
+        msg,
+      });
   }
-  return res.status(403).json({
-    success: false,
-    message: 'You are not authorized make this request',
-  });
+  return next({ code: 500, msg: 'Unauthorized request' });
 };
 
 export const addNewQuestions = async (
@@ -56,50 +57,33 @@ export const addNewQuestions = async (
   res: Response,
   next: NextFunction,
 ) => {
-  if (req.role === 'Admin') {
+  if (req) {
     const questionFields = getQuestionsField(req);
-    try {
-      const newQuestion = await pool.query(
-        addNewQuestionsQuery,
-        questionFields,
-      );
-      return res.status(201).json(newQuestion.rows[0]);
-    } catch (error: any) {
-      next({ code: 500, msg: error?.message });
-      return;
-    }
+    const { data: newSubject, error } = await QuestionModel.insert(questionFields);
+    return !error
+      ? res.status(200).json({ newSubject })
+      : res.status(500).json({ success: false, msg: error.details });
   }
-  return res.status(403).json({
-    success: false,
-    message: 'You are not authorized make this request',
-  });
+  return next({ code: 500, msg: 'Unauthorized request' });
 };
 
 export const getQuestions = async (
   req: Request,
   res: Response,
-  next: NextFunction,
 ) => {
   const { subject, year } = req.query;
-  try {
-    const { rows } = await pool.query(getSubjectQuery, [
-      subject?.toString().toLowerCase(),
-    ]);
-    const questions = await pool.query(getQuestionsQuerry, [
-      rows[0].subject_uid,
-      year,
-    ]);
-    if (questions.rows.length === 0) {
-      return res
-        .status(200)
-        .json({ success: true, payload: [], msg: 'No questions found' });
-    }
-    const withSubjectName = questions.rows.map((question) => ({
-      ...question,
-      subject,
-    }));
-    return res.status(200).json({ success: true, payload: withSubjectName });
-  } catch (error: any) {
-    next({ code: 500, msg: error?.message });
-  }
+  const sub = subject?.toString().toLowerCase();
+  const yr = Number(year?.toString());
+  const options = { col1: 'subjectId', col2: 'subjects_uid', col3: 'name' };
+  const { data, error } = await QuestionModel.innerJoin('subjects', options);
+  const questions = data.filter((
+    question: Question,
+  ) => question.subjects_name === sub && question.examyear === yr);
+  return !error && questions.length > 0
+    ? res.status(200).json({ success: true, questions })
+    : res.status(500).json({
+      success: false,
+      code: 500,
+      msg: 'Error Fetching questions' || error?.details,
+    });
 };

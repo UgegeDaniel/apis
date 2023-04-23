@@ -3,7 +3,7 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import questions from './routes/questions';
-import students from './routes/students';
+import users from './routes/users';
 import errorHandler from './middlewares/errorHandler';
 
 require('dotenv').config();
@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // ROUTES
 app.use('/api/questions', questions);
-app.use('/api/students', students);
+app.use('/api/users', users);
 
 app.get('/', (req: Request, res: Response) => {
   res.status(200).json({ success: true, msg: 'Base Route' });

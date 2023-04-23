@@ -7,7 +7,7 @@ import { ErrorType } from '../types';
 const errorHandler = (err: ErrorType, req: Request, res: Response) => {
   if (err) {
     res.locals.error = err;
-    const status = err.status || 500;
+    const status = err.code || 500;
     res.status(status);
     res.status(status).json({ ...err, success: false });
   }

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import bcrypt from 'bcrypt';
 import { Request } from 'express';
 
@@ -12,8 +13,9 @@ export const getQuestionsField = (req: Request) => {
     optionD,
     optionE,
     subjectId,
+    answer,
   } = req.body;
-  const questionFields = [
+  const questionFields = {
     examYear,
     question,
     instruction,
@@ -23,7 +25,8 @@ export const getQuestionsField = (req: Request) => {
     optionD,
     optionE,
     subjectId,
-  ];
+    answer,
+  };
   return questionFields;
 };
 
