@@ -13,7 +13,7 @@ import { authMiddleware } from '../middlewares/auth';
 
 const router = express.Router();
 
-// router.use(authMiddleware as express.RequestHandler);
+router.use(authMiddleware as express.RequestHandler);
 
 interface ApplicationGeneric<T> extends Application {}
 

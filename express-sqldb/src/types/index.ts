@@ -44,3 +44,20 @@ export type errorType = {
   code: number;
   detail: string
 } | unknown;
+
+export type Question = {
+  questions_uid: string;
+  examyear: number;
+  question: string;
+  instruction: string;
+  number: number;
+  optionA: string;
+  optionB: string;
+  optionC: string;
+  optionD: string;
+  optionE: string;
+  answer: string;
+  subjectId: string;
+  subject: string;
+  subjects_name: string;
+}

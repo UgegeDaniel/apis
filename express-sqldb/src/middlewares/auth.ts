@@ -14,9 +14,9 @@ export const authMiddleware = (
   req: CustomRequest,
   res: Response,
   next: NextFunction,
-): void => {
+) => {
   const { authorization } = req.headers;
-  if (!authorization) return next({ code: 401, msg: 'Token required' });
+  if (!authorization) return res.status(401).json({ msg: 'Token required' });
   const token = authorization.split(' ')[1];
   try {
     const { userId, role } = jwt.verify(token, secret) as TokenPayload;
@@ -25,6 +25,6 @@ export const authMiddleware = (
     next();
     return;
   } catch (error) {
-    next({ code: 401, msg: 'Invalid Token' });
+    return res.status(401).json({ msg: 'Invalid Token' });
   }
 };

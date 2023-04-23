@@ -1,27 +1,10 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
 /* eslint-disable consistent-return */
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { getQuestionsField } from '../utils/index';
-import { CustomRequest } from '../types';
+import { CustomRequest, Question } from '../types';
 import { SubjectModel, QuestionModel } from '../models/index';
-
-type Question = {
-  questions_uid: string;
-  examyear: number;
-  question: string;
-  instruction: string;
-  number: number;
-  optionA: string;
-  optionB: string;
-  optionC: string;
-  optionD: string;
-  optionE: string;
-  answer: string;
-  subjectId: string;
-  subject: string;
-  subjects_name: string;
-}
 
 export const getAllSubjects = async (
   req: Request,
@@ -29,42 +12,40 @@ export const getAllSubjects = async (
 ) => {
   const { data, error } = await SubjectModel.getAll();
   return !error
-    ? res.status(201).json({ data })
-    : res.status(500).json({ code: 500, msg: error.detail });
+    ? res.status(200).json({ success: true, data })
+    : res.status(500).json({ success: false, msg: error.detail });
 };
 
 export const addNewSubject = async (
   req: CustomRequest,
   res: Response,
-  next: NextFunction,
 ) => {
-  if (req) {
+  if (req.role === 'Admin') {
     const { subject } = req.body;
     const { data, error } = await SubjectModel.insert({ name: subject.toLowerCase() });
     const msg = error?.code === '23505' ? 'Subject already exists' : error?.detail;
     return !error
-      ? res.status(201).json({ data })
-      : res.status(500).json({
-        code: error.code,
+      ? res.status(201).json({ success: true, data })
+      : res.status(406).json({
+        success: false,
         msg,
       });
   }
-  return next({ code: 500, msg: 'Unauthorized request' });
+  return res.status(403).json({ success: false, msg: 'Unauthorized request' });
 };
 
 export const addNewQuestions = async (
   req: CustomRequest,
   res: Response,
-  next: NextFunction,
 ) => {
-  if (req) {
+  if (req.role === 'Admin') {
     const questionFields = getQuestionsField(req);
     const { data: newSubject, error } = await QuestionModel.insert(questionFields);
     return !error
-      ? res.status(200).json({ newSubject })
-      : res.status(500).json({ success: false, msg: error.details });
+      ? res.status(201).json({ success: true, newSubject })
+      : res.status(406).json({ success: false, msg: error.details });
   }
-  return next({ code: 500, msg: 'Unauthorized request' });
+  return res.status(403).json({ success: false, msg: 'Unauthorized request' });
 };
 
 export const getQuestions = async (
@@ -81,9 +62,8 @@ export const getQuestions = async (
   ) => question.subjects_name === sub && question.examyear === yr);
   return !error && questions.length > 0
     ? res.status(200).json({ success: true, questions })
-    : res.status(500).json({
+    : res.status(404).json({
       success: false,
-      code: 500,
       msg: 'Error Fetching questions' || error?.details,
     });
 };
