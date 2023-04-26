@@ -40,7 +40,7 @@ export const signUp = async (
   return !userError
     ? res.status(201).json({ success: true, payload, token })
     : res.status(406).json({
-      sucess: false,
+      success: false,
       msg,
     });
 };

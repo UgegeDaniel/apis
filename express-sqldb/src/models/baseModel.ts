@@ -43,11 +43,9 @@ class BaseModel {
     const idColumn = `${this.tableName}_uid`;
     const columns = uid ? [...Object.keys(itemsToInsert), idColumn] : Object.keys(itemsToInsert);
     const columnNames = columns.join(', ');
-    const values = uid
-      ? `${[...Object.values(itemsToInsert), 'uuid_generate_v4()'].join("', '")}`
-      : `${[...Object.values(itemsToInsert)].join("', '")}`;
+    const values = `${[...Object.values(itemsToInsert)].join("', '")}`;
     const queryString = `INSERT INTO ${this.tableName} (${columnNames})
-    VALUES ('${values}') RETURNING *`;
+    VALUES ('${values}' ${uid && ', uuid_generate_v4()'}) RETURNING *`;
     const payload = await query(queryString);
     return payload;
   };

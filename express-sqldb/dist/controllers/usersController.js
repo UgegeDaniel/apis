@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.signIn = exports.signUp = void 0;
+exports.saveStudentScore = exports.getStudentScore = exports.signIn = exports.signUp = void 0;
 const auth_1 = require("../middlewares/auth");
 const utils_1 = require("../utils");
 const models_1 = require("../models");
@@ -11,6 +11,12 @@ const getUserRoles = async (email) => {
     const payload = data.find((user) => user.email === email);
     return payload;
 };
+// const getUserHistory = async (email: string) => {
+//   const options = { col1: 'users_uid', col2: 'scores_uid', col3: 'name' };
+//   const { data } = await UserModel.innerJoin('scores', options);
+//   const payload = data.find((user: User) => user.email === email);
+//   return payload;
+// };
 const signUp = async (req, res) => {
     const { email, password, name } = req.body;
     const hashedPassword = await (0, utils_1.hashPassword)(password);
@@ -26,7 +32,7 @@ const signUp = async (req, res) => {
     return !userError
         ? res.status(201).json({ success: true, payload, token })
         : res.status(406).json({
-            sucess: false,
+            success: false,
             msg,
         });
 };
@@ -55,3 +61,34 @@ const signIn = async (req, res) => {
         : res.status(200).json({ success: true, user, token });
 };
 exports.signIn = signIn;
+const getStudentScore = async (req, res) => {
+    const { userId } = req;
+    const { data, error } = await models_1.ScoresModel.findBy({
+        key: 'user_id',
+        value: userId,
+    });
+    return error
+        ? res.status(404).json({ success: false, msg: 'User History not found' })
+        : res.status(200).json({ success: true, userHistory: data });
+};
+exports.getStudentScore = getStudentScore;
+const saveStudentScore = async (req, res) => {
+    const { subject, score } = req.body;
+    const { userId } = req;
+    const timeOfTest = Date.now();
+    const { data } = await models_1.SubjectModel.findBy({ key: 'name', value: subject });
+    const subjectId = data?.find((item) => item.name === subject).subjects_uid;
+    if (!subjectId)
+        return res.status(404).json({ success: false, msg: 'Subject not found' });
+    const itemsToInsert = {
+        time_of_test: timeOfTest,
+        user_id: userId,
+        subject_id: subjectId,
+        score,
+    };
+    const { data: scoresData, error } = await models_1.ScoresModel.insert(itemsToInsert, false);
+    return error
+        ? res.status(500).json({ success: false, msg: 'Something went wrong' })
+        : res.status(201).json({ success: true, scoresData });
+};
+exports.saveStudentScore = saveStudentScore;

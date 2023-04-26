@@ -9,7 +9,7 @@
     "ts-dev": "ts-node-dev --respawn src/index.ts",
     "lint": "eslint src/**/*.ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
-    "build": "tsc -w --outDir dist"
+    "build": "tsc --outDir dist"
   },
   "author": "",
   "license": "ISC",
