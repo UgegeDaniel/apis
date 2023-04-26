@@ -61,3 +61,10 @@ export type Question = {
   subject: string;
   subjects_name: string;
 }
+
+export type Score = {
+  time_of_test: string,
+  user_id: string,
+  subject_id: string,
+  score: number,
+}

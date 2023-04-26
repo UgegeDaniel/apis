@@ -17,7 +17,6 @@ DROP TABLE IF EXISTS subjects;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS roles;
 
-
 -- QUESTIONS 
 CREATE TABLE public.questions (
     questions_uid uuid NOT NULL,

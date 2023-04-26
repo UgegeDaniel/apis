@@ -4,8 +4,8 @@
 import { Request, Response } from 'express';
 import { createToken } from '../middlewares/auth';
 import { hashPassword, validatePassword } from '../utils';
-import { UserModel } from '../models';
-import { User } from '../types';
+import { ScoresModel, SubjectModel, UserModel } from '../models';
+import { CustomRequest, User } from '../types';
 
 const { parsed } = require('dotenv').config();
 
@@ -15,6 +15,12 @@ const getUserRoles = async (email: string) => {
   const payload = data.find((user: User) => user.email === email);
   return payload;
 };
+// const getUserHistory = async (email: string) => {
+//   const options = { col1: 'users_uid', col2: 'scores_uid', col3: 'name' };
+//   const { data } = await UserModel.innerJoin('scores', options);
+//   const payload = data.find((user: User) => user.email === email);
+//   return payload;
+// };
 
 export const signUp = async (
   req: Request,
@@ -64,4 +70,45 @@ export const signIn = async (
       msg,
     })
     : res.status(200).json({ success: true, user, token });
+};
+
+export const getStudentScore = async (
+  req: CustomRequest,
+  res: Response,
+) => {
+  const { userId } = req;
+  const { data, error } = await ScoresModel.findBy({
+    key: 'user_id',
+    value: userId,
+  });
+  return error
+    ? res.status(404).json({ success: false, msg: 'User History not found' })
+    : res.status(200).json({ success: true, userHistory: data });
+};
+
+type itemType = {
+  name: string;
+  subjects_uid: string;
+};
+
+export const saveStudentScore = async (
+  req: CustomRequest,
+  res: Response,
+) => {
+  const { subject, score } = req.body;
+  const { userId } = req;
+  const timeOfTest = Date.now();
+  const { data } = await SubjectModel.findBy({ key: 'name', value: subject });
+  const subjectId = data?.find((item: itemType) => item.name === subject).subjects_uid;
+  if (!subjectId) return res.status(404).json({ success: false, msg: 'Subject not found' });
+  const itemsToInsert = {
+    time_of_test: timeOfTest,
+    user_id: userId,
+    subject_id: subjectId,
+    score,
+  };
+  const { data: scoresData, error } = await ScoresModel.insert(itemsToInsert, false);
+  return error
+    ? res.status(500).json({ success: false, msg: 'Something went wrong' })
+    : res.status(201).json({ success: true, scoresData });
 };
