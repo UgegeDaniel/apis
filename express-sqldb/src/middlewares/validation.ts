@@ -1,6 +1,5 @@
-/* eslint-disable consistent-return */
-import { body, validationResult } from 'express-validator';
 import { Request, Response, NextFunction } from 'express';
+import { body, validationResult } from 'express-validator';
 
 const nameValidation = body('name')
   .isLength({ min: 5 })

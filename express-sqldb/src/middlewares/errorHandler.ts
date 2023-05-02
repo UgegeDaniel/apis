@@ -1,16 +1,14 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
-import { Request, Response } from 'express';
-import { ErrorType } from '../types';
+import { NextFunction, Request, Response } from 'express';
+import { ApiError } from '../types/apiError';
 
-// ERROR HANDLER
-const errorHandler = (err: ErrorType, req: Request, res: Response) => {
-  if (err) {
-    res.locals.error = err;
-    const status = err.code || 500;
-    res.status(status);
-    res.status(status).json({ ...err, success: false });
-  }
+const errorHandler = (
+  err: ApiError, 
+  req: Request, 
+  res: Response, 
+  next: NextFunction
+  ) => {
+  const status = err.statusCode || 500;
+  return res.status(status).json({ msg: err.message, success: false });
 };
 
 export default errorHandler;

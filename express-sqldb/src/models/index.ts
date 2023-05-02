@@ -1,9 +1,11 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/extensions */
-// eslint-disable-next-line import/no-unresolved
 import BaseModel from './baseModel';
+import BaseQuestionModel from './questionModel';
+import BaseScoreModel from './scoreModel';
+import BaseSubjectModel from './subjectModel';
+import BaseUserModel from './userModel';
 
-export const SubjectModel = new BaseModel('subjects');
-export const QuestionModel = new BaseModel('questions');
-export const UserModel = new BaseModel('users');
-export const ScoresModel = new BaseModel('scores');
+
+export const ScoresModel = new BaseScoreModel('scores');
+export const SubjectModel = new BaseSubjectModel('subjects');
+export const QuestionModel = new BaseQuestionModel('questions');
+export const UserModel = new BaseUserModel('users');

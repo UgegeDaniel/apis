@@ -1,49 +1,27 @@
-/* eslint-disable camelcase */
-import bcrypt from 'bcrypt';
 import { Request } from 'express';
+import { questionType, scoreType } from '../types/types';
+import { CustomRequest } from '../types/requestType';
+import { ApiError } from '../types/apiError';
 
-export const getQuestionsField = (req: Request) => {
+export const getNewQuestionFromReqBody = (req: Request): questionType => {
   const {
-    examYear,
-    question,
-    instruction,
-    optionA,
-    optionB,
-    optionC,
-    optionD,
-    optionE,
-    subjectId,
-    answer,
+    examYear, number, question, instruction, optionA,
+    optionB, optionC, optionD, optionE, subjectId, answer,
   } = req.body;
-  const questionFields = {
-    examYear,
-    question,
-    instruction,
-    optionA,
-    optionB,
-    optionC,
-    optionD,
-    optionE,
-    subjectId,
-    answer,
-  };
-  return questionFields;
-};
-
-export const hashPassword = async (password: string) => {
-  try {
-    const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hash(password, salt);
-    return hash;
-  } catch (error: any | unknown) {
-    throw new Error(error.message);
+  return {
+    examYear, number, question, instruction, optionA, optionB,
+    optionC, optionD, optionE, subjectId, answer,
   }
 };
 
-export const validatePassword = async (
-  password: string,
-  hashedPassword: string,
-) => {
-  const match = await bcrypt.compare(password, hashedPassword);
-  return match;
+export const getNewScoreFromReqBody = (req: CustomRequest): scoreType => {
+  const { subject_id, score } = req.body;
+  const { userId } = req;
+  const timeOfTest = Date.now();
+  return {
+    time_of_test: timeOfTest.toString(),
+    user_id: userId,
+    subject_id,
+    score
+  }
 };

@@ -1,13 +1,12 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
-/* eslint-disable consistent-return */
-
-import jwt, { Secret } from 'jsonwebtoken';
 import { Response, NextFunction } from 'express';
-import { CustomRequest, TokenPayload } from '../types';
+import jwt, { Secret } from 'jsonwebtoken';
+import { TokenPayload } from '../types/types';
+import { ApiError } from '../types/apiError';
+import { CustomRequest } from '../types/requestType';
 
-const secret: Secret = process.env.JWT_SECRET!;
+const { parsed } = require('dotenv').config();
 
+const secret: Secret = parsed.JWT_SECRET!;
 export const createToken = (id: TokenPayload) => jwt.sign(id, secret, { expiresIn: '1d' });
 
 export const authMiddleware = (
@@ -16,7 +15,7 @@ export const authMiddleware = (
   next: NextFunction,
 ) => {
   const { authorization } = req.headers;
-  if (!authorization) return res.status(401).json({ msg: 'Token required' });
+  if (!authorization) throw new ApiError(401, 'Token required');
   const token = authorization.split(' ')[1];
   try {
     const { userId, role } = jwt.verify(token, secret) as TokenPayload;
@@ -25,6 +24,6 @@ export const authMiddleware = (
     next();
     return;
   } catch (error) {
-    return res.status(401).json({ msg: 'Invalid Token' });
+    throw new ApiError(401, 'Invalid Token');
   }
 };
