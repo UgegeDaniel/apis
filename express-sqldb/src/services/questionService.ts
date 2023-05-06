@@ -1,7 +1,7 @@
 import { QuestionModel } from "../models";
 import { ApiError } from "../types/apiError";
 import { CustomRequest } from "../types/requestType";
-import { questionType } from "../types/types";
+// import { questionType } from "../types/types";
 
 import questionsData from './data'
 type itemType = {
@@ -21,7 +21,14 @@ type itemType = {
     examtype: string;
     examyear: string;
 }
-const addQuestionService = async (req: CustomRequest) => {
+
+export const getAvailableYearsService = async (subjectId: string) => {
+    const data = await QuestionModel.getYears(subjectId);
+    const years = Array.from(new Set(data.map((item: { examyear: number }) => item.examyear)));
+    return years
+}
+
+export const addQuestionService = async (req: CustomRequest) => {
     const { role } = req;
     if (role !== 'Student') throw new ApiError(401, 'You have no access');
     // const {
@@ -46,5 +53,3 @@ const addQuestionService = async (req: CustomRequest) => {
     // const data = await QuestionModel.addQuestion(newQuestion);
     // return data;
 }
-
-export default addQuestionService;

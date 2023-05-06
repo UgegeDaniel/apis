@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import { QuestionModel } from '../models/index';
 import { ApiError } from '../types/apiError';
 import { CustomRequest } from '../types/requestType';
-import addQuestionService from '../services/questionService';
+import { addQuestionService } from '../services/questionService';
 
 export const addNewQuestions = async (
   req: CustomRequest,

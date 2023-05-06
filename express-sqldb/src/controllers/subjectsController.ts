@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { QuestionModel, SubjectModel } from '../models/index';
+import { SubjectModel } from '../models/index';
+import { getAvailableYearsService } from "../services/questionService";
 
 export const getAllSubjects = async (
     req: Request,
@@ -33,12 +34,11 @@ export const getAvailableYears = async (
     res: Response,
     next: NextFunction,
 ) => {
+    const { subjectId } = req.query;
+    const subjectIdToString = subjectId?.toString()!;
     try {
-        const { subjectId } = req.query;
-        const subjectIdToString = subjectId?.toString()!;
-        const data = await QuestionModel.getYears(subjectIdToString);
-        const years = Array.from(new Set (data.map((item: {examyear: number})=> item.examyear)));
-        return res.status(201).json({ success: true, years})
+        const years = await getAvailableYearsService(subjectIdToString)
+        return res.status(201).json({ success: true, years })
     } catch (e) {
         return next(e)
     }
