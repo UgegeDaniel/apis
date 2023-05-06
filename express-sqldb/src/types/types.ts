@@ -3,20 +3,23 @@ export interface TokenPayload {
   role: string;
 }
 
-export type User = {
-  users_uid: string;
+export type UserType  = {
   email: string,
-  name: string,
+  name?: string,
   password: string,
-  role_id: string,
-  roles_name: string
+};
+
+export type DbUserType  = {
+  email: string,
+  name?: string,
+  password: string,
+  users_uid: string,
 };
 
 export type questionType = {
   examYear: number;
   question: string;
   instruction: string;
-  number: number;
   optionA: string;
   optionB: string;
   optionC: string;
@@ -24,6 +27,8 @@ export type questionType = {
   optionE: string;
   answer: string;
   subjectId: string;
+  contributor_id: string;
+  examType: string;
 }
 
 export type scoreType = {
@@ -32,3 +37,10 @@ export type scoreType = {
   subject_id: string;
   score: number;
 };
+
+export type ConstraintType = {
+  primaryColumn: string;
+  primaryValue: string;
+  secondaryColumn: string;
+  columOnSecondaryTable: string;
+}

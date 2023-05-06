@@ -1,13 +1,10 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
 import express, { Application } from 'express';
 import {
-  signUp, signIn, getStudentScore, saveStudentScore,
+  signUp, signIn, getStudentHistory, saveStudentScore,
 } from '../controllers/usersController';
 import { signUpValidators, signInValidators } from '../middlewares/validation';
 import { authMiddleware } from '../middlewares/auth';
 
-// eslint-disable-next-line no-unused-vars
 interface ApplicationGeneric<T> extends Application {}
 
 const router = express.Router();
@@ -24,11 +21,11 @@ router.post('/signin', signInValidators, signIn);
 
 // METHOD: get
 // ACCESS: Student
-// DESCRIPTION: Get student scores
+// DESCRIPTION: Get student history
 router.get(
-  '/score',
+  '/history',
   authMiddleware as express.RequestHandler,
-  getStudentScore as ApplicationGeneric<Record<string, any>>,
+  getStudentHistory as ApplicationGeneric<Record<string, any>>,
 );
 
 // METHOD: post

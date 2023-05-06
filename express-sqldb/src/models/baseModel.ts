@@ -1,4 +1,5 @@
 import query from './query';
+import { ConstraintType } from '../types/types';
 
 class BaseModel {
   public tableName: string;
@@ -22,24 +23,24 @@ class BaseModel {
     return payload;
   };
 
-  findBy = async (searchContraints: {}) => {
+  findBy = async (searchContraints: {}, selectedColumns?: string[]) => {
     const constraints = Object.keys(searchContraints).map(
       (constraint, index) => (`${constraint} = $${index + 1}`)
     ).join(' AND ');
-    const queryString = `SELECT * FROM ${this.tableName} WHERE ${constraints};`;
+    const columnsToReturn = selectedColumns ? `${[selectedColumns].join("', '")}` : "*"
+    const queryString = `SELECT ${columnsToReturn} FROM ${this.tableName} WHERE ${constraints};`;
     const payload = await query(queryString, Object.values(searchContraints));
     return payload;
   };
 
-  // innerJoin = async (secondTable: string, condition: conditionType) => {
-  //   const queryString = `SELECT ${this.tableName}.*, 
-  //   ${secondTable}.${condition.col3} as ${secondTable}_${condition.col3}
-  //   FROM ${this.tableName} 
-  //   JOIN ${secondTable} 
-  //   ON ${this.tableName}.${condition.col1} = ${secondTable}.${condition.col2}`;
-  //   const payload = await query(queryString);
-  //   return payload;
-  // };
+  innerJoin = async (secondaryTable: string, constraint: ConstraintType) => {
+    const queryString = `SELECT DISTINCT * FROM ${this.tableName} 
+    INNER JOIN ${secondaryTable}
+    ON ${this.tableName}.${constraint.secondaryColumn} = ${secondaryTable}.${constraint.columOnSecondaryTable}
+    WHERE ${this.tableName}.${constraint.primaryColumn} = '${constraint.primaryValue}' ;`
+    const payload = await query(queryString);
+    return payload;
+  };
 }
 
 export default BaseModel;

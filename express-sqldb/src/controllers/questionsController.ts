@@ -1,16 +1,16 @@
 import { NextFunction, Request, Response } from 'express';
-import { getNewQuestionFromReqBody } from '../utils/index';
 import { QuestionModel } from '../models/index';
 import { ApiError } from '../types/apiError';
+import { CustomRequest } from '../types/requestType';
+import addQuestionService from '../services/questionService';
 
 export const addNewQuestions = async (
-  req: Request,
+  req: CustomRequest,
   res: Response,
   next: NextFunction,
 ) => {
-  const questionFields = getNewQuestionFromReqBody(req);
   try {
-    const data = await QuestionModel.addQuestion(questionFields);
+    const data = await addQuestionService(req);
     return res.status(201).json({ success: true, data })
   } catch (e) {
     return next(e)

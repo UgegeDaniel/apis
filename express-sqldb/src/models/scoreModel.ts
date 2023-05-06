@@ -1,4 +1,4 @@
-import { scoreType } from "../types/types";
+import { ConstraintType, scoreType } from "../types/types";
 import BaseModel from "./baseModel";
 
 class BaseScoreModel extends BaseModel {
@@ -7,10 +7,11 @@ class BaseScoreModel extends BaseModel {
         this.tableName = tableName;
     }
 
-    getUserHistory = async (userId: string) => {
-        const data = await this.findBy({ user_id: userId });
+    getUserHistory = async (constraint: ConstraintType) => {
+        const data = await this.innerJoin('subjects', constraint );
         return data
     };
+    
     save = async (score: scoreType) => {
         const newScore = await this.insert(score);
         return newScore

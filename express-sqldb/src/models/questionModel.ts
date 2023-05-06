@@ -14,6 +14,10 @@ class BaseQuestionModel extends BaseModel {
     getQuestions = async (subjectId: string, year: number) => {
         return await this.findBy({ subjectId, examYear: year });
     };
+
+    getYears = async (subjectId: string) => {
+        return await this.findBy({ subjectId }, ['examyear']);
+    };
 }
 
 export default BaseQuestionModel;
