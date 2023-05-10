@@ -7,6 +7,7 @@
     "dev": "nodemon dist/index.js",
     "server": "node dist/index.js",
     "ts-dev": "ts-node-dev --respawn src/index.ts",
+    "update-db": "ts-node-dev updateDB sub=123",
     "lint": "eslint src/**/*.ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "build": "tsc --outDir dist"
@@ -20,6 +21,7 @@
     "@typescript-eslint/parser": "^5.57.1",
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
+    "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "eslint": "^8.38.0",

@@ -2,12 +2,15 @@ import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import appRouter from './routes'
 import errorHandler from './middlewares/errorHandler';
-
+import dbInit from './config/dbInit';
+import schemas from './schemas';
+import DatabaseInstance from './config/dbInstance';
 require('dotenv').config();
 
 // CONSTANTS
-const PORT = process.env.SERVER_PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const app: Application = express();
+const dbInstance = new DatabaseInstance(schemas);
 
 // GLOBAL MIDDLEWARES
 app.use(cors());
@@ -27,7 +30,9 @@ app.all('*', (req: Request, res: Response) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log('server running on port 5000');
+app.listen(PORT, async() => {
+  await dbInit(dbInstance, () => {
+    // eslint-disable-next-line no-console
+    console.log(`server running on port ${PORT}`);
+  });
 });

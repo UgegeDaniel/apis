@@ -5,8 +5,8 @@ import { Secret } from 'jsonwebtoken';
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      SERVER_PORT: string;
-      ENVIRONMENT: 'development' | 'production';
+      PORT: string;
+      ENVIRONMENT: string;
       DB_USER: string;
       DB_HOST: string;
       DB_PORT: string;

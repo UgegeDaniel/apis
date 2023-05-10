@@ -1,5 +1,5 @@
-import { scoreType } from '../types/types';
 import { CustomRequest } from '../types/requestType';
+import { scoreType } from '../types/tableTyes';
 
 export const getNewScoreFromReqBody = (req: CustomRequest): scoreType => {
   const { subjectId, score } = req.body;

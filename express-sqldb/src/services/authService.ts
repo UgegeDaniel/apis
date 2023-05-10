@@ -1,8 +1,9 @@
 import bcrypt from 'bcrypt';
 import { ApiError } from '../types/apiError';
-import { UserType, DbUserType } from '../types/types';
 import { UserModel } from '../models';
 import { createToken } from "../middlewares/auth";
+import { UserType } from '../types/types';
+import { DbUserType } from '../types/tableTyes';
 
 const validatePassword = async (
     password: string,

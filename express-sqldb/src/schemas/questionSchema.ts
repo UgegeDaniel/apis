@@ -1,0 +1,32 @@
+import { SchemaType } from "../types/types";
+
+const QuestionSchema: SchemaType = {
+    name: 'questions',
+    columns: [
+        { name: 'questions_uid', type: 'uuid', constarint: 'PRIMARY KEY' },
+        { name: 'question', type: 'character varying(500)', constarint: 'NOT NULL' },
+        { name: 'optiona', type: 'character varying(300)', constarint: 'NOT NULL' },
+        { name: 'optionb', type: 'character varying(300)', constarint: 'NOT NULL' },
+        { name: 'optionc', type: 'character varying(300)', constarint: 'NOT NULL' },
+        { name: 'optiond', type: 'character varying(300)', constarint: 'NOT NULL' },
+        { name: 'optione', type: 'character varying(300)', constarint: 'NOT NULL' },
+        { name: 'section', type: 'character varying(100)' },
+        { name: 'image', type: 'character varying(200)' },
+        { name: 'answer', type: 'character varying(100)', constarint: 'NOT NULL' },
+        { name: 'solution', type: 'character varying(100)', constarint: 'NOT NULL' },
+        { name: 'examtype', type: 'character varying(100)', constarint: 'NOT NULL' },
+        {
+            name: 'subjectid', type: 'uuid', constarint: 'NOT NULL', ref: {
+                table: 'subjects',
+                column: 'subjects_uid'
+            }
+        },
+        {
+            name: 'contributor_id', type: 'uuid', constarint: 'NOT NULL', ref: {
+                table: 'users',
+                column: 'users_uid'
+            }
+        },
+    ],
+}
+export default QuestionSchema;

@@ -1,4 +1,5 @@
-import { ConstraintType, scoreType } from "../types/types";
+import { scoreType } from "../types/tableTyes";
+import { ConstraintType } from "../types/types";
 import BaseModel from "./baseModel";
 
 class BaseScoreModel extends BaseModel {
