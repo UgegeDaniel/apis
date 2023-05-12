@@ -1,6 +1,7 @@
 import { ScoresModel } from "../models";
 
 export default async (userId: string) => {
+    console.log(userId)
     const constraint = {
         primaryColumn: 'user_id',
         primaryValue: userId,

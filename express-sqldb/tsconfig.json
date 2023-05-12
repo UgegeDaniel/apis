@@ -3,8 +3,14 @@
     "compileOptions": {
         "outDir": "dist",
         "useUnknownInCatchVariables": false,
-        "allowImportingTsExtensions" : true
+        "allowImportingTsExtensions" : true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "strict": true,
+        "moduleResolution": "node",
+        "module": "es2020",
+        "target": "es2015"
     },
     "exclude": ["node_modules"],
-    "include": ["src", "environment.d.ts", "updateDB.ts"]
+    "include": ["src", "environment.d.ts", "updateDB.ts"],
 }

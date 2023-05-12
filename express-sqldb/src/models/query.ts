@@ -1,6 +1,6 @@
 import pool from "../config/connectDB";
 import { ApiError } from "../types/apiError";
-import colors from 'colors/safe';
+// import colors from 'colors/safe';
 
 const query = async (queryString: string, options?: string[]): Promise<any> => {
     try {
@@ -9,7 +9,8 @@ const query = async (queryString: string, options?: string[]): Promise<any> => {
     } catch (err: any) {
         if(err?.code === '23505') throw new ApiError(400, "Resource already exists")
         const error = new ApiError(500, "Something went wrong")
-        console.log(colors.red(err.message));
+        // console.log(colors.red(err.message), err);
+        console.log(err.message, err);
         throw error;
     }
 };

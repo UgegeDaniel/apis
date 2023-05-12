@@ -35,7 +35,7 @@ class BaseModel {
 
   //Combine two tables together to create a single table with which satisfies a constraint(common column) and a condition while optionally adding an additional column in the return
   innerJoin = async (secondaryTable: string, constraint: ConstraintType) => {
-    const queryString = `SELECT DISTINCT * FROM ${this.tableName} 
+    const queryString = `SELECT * FROM ${this.tableName} 
     INNER JOIN ${secondaryTable}
     ON ${this.tableName}.${constraint.secondaryColumn} = ${secondaryTable}.${constraint.columOnSecondaryTable}
     WHERE ${this.tableName}.${constraint.primaryColumn} = '${constraint.primaryValue}' ;`

@@ -7,7 +7,10 @@ import { CustomRequest } from '../types/requestType';
 const { parsed } = require('dotenv').config();
 
 const secret: Secret = parsed.JWT_SECRET!;
-export const createToken = (id: TokenPayload) => jwt.sign(id, secret, { expiresIn: '1d' });
+export const createToken = (id: TokenPayload) => {
+  jwt.sign(id, secret, { expiresIn: '1d' }
+  )
+};
 
 export const authMiddleware = (
   req: CustomRequest,
@@ -20,6 +23,7 @@ export const authMiddleware = (
   try {
     const { userId, role } = jwt.verify(token, secret) as TokenPayload;
     req.userId = userId;
+    console.log({ userId })
     req.role = role;
     next();
     return;
