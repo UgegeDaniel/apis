@@ -4,6 +4,7 @@ import {
   getAllSubjects,
   addNewSubject,
 } from '../controllers/subjectsController';
+import { authMiddleware } from '../middlewares/auth';
 
 const router = express.Router();
 interface ApplicationGeneric<T> extends Application {}
@@ -11,7 +12,7 @@ interface ApplicationGeneric<T> extends Application {}
 // METHOD: get
 // ACCESS: authenticated user
 // DESCRIPTION: get all questions
-router.get('/', getAllSubjects);
+router.get('/', authMiddleware as express.RequestHandler, getAllSubjects);
 
 // METHOD: post
 // ACCESS: admin

@@ -6,11 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* eslint-disable no-unused-vars */
 const express_1 = __importDefault(require("express"));
 const subjectsController_1 = require("../controllers/subjectsController");
+const auth_1 = require("../middlewares/auth");
 const router = express_1.default.Router();
 // METHOD: get
 // ACCESS: authenticated user
 // DESCRIPTION: get all questions
-router.get('/', subjectsController_1.getAllSubjects);
+router.get('/', auth_1.authMiddleware, subjectsController_1.getAllSubjects);
 // METHOD: post
 // ACCESS: admin
 // DESCRIPTION: add new subjects
