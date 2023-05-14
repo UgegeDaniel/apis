@@ -1,70 +1,28 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var axios_1 = require("axios");
-var query_1 = require("./src/models/query");
-var fs_1 = require("fs");
-var params = {};
-for (var i = 2; i < process.argv.length; i++) {
-    var paramKey = process.argv[i].split('=')[0];
-    var paramValue = process.argv[i].split('=')[1];
+const axios_1 = __importDefault(require("axios"));
+const query_1 = __importDefault(require("./src/models/query"));
+const fs_1 = require("fs");
+const params = {};
+for (let i = 2; i < process.argv.length; i++) {
+    const paramKey = process.argv[i].split('=')[0];
+    const paramValue = process.argv[i].split('=')[1];
     params[paramKey] = paramValue;
 }
 function escapeSingleQuotes(str) {
     return str.replace(/'/g, "''");
 }
-var config = {
+const config = {
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'AccessToken': params.token
     }
 };
-var questionToInsert = function (item) { return ({
+const questionToInsert = (item) => ({
     examYear: item.examyear,
     question: escapeSingleQuotes(item.question),
     section: escapeSingleQuotes(item.section),
@@ -78,77 +36,59 @@ var questionToInsert = function (item) { return ({
     subjectId: params.subjectId,
     contributor_id: 'c9f3aae1-149e-48eb-a61b-48ee2a13e454',
     examType: escapeSingleQuotes(item.examtype),
-}); };
-var subjectToInsert = function (item) { return ({
+});
+const subjectToInsert = (item) => ({
     name: item
-}); };
-var userToInsert = function () { return ({
+});
+const userToInsert = () => ({
     name: 'Ugege Daniel',
     email: 'admin@jakk.com',
     password: '$2a$05$C3HaM4ywB6apzQocypzUCeLpehXPvfU.4AvJlDLY8ExUDpzi1aRBC',
     role_id: '04d0a1fc-493e-4e94-a6f1-7e5859ca5783',
-}); };
-var updateQuestionTable = function (data, tableName) { return __awaiter(void 0, void 0, void 0, function () {
-    var queryStrings, insertionQueryString, queryResponse;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                queryStrings = [];
-                data.forEach(function (item) {
-                    var itemsToInsert = questionToInsert(item);
-                    var values = "".concat(__spreadArray([], Object.values(itemsToInsert), true).join("', '"));
-                    var columnNames = __spreadArray(["".concat(tableName, "_uid")], Object.keys(itemsToInsert), true);
-                    var queryString = "\n        INSERT INTO ".concat(tableName, " \n        (").concat(columnNames, ")\n        VALUES (uuid_generate_v4(), '").concat(values, "');");
-                    queryStrings.push(queryString);
-                });
-                insertionQueryString = queryStrings.join('');
-                return [4 /*yield*/, (0, query_1.default)(insertionQueryString)];
-            case 1:
-                queryResponse = _a.sent();
-                console.log(queryResponse);
-                return [2 /*return*/];
-        }
+});
+const updateQuestionTable = async (data, tableName) => {
+    const queryStrings = [];
+    data.forEach((item) => {
+        const itemsToInsert = questionToInsert(item);
+        const values = `${[...Object.values(itemsToInsert)].join("', '")}`;
+        const columnNames = [`${tableName}_uid`, ...Object.keys(itemsToInsert)];
+        const queryString = `
+        INSERT INTO ${tableName} 
+        (${columnNames})
+        VALUES (uuid_generate_v4(), '${values}');`;
+        queryStrings.push(queryString);
     });
-}); };
-var getFileData = function (year) {
-    (0, fs_1.readFile)("./logs/".concat(params.subject, "-").concat(year, ".json"), 'utf8', function (err, data) {
+    const insertionQueryString = queryStrings.join('');
+    const queryResponse = await (0, query_1.default)(insertionQueryString);
+    console.log(queryResponse);
+};
+const getFileData = (year) => {
+    (0, fs_1.readFile)(`./logs/${params.subject}-${year}.json`, 'utf8', (err, data) => {
         if (err) {
-            console.error("Error reading JSON file: ".concat(err));
+            console.error(`Error reading JSON file: ${err}`);
             return;
         }
-        var jsonData = JSON.parse(data);
+        const jsonData = JSON.parse(data);
         jsonData.data.length > 0 && updateQuestionTable(jsonData.data, 'questions');
     });
 };
 !params.remote && getFileData(params.year);
-var requestData = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var subject, year, url, data, responseData, err_1;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                subject = params.subject, year = params.year;
-                url = "https://questions.aloc.com.ng/api/v2/q/40?subject=".concat(subject, "&year=").concat(year, "&type=utme");
-                _a.label = 1;
-            case 1:
-                _a.trys.push([1, 4, , 5]);
-                return [4 /*yield*/, axios_1.default.get(url, config)];
-            case 2:
-                data = (_a.sent()).data;
-                return [4 /*yield*/, data];
-            case 3:
-                responseData = _a.sent();
-                responseData.data.length > 0 && updateQuestionTable(responseData.data, 'questions');
-                return [3 /*break*/, 5];
-            case 4:
-                err_1 = _a.sent();
-                console.log({ err: err_1 });
-                return [2 /*return*/, { responseData: null, err: err_1 }];
-            case 5: return [2 /*return*/];
-        }
-    });
-}); };
+const requestData = async () => {
+    const { subject, year } = params;
+    const url = `https://questions.aloc.com.ng/api/v2/q/40?subject=${subject}&year=${year}&type=utme`;
+    // const subjectUrl = 'https://questions.aloc.com.ng/api/metrics/list-subjects';
+    try {
+        const { data } = await axios_1.default.get(url, config);
+        const responseData = await data;
+        responseData.data.length > 0 && updateQuestionTable(responseData.data, 'questions');
+    }
+    catch (err) {
+        console.log({ err });
+        return { responseData: null, err };
+    }
+};
 params.remote && requestData();
-var availableYears = {
+const availableYears = {
     physics: [2006, 2007, 2009, 2010, 2011, 2012],
     commerce: [1900, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2016],
     accounting: [1997, 2004, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
@@ -163,7 +103,7 @@ var availableYears = {
     currentaffairs: [2013],
     history: [2013],
 };
-var subjectIds = {
+const subjectIds = {
     english: 'b12dee06-a1eb-40aa-a436-42659b27e9b0',
     mathematics: 'afc4eb1a-7c28-465d-b022-e52081bb2da7',
     commerce: '4f047644-f623-4388-a2e0-021a3ba56145',
