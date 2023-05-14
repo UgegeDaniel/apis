@@ -7,10 +7,10 @@ const query = async (queryString: string, options?: string[]): Promise<any> => {
     const { rows: data } = await pool.query(queryString, options);
     return data;
   } catch (err: any) {
-    if (err?.code === '23505') throw new ApiError(400, 'Resource already exists');
-    const error = new ApiError(500, 'Something went wrong');
-    logger.error(err.message, err);
-    throw error;
+    const apiError = new ApiError(400, "Couldn't perform action");
+    logger.error(apiError.message);
+    if (err?.code === '23505') throw apiError;
+    throw new ApiError(500, 'Something went wrong');
   }
 };
 

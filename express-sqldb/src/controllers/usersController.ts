@@ -15,7 +15,7 @@ export const signUp = async (
   try {
     const { user, token } = await authService.signUp({ name, email, password });
     return res.status(201).json({ success: true, user, token });
-  } catch (e) {
+  } catch (e: any) {
     return next(e);
   }
 };

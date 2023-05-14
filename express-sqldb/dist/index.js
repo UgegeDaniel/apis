@@ -11,6 +11,7 @@ const dbInit_1 = __importDefault(require("./config/dbInit"));
 const schemas_1 = __importDefault(require("./schemas"));
 const dbInstance_1 = __importDefault(require("./config/dbInstance"));
 const logger_1 = __importDefault(require("./logger"));
+const logger_2 = __importDefault(require("./middlewares/logger"));
 require('dotenv').config();
 // CONSTANTS
 const PORT = Number(process.env.PORT) || 5000;
@@ -20,6 +21,7 @@ const dbInstance = new dbInstance_1.default(schemas_1.default);
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
+app.use(logger_2.default);
 // ROUTES
 app.use('/api', routes_1.default);
 app.get('/', (req, res) => {

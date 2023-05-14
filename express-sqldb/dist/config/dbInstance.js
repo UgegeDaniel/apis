@@ -12,8 +12,7 @@ class DatabaseInstance {
             this.schemas.forEach((schema) => {
                 DatabaseInstance.showConsoleMsg(`creating table: ${schema.name} ...`);
                 const queryString = `
-        CREATE TABLE IF NOT EXISTS ${schema.name} ( ${DatabaseInstance.getSchema(schema)});
-        `;
+        CREATE TABLE IF NOT EXISTS ${schema.name} (${DatabaseInstance.getSchema(schema)});`;
                 this.queryStrings.push(queryString);
             });
         };

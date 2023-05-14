@@ -9,10 +9,12 @@ import { authMiddleware } from '../middlewares/auth';
 const router = express.Router();
 interface ApplicationGeneric<T> extends Application {}
 
+router.use(authMiddleware as express.RequestHandler);
+
 // METHOD: get
 // ACCESS: authenticated user
 // DESCRIPTION: get all questions
-router.get('/', authMiddleware as express.RequestHandler, getAllSubjects);
+router.get('/', getAllSubjects);
 
 // METHOD: post
 // ACCESS: admin

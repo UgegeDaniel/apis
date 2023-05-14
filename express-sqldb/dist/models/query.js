@@ -12,11 +12,11 @@ const query = async (queryString, options) => {
         return data;
     }
     catch (err) {
+        const apiError = new apiErrorType_1.ApiError(400, "Couldn't perform action");
+        logger_1.default.error(apiError.message);
         if (err?.code === '23505')
-            throw new apiErrorType_1.ApiError(400, 'Resource already exists');
-        const error = new apiErrorType_1.ApiError(500, 'Something went wrong');
-        logger_1.default.error(err.message, err);
-        throw error;
+            throw apiError;
+        throw new apiErrorType_1.ApiError(500, 'Something went wrong');
     }
 };
 exports.default = query;

@@ -6,6 +6,7 @@ import dbInit from './config/dbInit';
 import schemas from './schemas';
 import DatabaseInstance from './config/dbInstance';
 import logger from './logger';
+import logReqUrl from './middlewares/logger';
 
 require('dotenv').config();
 
@@ -18,6 +19,7 @@ const dbInstance = new DatabaseInstance(schemas);
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(logReqUrl);
 
 // ROUTES
 app.use('/api', appRouter);

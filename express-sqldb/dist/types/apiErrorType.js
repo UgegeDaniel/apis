@@ -4,8 +4,8 @@ exports.ApiError = void 0;
 class ApiError extends Error {
     constructor(statusCode, message) {
         super(message);
-        this.message = message;
         this.statusCode = statusCode;
+        this.message = message;
     }
 }
 exports.ApiError = ApiError;
