@@ -1,7 +1,12 @@
+/* eslint-disable no-unused-vars */
 import express, { Application } from 'express';
+import {
+  getAllSubjects,
+  addNewSubject,
+} from '../controllers/subjectsController';
+
 const router = express.Router();
-import { getAllSubjects, addNewSubject } from '../controllers/subjectsController'
-interface ApplicationGeneric<T> extends Application { }
+interface ApplicationGeneric<T> extends Application {}
 
 // METHOD: get
 // ACCESS: authenticated user
@@ -11,9 +16,6 @@ router.get('/', getAllSubjects);
 // METHOD: post
 // ACCESS: admin
 // DESCRIPTION: add new subjects
-router.post(
-    '/new',
-    addNewSubject as ApplicationGeneric<Record<string, any>>,
-);
+router.post('/new', addNewSubject as ApplicationGeneric<Record<string, any>>);
 
 export default router;

@@ -1,12 +1,7 @@
-import { NextFunction, Request, Response } from 'express';
-import { ApiError } from '../types/apiError';
+import { Request, Response } from 'express';
+import { ApiError } from '../types/apiErrorType';
 
-const errorHandler = (
-  err: ApiError, 
-  req: Request, 
-  res: Response, 
-  next: NextFunction
-  ) => {
+const errorHandler = (err: ApiError, req: Request, res: Response) => {
   const status = err.statusCode || 500;
   return res.status(status).json({ msg: err.message, success: false });
 };

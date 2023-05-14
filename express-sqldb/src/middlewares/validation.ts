@@ -24,7 +24,7 @@ const validateMiddleware = (
     const errMsgs = errors.array().map((err) => err.msg);
     return res.status(400).json({ success: false, errors: errMsgs });
   }
-  next();
+  return next();
 };
 
 export const signUpValidators = [

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Request, Application } from 'express';
 
 export interface ApplicationGeneric<T> extends Application {}

@@ -1,24 +1,27 @@
 {
-    "extends": [
-        "airbnb-base",
-        "plugin:@typescript-eslint/eslint-recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "root": true,
-    "ignorePatterns": ["**/*.js"],
-    "rules": {
-        "import/extensions": [
-           "error",
-           "ignorePackages",
-           {
-             "js": "never",
-             "jsx": "never",
-             "ts": "never",
-             "tsx": "never"
-           }
-        ],
-        "import/parsers": {
-          "@typescript-eslint/parser": [".ts", ".tsx"]
-     }
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "ignorePatterns": [
+    "**/*.js"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
+  }
 }

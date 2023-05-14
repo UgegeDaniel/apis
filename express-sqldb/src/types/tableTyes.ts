@@ -1,8 +1,8 @@
 export type DbUserType = {
-  email: string,
-  name?: string,
-  password: string,
-  users_uid: string,
+  email: string;
+  name?: string;
+  password: string;
+  users_uid: string;
 };
 
 export type questionType = {
@@ -19,7 +19,7 @@ export type questionType = {
   subjectId: string;
   contributor_id: string;
   examType: string;
-}
+};
 
 export type apiQuestionType = {
   examyear: number;
@@ -31,12 +31,12 @@ export type apiQuestionType = {
     c: string;
     d: string;
     e: string;
-  },
+  };
   answer: string;
   image: string;
   examtype: string;
   solution: string;
-}
+};
 
 export type scoreType = {
   time_of_test: string;

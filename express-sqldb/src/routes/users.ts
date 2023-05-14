@@ -1,6 +1,10 @@
+/* eslint-disable no-unused-vars */
 import express, { Application } from 'express';
 import {
-  signUp, signIn, getStudentHistory, saveStudentScore,
+  signUp,
+  signIn,
+  getStudentHistory,
+  saveStudentScore,
 } from '../controllers/usersController';
 import { signUpValidators, signInValidators } from '../middlewares/validation';
 import { authMiddleware } from '../middlewares/auth';

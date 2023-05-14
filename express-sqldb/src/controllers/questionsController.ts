@@ -1,19 +1,24 @@
 import { NextFunction, Request, Response } from 'express';
-import { QuestionModel } from '../models/index';
-import { ApiError } from '../types/apiError';
 import { CustomRequest } from '../types/requestType';
-import { addQuestionService, getAvailableYearsService, getQuestionsService } from '../services/questionService';
+import {
+  addQuestionService,
+  getAvailableYearsService,
+  getQuestionsService,
+} from '../services/questionService';
+import { ApiError } from '../types/apiErrorType';
 
 export const addNewQuestions = async (
   req: CustomRequest,
   res: Response,
   next: NextFunction,
 ) => {
+  const { role } = req;
+  if (role !== 'Student') throw new ApiError(401, 'You have no access');
   try {
-    const data = await addQuestionService(req);
-    return res.status(201).json({ success: true, data })
+    const newQuestion = await addQuestionService(req);
+    return res.status(201).json({ success: true, newQuestion });
   } catch (e) {
-    return next(e)
+    return next(e);
   }
 };
 
@@ -25,10 +30,10 @@ export const getAvailableYears = async (
   const { subjectId } = req.query;
   const subjectIdToString = subjectId?.toString()!;
   try {
-      const years = await getAvailableYearsService(subjectIdToString)
-      return res.status(201).json({ success: true, years })
+    const years = await getAvailableYearsService(subjectIdToString);
+    return res.status(201).json({ success: true, years });
   } catch (e) {
-      return next(e)
+    return next(e);
   }
 };
 
@@ -41,9 +46,12 @@ export const getQuestions = async (
   const subjectIdToString = subjectId?.toString()!;
   const yearToNumber = Number(year?.toString());
   try {
-    const questions = await getQuestionsService(subjectIdToString, yearToNumber);
-    return res.status(200).json({ success: true, questions })
+    const questions = await getQuestionsService(
+      subjectIdToString,
+      yearToNumber,
+    );
+    return res.status(200).json({ success: true, questions });
   } catch (e) {
-    return next(e)
+    return next(e);
   }
 };

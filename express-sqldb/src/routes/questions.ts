@@ -1,5 +1,9 @@
 import express from 'express';
-import { addNewQuestions, getQuestions, getAvailableYears} from '../controllers/questionsController';
+import {
+  addNewQuestions,
+  getQuestions,
+  getAvailableYears,
+} from '../controllers/questionsController';
 import { authMiddleware } from '../middlewares/auth';
 import { ApplicationGeneric } from '../types/requestType';
 

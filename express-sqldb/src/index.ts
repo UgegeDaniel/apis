@@ -1,14 +1,16 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
-import appRouter from './routes'
+import appRouter from './routes';
 import errorHandler from './middlewares/errorHandler';
 import dbInit from './config/dbInit';
 import schemas from './schemas';
 import DatabaseInstance from './config/dbInstance';
+import logger from './logger';
+
 require('dotenv').config();
 
 // CONSTANTS
-const PORT = process.env.PORT || 5000;
+const PORT = Number(process.env.PORT) || 5000;
 const app: Application = express();
 const dbInstance = new DatabaseInstance(schemas);
 
@@ -18,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // ROUTES
-app.use('/api', appRouter)
+app.use('/api', appRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.status(200).json({ success: true, msg: 'Base Route' });
@@ -30,9 +32,8 @@ app.all('*', (req: Request, res: Response) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, async() => {
+app.listen(PORT, async () => {
   await dbInit(dbInstance, () => {
-    // eslint-disable-next-line no-console
-    console.log(`server running on port ${PORT}`);
+    logger.info(`SERVER RUNNING ON PORT: ${PORT}`);
   });
 });
