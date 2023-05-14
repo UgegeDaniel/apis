@@ -9,7 +9,7 @@
     "update-db": "ts-node-dev updateDB",
     "lint": "eslint src/**/*.ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
-    "build": "tsc --outDir dist"
+    "build": "tsc --outDir ./dist"
   },
   "author": "",
   "license": "ISC",

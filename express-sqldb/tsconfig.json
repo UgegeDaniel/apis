@@ -1,7 +1,7 @@
 {
     "extends": "@tsconfig/node16/tsconfig.json",
     "compileOptions": {
-        "outDir": "dist",
+        "outDir": "./dist",
         "useUnknownInCatchVariables": false,
         "allowImportingTsExtensions" : true,
         "esModuleInterop": true,
@@ -9,8 +9,9 @@
         "strict": true,
         "moduleResolution": "node",
         "module": "es2020",
-        "target": "es2015"
+        "target": "es2015",
+        "sourceMap": true
     },
     "exclude": ["node_modules"],
-    "include": ["src", "environment.d.ts", "updateDB.ts"],
+    "include": ["src/**/*.ts", "environment.d.ts", "updateDB.ts"],
 }
