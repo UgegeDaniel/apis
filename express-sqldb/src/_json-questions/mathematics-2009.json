@@ -1,0 +1,687 @@
+{
+    "message": "We could not find what you asked for, but got you this",
+    "subject": "mathematics",
+    "status": 200,
+    "data": [
+        {
+            "id": 38,
+            "question": "The difference of two numbers is 10, while their product is 39. Find these numbers",
+            "option": {
+                "a": "– 3 and 10 or 13 and 10,",
+                "b": "3 and – 10 or 3 and 13,  ",
+                "c": "3 and – 3 or 3 and 13,     ",
+                "d": " – 3 and – 13 or   13 and  3 ",
+                "e": " – 3 and – 13 or   13 and  3 "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 24,
+            "question": "Evaluate x in base 3 if 41x-22x=17x. ",
+            "option": {
+                "a": "11",
+                "b": "8",
+                "c": "12",
+                "d": "22",
+                "e": "22"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 47,
+            "question": "A regular polygon has each of it angles as 1600. What is the number of sides of the polygon?  ",
+            "option": {
+                "a": "18,    ",
+                "b": "36,       ",
+                "c": "9,     ",
+                "d": "20",
+                "e": "20"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 16,
+            "question": "A bag contains 10 balls of which 3 are red and 7 are white. Two balls are drawn at random. Find the probability of none of the balls is red, if the draw is without replacement ",
+            "option": {
+                "a": "0.1",
+                "b": "0.47",
+                "c": "0.42",
+                "d": "0.21",
+                "e": "0.21"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 27,
+            "question": "The journey from Lagos to Ibadan usually takes a motorist 1 hour 30 minutes. By increasing his average speed by 20km/hr, the motorist saves 15 minutes. His usual speed, in Km/hr is ",
+            "option": {
+                "a": "100",
+                "b": "90",
+                "c": "85",
+                "d": "80",
+                "e": "80"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 5,
+            "question": "A cyclist rode for 30minutes at xhkm/hr. if the total distance covered is less than 60km, what is the range of values for x? ",
+            "option": {
+                "a": "x<14   ",
+                "b": "x<20  ",
+                "c": "x<29  ",
+                "d": "x< 28",
+                "e": "x< 28"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 64,
+            "question": "If the length of the sides of a right angled triangle are (3x + 1)cm, (3x – 1)cm and xcm, what is x ? ",
+            "option": {
+                "a": "2",
+                "b": "6",
+                "c": "18",
+                "d": "12",
+                "e": "12"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 59,
+            "question": "Given a regular hexagon, calculate each interior angle of the hexagon ",
+            "option": {
+                "a": "60",
+                "b": "30",
+                "c": "120",
+                "d": "15",
+                "e": "15"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 11,
+            "question": "Z is partly constant and partly varies inversely as the square of d. when d = 1, z = 11 and when d = 2, z = 5. Find the value of z when d = 4.  ",
+            "option": {
+                "a": "2",
+                "b": "3.5",
+                "c": "5",
+                "d": "5.5",
+                "e": "5.5"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 20,
+            "question": "The volume of a certain sphere is numerically equal to twice its surface area. The diameter of the sphere is: ",
+            "option": {
+                "a": "6",
+                "b": "9",
+                "c": "12",
+                "d": "",
+                "e": ""
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 73,
+            "question": "Given f(x) =3+x and g(x) =3-x, find g (f(x))",
+            "option": {
+                "a": "6",
+                "b": "x",
+                "c": "-x",
+                "d": "0",
+                "e": "0"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 40,
+            "question": "All the 120 pupils in a school learn Yoruba or Igbo or both. Given that 75 learn Yoruba and 60 learn Igbo. 13. How many learn both languages? ",
+            "option": {
+                "a": "60",
+                "b": "45",
+                "c": "15",
+                "d": "120",
+                "e": "120"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 13,
+            "question": "The indefinite integral of the function f(x) = xcosx for any constant k, is ",
+            "option": {
+                "a": "–cos + sinx +k,  ",
+                "b": "xsinx-cosx,   ",
+                "c": "xsinx for any constant k,   ",
+                "d": "x+sinx+cosx+k",
+                "e": "x+sinx+cosx+k"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 23,
+            "question": "The average age of the three children in a family is 9 years. If the average age of their parent is 39 years, the average age of the whole family is: ",
+            "option": {
+                "a": "20 years  ",
+                "b": "21years  ",
+                "c": "24years  ",
+                "d": "27years",
+                "e": "27years"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 41,
+            "question": "All the 120 pupils in a school learn Yoruba or Igbo or both. Given that 75 learn Yoruba and 60 learn Igbo. How many learn Igbo only?   ",
+            "option": {
+                "a": "45",
+                "b": "30",
+                "c": "15",
+                "d": "60",
+                "e": "60"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 7,
+            "question": "In a class, 37 students take a least one of chemistry, Economics and Government, 8 students take Chemistry, 19 take Economics and 25 take Government, 12 students take Economics and Government but nobody takes Chemistry and Economics. How many students take both chemistry and Government? ",
+            "option": {
+                "a": "3",
+                "b": "4",
+                "c": "5",
+                "d": "6",
+                "e": "6"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 34,
+            "question": "A. cylinder has height 4cm and base radius 5cm.its volume to 3 significant figure is  ",
+            "option": {
+                "a": "314.2cm2 ",
+                "b": "31.42 cm2 ",
+                "c": "251 4cm2 ",
+                "d": "251cm2",
+                "e": "251cm2"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 65,
+            "question": "A number of pencils were shared out among peter, Paul and Audu in the ratio 2:3:5 respectively. If Peter got 5, how many were shared? ",
+            "option": {
+                "a": "15",
+                "b": "25",
+                "c": "30",
+                "d": "50",
+                "e": "50"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 8,
+            "question": "Solve for p in the following  equation given in base two  11(p+ 110) = 1001p   ",
+            "option": {
+                "a": "10",
+                "b": "11",
+                "c": "110",
+                "d": "111",
+                "e": "111"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 15,
+            "question": "A bag contains 10 balls of which 3 are red and 7 are white. Two balls are drawn at random. Find the probability of none of the balls is red, if the draw is with replacement: ",
+            "option": {
+                "a": "0.9",
+                "b": "1",
+                "c": "0.47",
+                "d": "0.49",
+                "e": "0.49"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 53,
+            "question": "Two fair dice are rolled. What is the probability that both show up the same number of point?",
+            "option": {
+                "a": "1/36 ",
+                "b": "7/36 ",
+                "c": "½ ",
+                "d": "1/6",
+                "e": "1/6"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 6,
+            "question": "A business invested a total of N200,000 in two companies which paid dividends of 5% and 7% respectively. If the received a total of N11, 600 as dividend, how much did he invest at 5% ",
+            "option": {
+                "a": "N160,000 ",
+                "b": "N140,000 ",
+                "c": "N120,000 ",
+                "d": "N80,000",
+                "e": "N80,000"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 56,
+            "question": "If P varies inversely as V and V varies directly as R2, find the relationship between P and R given that R = 7 when P = 2 ",
+            "option": {
+                "a": "P = 98R2 ",
+                "b": "PR2 = 98 ",
+                "c": "P2R = 89 ",
+                "d": "P = 1/98R ",
+                "e": "P = 1/98R "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 43,
+            "question": "The trigonometric expression cos2A + sin 2A can be written as:  ",
+            "option": {
+                "a": "cosA(cosA + sinA)  ",
+                "b": "B.cos2A + sin2A – 2sinAcosA,  ",
+                "c": "2sinAcosA + cos2A + sin2A,  ",
+                "d": "D.cos2A +sinA  – 2sinAcosA",
+                "e": "D.cos2A +sinA  – 2sinAcosA"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 4,
+            "question": "In how many different ways can the letters of the word GEOLOGY be arranged in order? ",
+            "option": {
+                "a": "720",
+                "b": "1260",
+                "c": "2520",
+                "d": "5040",
+                "e": "5040"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 72,
+            "question": "Solve the equation 3x+1 = 271-x  ",
+            "option": {
+                "a": "1/2",
+                "b": "-1/2",
+                "c": "3/4",
+                "d": "-3/4",
+                "e": "-3/4"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 63,
+            "question": "Find the probability that a number selected at random 40 to 50 is a prime number   ",
+            "option": {
+                "a": "3/11",
+                "b": "5/11",
+                "c": "5/10",
+                "d": "4/10",
+                "e": "4/10"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 1,
+            "question": "A regular polygon has each of it angles at 160. What is the number of sides of the polygon? ",
+            "option": {
+                "a": "36",
+                "b": "9",
+                "c": "18",
+                "d": "20",
+                "e": "20"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 74,
+            "question": "Differentiate sin (2x-5) with respect to x. ",
+            "option": {
+                "a": "cos (2x-5)",
+                "b": "–cos (2x-5)   ",
+                "c": " 2cos (2x-5)",
+                "d": "-2cos (2x-5)",
+                "e": "-2cos (2x-5)"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 37,
+            "question": "Dividing 2x3 – x2 – 5x + 1 by x  + 3 gives the remainder ",
+            "option": {
+                "a": ".-3",
+                "b": "47",
+                "c": "61",
+                "d": "-47",
+                "e": "-47"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 2,
+            "question": "A girl walks 30m from a point P on  a bearing of 040 to a point Q. she   then walks 30m on a bearing of 140 to a point R. the bearing of R from P is ",
+            "option": {
+                "a": "90",
+                "b": "50 ",
+                "c": "45",
+                "d": "40",
+                "e": "40"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 31,
+            "question": "The expression a 3 + b 3 is equal  to ",
+            "option": {
+                "a": "(a2 +b)(a-ab+b2 )",
+                "b": "(a+b)(a2 –ab+b2 )  ",
+                "c": "(a-b2)(a2-  ab+b)",
+                "d": "(a­-b)(a2+ab+b2)",
+                "e": "(a­-b)(a2+ab+b2)"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 48,
+            "question": "One angle of an octagon is 1000 while the other sides are equal. Find each of these exterior angles. ",
+            "option": {
+                "a": "800,",
+                "b": "600,",
+                "c": "1400,           ",
+                "d": "400,   ",
+                "e": "400,   "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 28,
+            "question": "The smallest section of a rod which can be cut 36cm in length is",
+            "option": {
+                "a": "90cm ",
+                "b": "180cm ",
+                "c": "360cm  ",
+                "d": "540cm.",
+                "e": "540cm."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 30,
+            "question": "In a survey of 100 students in an institution, 80 students speak Yoruba, 22 speak Igbo, while 6 speak neither Igbo nor Yoruba. How many students speak Yoruba and Igbo? ",
+            "option": {
+                "a": "96",
+                "b": "8",
+                "c": "64",
+                "d": "12",
+                "e": "12"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 54,
+            "question": "Find the probability of selecting a figure which is parallelogram from a square, a rectangle, a rhombus, a kite and a trapezium  ",
+            "option": {
+                "a": "3/5 ",
+                "b": "2/5 ",
+                "c": "1/5 ",
+                "d": "1/5 ",
+                "e": "1/5 "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 50,
+            "question": "If 32y – 6(3y) = 27, find y ",
+            "option": {
+                "a": "3",
+                "b": "-1",
+                "c": "2",
+                "d": "-3",
+                "e": "-3"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 33,
+            "question": "A cone has base radius 4cm and  height 3cm. The area of its curved surface is",
+            "option": {
+                "a": "12pcm2     ",
+                "b": "20pcm2",
+                "c": "24pcm2 ",
+                "d": "15cm2",
+                "e": "15cm2"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 9,
+            "question": "Factorize 16(3x+2y)2-25 (a+2b)2",
+            "option": {
+                "a": "(12x +8y+5a+10b)(12x+8y-5a-10b)    ",
+                "b": "(12x+8y-5a-10b) (12x+8y-5a-10b),    ",
+                "c": "20 (3x +2y-a-2b)(3x+2y+a+2b)  ",
+                "d": "20(3x+2y+a+2b) (3x+2y+a+2b).",
+                "e": "20(3x+2y+a+2b) (3x+2y+a+2b)."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 55,
+            "question": "A man kept 6 black, 5 brown and 7 purple shirts in a drawer. What is the probability of his picking a purple shirt with his eyes close ",
+            "option": {
+                "a": "1/7",
+                "b": "7/18 ",
+                "c": "11/18 ",
+                "d": "7/11",
+                "e": "7/11"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        }
+    ]
+}

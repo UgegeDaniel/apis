@@ -16,11 +16,12 @@ class DatabaseInstance {
     this.addDefaultQueryString();
   }
 
-  static getSchema = (schema: SchemaType) => schema.columns
-    .map(
-      (column) => `${column.name} ${column.type} ${column.constarint || ''}`,
-    )
-    .toString();
+  static getSchema = (schema: SchemaType) =>
+    schema.columns
+      .map(
+        (column) => `${column.name} ${column.type} ${column.constarint || ''}`
+      )
+      .toString();
 
   static showConsoleMsg = (msg: string) => {
     logger.info(msg);
@@ -30,7 +31,9 @@ class DatabaseInstance {
     this.schemas.forEach((schema) => {
       DatabaseInstance.showConsoleMsg(`creating table: ${schema.name} ...`);
       const queryString = `
-        CREATE TABLE IF NOT EXISTS ${schema.name} (${DatabaseInstance.getSchema(schema)});`;
+        CREATE TABLE IF NOT EXISTS ${schema.name} (${DatabaseInstance.getSchema(
+        schema
+      )});`;
       this.queryStrings.push(queryString);
     });
   };
@@ -106,8 +109,8 @@ class DatabaseInstance {
     this.schemas.forEach((schema) => {
       const msg = 'running default querries ...';
       schema.defaultQuery && DatabaseInstance.showConsoleMsg(msg);
-      schema.defaultQuery
-        && schema.defaultQuery.forEach((defQuery) => {
+      schema.defaultQuery &&
+        schema.defaultQuery.forEach((defQuery) => {
           const values = `${[...Object.values(defQuery)].join("', '")}`;
           const columnNames = [`${schema.name}_uid`, ...Object.keys(defQuery)];
           const queryString = schema.defaultQuery

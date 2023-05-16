@@ -8,7 +8,7 @@ const query = async (queryString: string, options?: string[]): Promise<any> => {
     return data;
   } catch (err: any) {
     const apiError = new ApiError(400, "Couldn't perform action");
-    logger.error(apiError.message);
+    logger.error(err);
     if (err?.code === '23505') throw apiError;
     throw new ApiError(500, 'Something went wrong');
   }

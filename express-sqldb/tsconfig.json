@@ -3,7 +3,7 @@
     "compileOptions": {
         "outDir": "./dist",
         "useUnknownInCatchVariables": false,
-        "allowImportingTsExtensions" : true,
+        "allowImportingTsExtensions": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "strict": true,
@@ -12,6 +12,12 @@
         "target": "es2015",
         "sourceMap": true
     },
-    "exclude": ["node_modules"],
-    "include": ["src/**/*.ts", "environment.d.ts", "updateDB.ts"],
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "src/**/*.ts",
+        "environment.d.ts",
+        "src/cli/index.ts"
+    ],
 }

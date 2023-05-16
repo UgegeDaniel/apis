@@ -40,9 +40,9 @@ const getStudentHistory = async (req, res, next) => {
 };
 exports.getStudentHistory = getStudentHistory;
 const saveStudentScore = async (req, res, next) => {
-    const { subjectId, score } = req.body;
+    const { subjectId, score, year } = req.body;
     const { userId } = req;
-    const newScore = (0, scoresService_1.saveStudentScoreService)(userId, subjectId, score);
+    const newScore = (0, scoresService_1.saveStudentScoreService)(userId, subjectId, score, year);
     try {
         return res.status(201).json({ success: true, newScore });
     }

@@ -1,0 +1,686 @@
+{
+    "subject": "english",
+    "status": 200,
+    "data": [
+        {
+            "id": 137,
+            "question": "His plans <i>boomeranged</i> on him",
+            "option": {
+                "a": "bounce",
+                "b": "fell",
+                "c": "catapulted",
+                "d": "backfired",
+                "e": "backfired"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 142,
+            "question": "The prosecutor was fully able to <i>substantiate</i> the charge.",
+            "option": {
+                "a": "expatiate on",
+                "b": "prove",
+                "c": "dismiss",
+                "d": "weaken",
+                "e": "weaken"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 116,
+            "question": "Beauty queens sometime wear <i>outlandish</i>  dresses.",
+            "option": {
+                "a": "beautiful",
+                "b": "flashy",
+                "c": "familiar",
+                "d": "attractive",
+                "e": "attractive"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 104,
+            "question": "Everyone was ready to play the evil’s advocate in the impeachment controversy.",
+            "option": {
+                "a": "everyone was willing to speak against the impeachment to encourage discussion on it.",
+                "b": "everyone was willing to defend an unpopular point of view concerning the impeachment.",
+                "c": "everyone was willing to fight for the defenceless citizens no matter the consequences.",
+                "d": "everyone was willing to be an evil genius in the controversy",
+                "e": "everyone was willing to be an evil genius in the controversy"
+            },
+            "section": "that best explains the information conveyed in the sentence.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 136,
+            "question": "It is a <i>misnomer</i> to call three thousand naira a living wage.",
+            "option": {
+                "a": "an incontrovertible assertion",
+                "b": "an appropriate term",
+                "c": "a wrong description",
+                "d": "a mishmash",
+                "e": "a mishmash"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 80,
+            "question": "……………his illness, Muhammad could not come to school.",
+            "option": {
+                "a": "with reference to",
+                "b": "referring to",
+                "c": "owing to",
+                "d": "due to .",
+                "e": "due to ."
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 82,
+            "question": "People dislike Mariam because she is ……………",
+            "option": {
+                "a": "trickful",
+                "b": " trickish",
+                "c": "trickly",
+                "d": "tricker",
+                "e": "tricker"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 131,
+            "question": "The presence of the captain makes the sailors <i>ill at ease</i>.",
+            "option": {
+                "a": "uncomfortable ",
+                "b": "sickly ",
+                "c": "impatient",
+                "d": "easily ill",
+                "e": "easily ill"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 98,
+            "question": "He not only looked after the children when their parents died, ………..sponsored their education to university.",
+            "option": {
+                "a": "but also",
+                "b": "also he",
+                "c": "but he",
+                "d": "also",
+                "e": "also"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 83,
+            "question": "The reporter said that the Honourable speaker………….. impeached ",
+            "option": {
+                "a": "is to be",
+                "b": "might have been",
+                "c": "may have being",
+                "d": "will have been",
+                "e": "will have been"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 124,
+            "question": "The team got <i>an ecstatic</i> welcome from the crowd.",
+            "option": {
+                "a": "An unexpected",
+                "b": "a joyous",
+                "c": "a cold",
+                "d": "a thunderous",
+                "e": "a thunderous"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 76,
+            "question": "I shall find time for my ……… when I get …… with this difficult assignment.",
+            "option": {
+                "a": "Pat time /over",
+                "b": "pass-time/over",
+                "c": "pastime/through",
+                "d": "pastime/through",
+                "e": "pastime/through"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 127,
+            "question": "sufficiency",
+            "option": {
+                "a": "sufFIciency",
+                "b": "SUFficiency",
+                "c": "sufficienCY",
+                "d": "suffiCIENcy",
+                "e": "suffiCIENcy"
+            },
+            "section": "choose the appropriate stress pattern from the options. The syllables are written in capital letters.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 99,
+            "question": "His supporters railed round him in moments of …………..",
+            "option": {
+                "a": "criticism",
+                "b": "Crisis",
+                "c": "acrimony",
+                "d": "disillusionment.",
+                "e": "disillusionment."
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 77,
+            "question": "Agbo says he is not afraid of ………",
+            "option": {
+                "a": "anybody",
+                "b": "nothing",
+                "c": "nobody",
+                "d": "no one",
+                "e": "no one"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 148,
+            "question": "",
+            "option": {
+                "a": "bachelor",
+                "b": "condemn",
+                "c": " afternoon",
+                "d": "intact ",
+                "e": "intact "
+            },
+            "section": "choose the option that has the stress on the first syllable.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 133,
+            "question": "Okonkwo manages his household <i>with a heavy hand.</i>",
+            "option": {
+                "a": "like a powerful dictator",
+                "b": "using the cane on every occasion",
+                "c": "without tolerating weakness",
+                "d": "like a heavy weight champion.",
+                "e": "like a heavy weight champion."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 88,
+            "question": "Each of the houses…………",
+            "option": {
+                "a": " have got",
+                "b": " Have",
+                "c": "has",
+                "d": "were given a new look.",
+                "e": "were given a new look."
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 125,
+            "question": "We found a <i>shady</i> place for the display.",
+            "option": {
+                "a": "an open",
+                "b": "an unsafe",
+                "c": "a stuffy",
+                "d": "an enclosed",
+                "e": "an enclosed"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 87,
+            "question": "Ali goes to the stadium regularly, but he …………… to the church for months.",
+            "option": {
+                "a": "hasn’t been",
+                "b": "haven’t been",
+                "c": "didn’t go",
+                "d": "hadn’t been",
+                "e": "hadn’t been"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 149,
+            "question": "",
+            "option": {
+                "a": " foul",
+                "b": "tout",
+                "c": "owl",
+                "d": "foe",
+                "e": "foe"
+            },
+            "section": "choose the option that has a different vowel sound from the others.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 121,
+            "question": "The injured man is determined to <i>get back</i> at his assailant.",
+            "option": {
+                "a": "attack",
+                "b": "identify",
+                "c": "visit",
+                "d": "forgive",
+                "e": "forgive"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 84,
+            "question": "Actually, he forgot the one to …………… the job was given.",
+            "option": {
+                "a": "whom",
+                "b": "who",
+                "c": "whomever",
+                "d": "whoever",
+                "e": "whoever"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 139,
+            "question": "There has been a <i>downturn</i> in the affairs of the company.",
+            "option": {
+                "a": "a massive increase",
+                "b": "little progress",
+                "c": "a turn-around",
+                "d": "a decline",
+                "e": "a decline"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 140,
+            "question": "The <i>mottled</i> skin of a person with HIV indicates an advance stage  of its development.",
+            "option": {
+                "a": "Brown ",
+                "b": "spotted",
+                "c": "scaly",
+                "d": "pimply",
+                "e": "pimply"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 112,
+            "question": "The <i>potency</i> of the drug has been acknowledged.",
+            "option": {
+                "a": "action",
+                "b": "loss",
+                "c": "inefficacy",
+                "d": "power",
+                "e": "power"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 106,
+            "question": "The government warns that drink-driving is punishable under the law.",
+            "option": {
+                "a": "a drunkard driving can be punished",
+                "b": "driving while drunk is an offence",
+                "c": "driving while drinking is an offence",
+                "d": "drinking and driving is an offence.",
+                "e": "drinking and driving is an offence."
+            },
+            "section": "that best explains the information conveyed in the sentence.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 81,
+            "question": "After so many trials, the experiment………….",
+            "option": {
+                "a": "paid up",
+                "b": "paid for",
+                "c": "paid out",
+                "d": "paid off",
+                "e": "paid off"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 126,
+            "question": "expostulate",
+            "option": {
+                "a": "exposTUlate",
+                "b": "expostuLATE",
+                "c": "EXpostulate",
+                "d": "exPOStulate",
+                "e": "exPOStulate"
+            },
+            "section": "choose the appropriate stress pattern from the options. The syllables are written in capital letters.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 111,
+            "question": "Sailors are unusually <i>dauntless</i> in their exploits",
+            "option": {
+                "a": "selfless",
+                "b": "ruthless",
+                "c": "excited",
+                "d": "frightened",
+                "e": "frightened"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 145,
+            "question": "n<u>i</u>ne",
+            "option": {
+                "a": "pint",
+                "b": "gill",
+                "c": "pin",
+                "d": "click",
+                "e": "click"
+            },
+            "section": "choose the option that has the same vowel sound as the one represented by the letter(s) underlined.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 118,
+            "question": "My father’s presentation was rather <i>causal</i>",
+            "option": {
+                "a": "formal",
+                "b": "vital",
+                "c": "informal ",
+                "d": "divisive",
+                "e": "divisive"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 101,
+            "question": "Ju<u>dge</u>",
+            "option": {
+                "a": "gear",
+                "b": "spinach",
+                "c": "pleasure",
+                "d": "camouflage",
+                "e": "camouflage"
+            },
+            "section": "choose the option that has the same consonant sound as the one represented by the letter(s) underline.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 97,
+            "question": "The poor widow who could not buy the clothes was seen…….her wool into……….yesterday",
+            "option": {
+                "a": "to spin/yards",
+                "b": "spinning/yarn",
+                "c": "making/tailoring",
+                "d": "to spill/clothes",
+                "e": "to spill/clothes"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 117,
+            "question": "The journalist said he was working <i>freelance</i>",
+            "option": {
+                "a": "tirelessly",
+                "b": "satisfactorily",
+                "c": "without a pay",
+                "d": "dependently",
+                "e": "dependently"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 105,
+            "question": "Adamu’s father is a key figure in that ministry",
+            "option": {
+                "a": "The ministry trusts Adamu’s father as a central figure",
+                "b": "Adamu’s father is a figurehead in the ministry",
+                "c": "Adamu’s father’s position is essential in the ministry.",
+                "d": "Adamu’s father keeps the key to the ministry.",
+                "e": "Adamu’s father keeps the key to the ministry."
+            },
+            "section": "that best explains the information conveyed in the sentence.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 92,
+            "question": "No teacher of honour would subject his student to any form of ……..",
+            "option": {
+                "a": "harassment",
+                "b": "Harassment",
+                "c": "harassment",
+                "d": "harassment",
+                "e": "harassment"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 115,
+            "question": "The ship was <i>imperiled</i> by high winds",
+            "option": {
+                "a": "piloted",
+                "b": "destroyed",
+                "c": "deceived",
+                "d": "saved",
+                "e": "saved"
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 134,
+            "question": "The school’s badge is the <i>insignia</i> of office for all the prefects in the school.",
+            "option": {
+                "a": "Power",
+                "b": "symbol",
+                "c": "seal",
+                "d": "recognition",
+                "e": "recognition"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        },
+        {
+            "id": 90,
+            "question": "I don’t coming home, is he?......... he is isn’t.",
+            "option": {
+                "a": "Yes",
+                "b": "No",
+                "c": "won",
+                "d": "now",
+                "e": "now"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2004"
+        }
+    ]
+}

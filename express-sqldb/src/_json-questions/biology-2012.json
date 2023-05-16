@@ -1,0 +1,669 @@
+{
+    "subject_id": "75ec97a7-0ef9-4709-ba9a-029fc273edff",
+    "status": 200,
+    "data": [
+        {
+            "id": 380,
+            "question": "The short thick beak in birds is an adaptation for",
+            "option": {
+                "a": "crushing seeds",
+                "b": "sucking nectar  ",
+                "c": "tearing flesh",
+                "d": "straining mud",
+                "e": "straining mud"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 351,
+            "question": "An animal body that can be cut along its axis in any plane to give two identical parts is said to be  ",
+            "option": {
+                "a": "radically  symmetrical",
+                "b": "bilaterally symmetrical",
+                "c": "asymmetrical",
+                "d": "symmetrical",
+                "e": "symmetrical"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 379,
+            "question": "The correct base pairing for DNA is",
+            "option": {
+                "a": "adenine _ thymine and guanine_ cytosine  ",
+                "b": "adenine_ guanine and thymine_ cytosine  ",
+                "c": "adenine_ cytosine and guanine_ thymine  ",
+                "d": "adenine_ adenine  and cytosine_cytosine",
+                "e": "adenine_ adenine  and cytosine_cytosine"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 353,
+            "question": "The feature  that links birds to reptiles in evolution is the possession of  ",
+            "option": {
+                "a": "feathers  ",
+                "b": "beak  ",
+                "c": "skeleton",
+                "d": "scales",
+                "e": "scales"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 356,
+            "question": "In the mammalian male reproductive system, the part that serves as a passage for both urine and semen is the ",
+            "option": {
+                "a": "urethra  ",
+                "b": "ureter  ",
+                "c": "bladder",
+                "d": "seminal vesicle",
+                "e": "seminal vesicle"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 367,
+            "question": "The water cycle is maintained mainly by   ",
+            "option": {
+                "a": "evaporation  of water in the environment  ",
+                "b": "evaporation and condensation of water  in the environment  ",
+                "c": "condensation of water in the environment  ",
+                "d": "transpiration and respiration in plants",
+                "e": "transpiration and respiration in plants"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 370,
+            "question": "Which of the following animals an exist solely on the water they get from food and metabolic reactions?  ",
+            "option": {
+                "a": "Forest arboreal dwellers  ",
+                "b": "Desert dwellers",
+                "c": "forest ground dwellers",
+                "d": "rainforest dwellers",
+                "e": "rainforest dwellers"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 357,
+            "question": "In plants, which of the  following is required in minute quantities  for growth?",
+            "option": {
+                "a": "copper  ",
+                "b": "potassium",
+                "c": "phosphorous",
+                "d": "sodium  ",
+                "e": "sodium  "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 384,
+            "question": "From his study of Galapagos finches, Darwin derived his theory of evolution from ",
+            "option": {
+                "a": " comparative anatomy",
+                "b": "comparative physiology",
+                "c": " fossil remains  ",
+                "d": "comparative embryology.",
+                "e": "comparative embryology."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 352,
+            "question": "Which  of the following possesses mammary gland?",
+            "option": {
+                "a": "Dogfish",
+                "b": "Whale  ",
+                "c": "Shark  ",
+                "d": "Catfish",
+                "e": "Catfish"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 349,
+            "question": "The fungi are a distinct group of eukaryotes mainly  because they have  ",
+            "option": {
+                "a": "spores  ",
+                "b": "no chlorophyll  ",
+                "c": "many fruiting bodies",
+                "d": "sexual and asexual reproduction",
+                "e": "sexual and asexual reproduction"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 369,
+            "question": "The presence of stilt roots, pneumatophores, sunken stomata and salt glands are adaptive features of plants found in the",
+            "option": {
+                "a": "tropical rainforest",
+                "b": "mangrove swamps  ",
+                "c": "grassland  ",
+                "d": "montane forest",
+                "e": "montane forest"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 377,
+            "question": "A yellow maize is planted and all the fruits obtained are of yellow seeds. When they are cross bred, yellow seeds and white seeds are obtained in a ratio 3:1. The yellow seed is said to be  ",
+            "option": {
+                "a": "non heritable",
+                "b": "sex linked",
+                "c": "a recessive trait  ",
+                "d": "a dominant trait",
+                "e": "a dominant trait"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 365,
+            "question": "The autonomic nervous system consists of neurons that control the",
+            "option": {
+                "a": "voluntary  muscle",
+                "b": "heart beat",
+                "c": "tongue  ",
+                "d": "hands",
+                "e": "hands"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 358,
+            "question": "Which of the following organisms is both parasitic and  autotrophic?  ",
+            "option": {
+                "a": "Sundew  ",
+                "b": "Loranthus",
+                "c": "Rhizopus  ",
+                "d": "tapeworm",
+                "e": "tapeworm"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 378,
+            "question": "When a colour blind man marries a carrier woman. What is the probability of their offspring being colorblind?",
+            "option": {
+                "a": "25%",
+                "b": "50%",
+                "c": "75%",
+                "d": "100%",
+                "e": "100%"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 359,
+            "question": "A function of the hydrochloric acid produced in the human stomach during digestion is to  ",
+            "option": {
+                "a": "neutralize the effect of bile   ",
+                "b": "coagulate milk protein and emulsify fats  ",
+                "c": "stop the action of ptyalin  ",
+                "d": "break up food into smaller particles",
+                "e": "break up food into smaller particles"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 376,
+            "question": "Which of the following is true in blood transfusion?",
+            "option": {
+                "a": "a person of blood group AB can donate blood only to another person of blood group AB",
+                "b": "Persons of blood groups A and B can donate or receive blood from each other",
+                "c": "A person of blood group AB can receive blood only from persons of blood group A or B  ",
+                "d": "A person of blood group O can donate only to a person of blood group O.",
+                "e": "A person of blood group O can donate only to a person of blood group O."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 346,
+            "question": "Which of the following is most advanced in the evolutionary trend of animals?  ",
+            "option": {
+                "a": " Liver fluke  ",
+                "b": "Earthworm",
+                "c": "Snail  ",
+                "d": "cockroach",
+                "e": "cockroach"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 382,
+            "question": "The significance of a very large number  of termites involved in nuptial swarming is to",
+            "option": {
+                "a": "provide birds with plenty of food",
+                "b": "ensure their perpetuation despite predatory pressure  ",
+                "c": "search for a favourable place to breed  ",
+                "d": "ensure that every individual gets a mate.",
+                "e": "ensure that every individual gets a mate."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 355,
+            "question": "Which of the following plant structures lacks a waterproof of cuticle?  ",
+            "option": {
+                "a": "leaf  ",
+                "b": "stem  ",
+                "c": "root",
+                "d": "shoot",
+                "e": "shoot"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 361,
+            "question": "In the kidney of mammals, the site of ultra filtration is the",
+            "option": {
+                "a": "urinferous tuble",
+                "b": "Bowman capsule  ",
+                "c": "loop of Henle  ",
+                "d": "renal tuble",
+                "e": "renal tuble"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 383,
+            "question": "The use and disuse of body parts and the inheritance of acquired traits were used to explain  ",
+            "option": {
+                "a": "Darwin’s theory",
+                "b": "Lamarck’s theory",
+                "c": "genetic drift  ",
+                "d": "gene flow",
+                "e": "gene flow"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 366,
+            "question": "Plants of temperate origin can be grown in tropical areas in the vegetation zones of the",
+            "option": {
+                "a": "rain forest   ",
+                "b": "Guinea savanna   ",
+                "c": "Sudan savanna",
+                "d": "montane forest",
+                "e": "montane forest"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 362,
+            "question": "Which of the following  is involved1 in secondary  thickening in plants?",
+            "option": {
+                "a": "collenchyma  and  xylem cells  ",
+                "b": "Vascular cambium and collenchyma’s cells  ",
+                "c": "vascular cambium and cork cambium",
+                "d": "Cork cambium and sclerenchyma",
+                "e": "Cork cambium and sclerenchyma"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 374,
+            "question": "An indigenous method of renewing and maintaining  soil fertility is by",
+            "option": {
+                "a": "clearing farms a by burning",
+                "b": "planting one crop type  ",
+                "c": "adding inorganic fertilizers yearly   ",
+                "d": "crop rotation and shifting cultivation",
+                "e": "crop rotation and shifting cultivation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 364,
+            "question": "Plant  growth can be artificially stimulated by the addition of  ",
+            "option": {
+                "a": "gibberellin  ",
+                "b": "kinin",
+                "c": "abscisic acid  ",
+                "d": "ethylene",
+                "e": "ethylene"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 363,
+            "question": "An example of a fruit  that develops from a single carpel is",
+            "option": {
+                "a": "(a)okro  ",
+                "b": "tomato",
+                "c": "bean  ",
+                "d": "orange",
+                "e": "orange"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 348,
+            "question": "Plants  that show secondary growth are usually found among the",
+            "option": {
+                "a": "thallophytes",
+                "b": "pteridophytes",
+                "c": "monocotyledons  ",
+                "d": "dicotyledons",
+                "e": "dicotyledons"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 368,
+            "question": "Organisms living in an estuarine habitat are adapted to  ",
+            "option": {
+                "a": "withstand   wide fluctuations in temperature   ",
+                "b": "survive only in water with low salinity   ",
+                "c": "withstand wide fluctuations in salinity   ",
+                "d": "feed only on phytoplankton and dead organic matter.",
+                "e": "feed only on phytoplankton and dead organic matter."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 354,
+            "question": "Counter shading is an adaptive  feature that enables animals to  ",
+            "option": {
+                "a": "flight enemies  ",
+                "b": "remain undetected",
+                "c": "warn enemies  ",
+                "d": "attract mates",
+                "e": "attract mates"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 347,
+            "question": "Which of the following is the lowest category of  classification?  ",
+            "option": {
+                "a": "Class   ",
+                "b": "species  ",
+                "c": "Family",
+                "d": "Genus",
+                "e": "Genus"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 371,
+            "question": "The most likely first colonizers of a bare rock are  ",
+            "option": {
+                "a": "mosses  ",
+                "b": "ferns",
+                "c": "lichen  ",
+                "d": "fungi",
+                "e": "fungi"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 373,
+            "question": "The abiotic factors that  control human population include  ",
+            "option": {
+                "a": "disease and famine  ",
+                "b": "space and rainfall  ",
+                "c": "flooding and earthquake   ",
+                "d": "temperature",
+                "e": "temperature"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 372,
+            "question": "The carrying capacity of a habitat is reached when the population growth begins to",
+            "option": {
+                "a": "increase slowly",
+                "b": "increase exponentially",
+                "c": "slow down",
+                "d": "remain steady",
+                "e": "remain steady"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 381,
+            "question": "The basking of Agama lizards in the sun is to",
+            "option": {
+                "a": "chance the colour of their body  ",
+                "b": "raise their body temperature to become active",
+                "c": "fight to defend their territories",
+                "d": "attract the female for courtship",
+                "e": "attract the female for courtship"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 375,
+            "question": "The disease caused by water-brone pathogen include",
+            "option": {
+                "a": "gonrrhoea and poliomyelitis   ",
+                "b": "typhoid and syphilis   ",
+                "c": "tuberculosis and cholera",
+                "d": "typhoid and cholera",
+                "e": "typhoid and cholera"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 350,
+            "question": "An arthropod that is destructive at the early stage of its life cycle is",
+            "option": {
+                "a": "butterfly  ",
+                "b": "mosquito  ",
+                "c": "bee",
+                "d": "millipede",
+                "e": "millipede"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        },
+        {
+            "id": 360,
+            "question": "Which of the following is a polysaccharide?",
+            "option": {
+                "a": "Glucose  ",
+                "b": "sucrose",
+                "c": "Maltose   ",
+                "d": "Cellulose",
+                "e": "Cellulose"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2012"
+        }
+    ]
+}

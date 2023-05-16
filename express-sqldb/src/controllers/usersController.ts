@@ -53,9 +53,9 @@ export const saveStudentScore = async (
   res: Response,
   next: NextFunction,
 ) => {
-  const { subjectId, score } = req.body;
+  const { subjectId, score, year } = req.body;
   const { userId } = req;
-  const newScore = saveStudentScoreService(userId, subjectId, score);
+  const newScore = saveStudentScoreService(userId, subjectId, score, year);
   try {
     return res.status(201).json({ success: true, newScore });
   } catch (e) {

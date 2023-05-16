@@ -1,0 +1,686 @@
+{
+    "subject_id": "75ec97a7-0ef9-4709-ba9a-029fc273edff",
+    "status": 200,
+    "data": [
+        {
+            "id": 336,
+            "question": "In which of the following biomes is the south western part of Nigeria located?  ",
+            "option": {
+                "a": "Tropical rainforest  ",
+                "b": "Tropical woodland  ",
+                "c": "desert",
+                "d": "Temperature forest",
+                "e": "Temperature forest"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 311,
+            "question": "The ability  of a living organism to detect and respond to changes in the environment is referred to as",
+            "option": {
+                "a": "irritability",
+                "b": "growth    ",
+                "c": "taxis",
+                "d": "locomotion",
+                "e": "locomotion"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 341,
+            "question": "The crossing of individuals of the same species with different genetic characters is",
+            "option": {
+                "a": " polygenic inheritance  ",
+                "b": " non disjunction  ",
+                "c": "inbreeding",
+                "d": "cross breeding",
+                "e": "cross breeding"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 302,
+            "question": "The function of the red head in male Agama lizards is to",
+            "option": {
+                "a": "scare other males from the territory  ",
+                "b": "attract female lizards for mating purposes  ",
+                "c": "warn predators of the distastefulness of the animal  ",
+                "d": "Conceal and camouflage the animal from predators",
+                "e": "Conceal and camouflage the animal from predators"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 344,
+            "question": "The fallacy in Lamarck’s evolutionary theory was the  assumption that",
+            "option": {
+                "a": "acquired traits  are heritable",
+                "b": "acquired traits are seldom formed",
+                "c": "traits  are acquired  through the use of body parts  ",
+                "d": "traits are acquired through disuse  of body parts.",
+                "e": "traits are acquired through disuse  of body parts."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 345,
+            "question": "The brightly coloured eye spots on the hind wings of a moth are an example of ",
+            "option": {
+                "a": " disruptive colouration",
+                "b": " continuous variation    ",
+                "c": "divergent  Evolution",
+                "d": "convergent  evolution",
+                "e": "convergent  evolution"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 332,
+            "question": "Habitats are generally classified into  ",
+            "option": {
+                "a": "aquatic and terrestrial",
+                "b": "arboreal  and marine biomes",
+                "c": "microhabitats and macro habitats",
+                "d": "biotic and abiotic",
+                "e": "biotic and abiotic"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 337,
+            "question": "Lack of space in a population  could lead to an increase in",
+            "option": {
+                "a": "birth rate",
+                "b": "disease rate",
+                "c": "drought   ",
+                "d": "water  scarcity",
+                "e": "water  scarcity"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 326,
+            "question": "An example of a filter-feeding animals is",
+            "option": {
+                "a": "butterly  ",
+                "b": "whale",
+                "c": "mosquito  ",
+                "d": "shark",
+                "e": "shark"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 334,
+            "question": "Which of the following groups of environmental factors are density dependent?  ",
+            "option": {
+                "a": "Temperature, salinity, predation and disease   ",
+                "b": " Food, predation, disease and accumulation of metabolites  ",
+                "c": "Temperature, food disease and light  ",
+                "d": "food, salinity, accumulation  of metabolites and light",
+                "e": "food, salinity, accumulation  of metabolites and light"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 305,
+            "question": "In which of the following groups of vertebrates is parental  care mostly exhibited? ",
+            "option": {
+                "a": "  Amphibia",
+                "b": "Aves  ",
+                "c": "Mammalia  ",
+                "d": "Reptilia",
+                "e": "Reptilia"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 319,
+            "question": "The movement response of a cockroach away  from a light source can be described as  ",
+            "option": {
+                "a": "negative phototaxism  ",
+                "b": "negative photropism",
+                "c": "positive  photropism  ",
+                "d": "positive phototaxism",
+                "e": "positive phototaxism"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 304,
+            "question": "Seed plants are divided into",
+            "option": {
+                "a": "angiosperms and gymnosperms",
+                "b": "monocotyledons and dicotyledons",
+                "c": "thallophyes and pbryophytes  ",
+                "d": "Tracheophytes and ferns",
+                "e": "Tracheophytes and ferns"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 306,
+            "question": "The adult form of III is a vector of  ",
+            "option": {
+                "a": "river blindness",
+                "b": "cholera",
+                "c": "elephantiasis",
+                "d": "sleeping sickness",
+                "e": "sleeping sickness"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 335,
+            "question": "Millet, sorghum, maize and onions are common crops grown in Nigerian in the  (a) Sudan savanna",
+            "option": {
+                "a": "montane forests   ",
+                "b": "Sahel savanna",
+                "c": "Tropical rainforests",
+                "d": "",
+                "e": ""
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 329,
+            "question": "The vector of the malaria parasite is a",
+            "option": {
+                "a": "female anopheles mosquito  ",
+                "b": "male culex mosquitoes",
+                "c": "female culex mosquito  ",
+                "d": "female Aids mosquito",
+                "e": "female Aids mosquito"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 343,
+            "question": "During blood transfusion, agglutination may occur as a result of the reaction between",
+            "option": {
+                "a": "two different antigens  ",
+                "b": "two different antibodies  ",
+                "c": "similar antigens and antibodies  ",
+                "d": "contrasting antigens and antibodies",
+                "e": "contrasting antigens and antibodies"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 322,
+            "question": "The sequence of the one way gaseous exchange mechanism in a fish is",
+            "option": {
+                "a": "gills _ operculum _ mouth",
+                "b": "mouth_operculum_ gills  ",
+                "c": "mouth _gills _operculum",
+                "d": "operculum _ gills_ mouth",
+                "e": "operculum _ gills_ mouth"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 313,
+            "question": "An example of an endospermous seed is   ",
+            "option": {
+                "a": "cashew  nut  ",
+                "b": "cottons seed",
+                "c": "bean seed  ",
+                "d": "maize grain",
+                "e": "maize grain"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 318,
+            "question": "The path followed by air as it passes through the lungs in mammals is  ",
+            "option": {
+                "a": "bronchi_ trachea_ alveoli_ bronchioles  ",
+                "b": "Trachea _ Bronchiole _ bronchi_ alveoli   ",
+                "c": "bornchioles _ alveoli _ bronchi_ trachea   ",
+                "d": "trachea_ bronchi _ bronchioles_ alveoli",
+                "e": "trachea_ bronchi _ bronchioles_ alveoli"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 324,
+            "question": "In nature, plants and animals are perpetually engaged in mutulism because  ",
+            "option": {
+                "a": "all animals rely on food produced  by plants",
+                "b": "they  utilize respiratory wastes of each other  ",
+                "c": "they are neighbours  ",
+                "d": "they are rivals",
+                "e": "they are rivals"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 309,
+            "question": "Which of the following is true of leucocytes?  ",
+            "option": {
+                "a": "They are most numerous and ramify all cells  ",
+                "b": "They are large and nucleated  ",
+                "c": "They are involved in blood clotting",
+                "d": "They are respiratory pigments",
+                "e": "They are respiratory pigments"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 312,
+            "question": "In mammals, the exchange of nutrients and metabolic products occurs in the",
+            "option": {
+                "a": "oesophagus",
+                "b": "trachea",
+                "c": "lymph   ",
+                "d": "lungs",
+                "e": "lungs"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 323,
+            "question": "The  type of asexual reproduction that is common to both paramecium and protists is",
+            "option": {
+                "a": "speculation  ",
+                "b": "fragmentation",
+                "c": "fission",
+                "d": "budding",
+                "e": "budding"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 327,
+            "question": "Which of the  following is a feature of the population Pyramid of a developing country?  ",
+            "option": {
+                "a": "Low birth rate",
+                "b": "low death rate  ",
+                "c": "short lifespan",
+                "d": "long lifespan",
+                "e": "long lifespan"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 315,
+            "question": "I. Test tube containing cane sugar and water  II. Test tube containing cane sugar and dilute acid  III Test tube containing cane sugar and its degrading enzyme \nIn which of the test tubes will glucose be detected after complete hydrolysis?\n",
+            "option": {
+                "a": "II and III only",
+                "b": "I only",
+                "c": "I, II and III   ",
+                "d": "I and II only",
+                "e": "I and II only"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 338,
+            "question": "The inheritable characters that are determined by a gene located only on the X-chromosome is  ",
+            "option": {
+                "a": "sex linked",
+                "b": "homozygous  ",
+                "c": "dominant  ",
+                "d": "recessive",
+                "e": "recessive"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 328,
+            "question": "the interaction of a community of organisms with its abiotic environment constitutes",
+            "option": {
+                "a": "a food chain",
+                "b": "an ecosystem  ",
+                "c": "a microhabitat",
+                "d": "a niche",
+                "e": "a niche"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 303,
+            "question": "In which of the following species is the biomass of an individual the smallest?",
+            "option": {
+                "a": "Agama sp  ",
+                "b": "Bufo sp",
+                "c": "spirogyra sp   ",
+                "d": "Tilapia sp",
+                "e": "Tilapia sp"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 316,
+            "question": "I. Test tube containing cane sugar and water  II. Test tube containing cane sugar and dilute acid  III Test tube containing cane sugar and its degrading enzyme \nThe enzyme involved in the hydrolysis is\n",
+            "option": {
+                "a": "erepsin  ",
+                "b": "perilymph   ",
+                "c": "maltase  ",
+                "d": "rennin",
+                "e": "rennin"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 320,
+            "question": "The vascular tissues in higher plants are responsible for  ",
+            "option": {
+                "a": "suction pressure  ",
+                "b": "transpiration pull",
+                "c": "the transport of gases and water   ",
+                "d": "the movement of food and water",
+                "e": "the movement of food and water"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 325,
+            "question": "In an experiment to determine the percentage of humus and water in a soil sample, the following results were obtained. \nWeight of the evaporating basin alone = 80.5g   Weight of basin and soil = 101.5g    Weight after drying the soil in the oven = 99.0g    Weight of basin and roasted soil = 95.5h\nThe percentage of humus in the soil sample is  \n",
+            "option": {
+                "a": "17.60%",
+                "b": "26.70%",
+                "c": "16.20%",
+                "d": "16.70%",
+                "e": "16.70%"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 342,
+            "question": "The number of alleles controlling  blood groups in humans is",
+            "option": {
+                "a": "4",
+                "b": "5",
+                "c": "2",
+                "d": "3",
+                "e": "3"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 317,
+            "question": "The part of the mammalian ear responsible for the maintenance of balance is the ",
+            "option": {
+                "a": "pinna   ",
+                "b": " perilymph  ",
+                "c": " Ossicles   ",
+                "d": " cochlea",
+                "e": " cochlea"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 339,
+            "question": "If the cross of a red  flowered plant with a white flowered plant produces a pink flowered plant, it is an example of",
+            "option": {
+                "a": "incomplete dominance  ",
+                "b": " mutation  ",
+                "c": " linkage",
+                "d": "co dominance",
+                "e": "co dominance"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 330,
+            "question": "Which of the following  instruments is used  to measure relative humidity?",
+            "option": {
+                "a": "Thermometer  ",
+                "b": "Hygrometer  ",
+                "c": "Anemometer",
+                "d": "Hydrometer",
+                "e": "Hydrometer"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 314,
+            "question": "I. Parasitism _ Sundew    II Autrrophism_Amoeba    III Saprophytism_ Alga  IV. Heterotrophism- Agama. Which of the above modes of nutrition is correctly matched with the organism that  exhibits it?",
+            "option": {
+                "a": "III",
+                "b": "IV  ",
+                "c": "I",
+                "d": "II",
+                "e": "II"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 340,
+            "question": "Which of the following theories was NOT considered by Darwin in his evolutionary theory?",
+            "option": {
+                "a": "survival of the fittest  ",
+                "b": "use and disuse  ",
+                "c": "competition ",
+                "d": " variation",
+                "e": " variation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 308,
+            "question": "Which of the following can cause shrinkage  of living cells?  ",
+            "option": {
+                "a": "Isotonic solution   ",
+                "b": "Delonized water  ",
+                "c": "Hypertonic solution",
+                "d": "hypotonic solution",
+                "e": "hypotonic solution"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        },
+        {
+            "id": 331,
+            "question": "Exo-erythrocytic phase  of the life cycle  of malaria parasite occurs in the",
+            "option": {
+                "a": "reticuloendothelial cells of humans",
+                "b": "maphigian tubules of mosquito",
+                "c": "brain of humans  ",
+                "d": "liver  of humans",
+                "e": "liver  of humans"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2011"
+        }
+    ]
+}

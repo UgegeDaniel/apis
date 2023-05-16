@@ -28,7 +28,7 @@ const ScoreSchema = {
             },
         },
         { name: 'score', type: 'DECIMAL(5, 2)', constarint: 'NOT NULL' },
-        { name: 'year', type: 'character varying(3)', constarint: 'NOT NULL' },
+        { name: 'year', type: 'character varying(4)', constarint: 'NOT NULL' },
     ],
 };
 exports.default = ScoreSchema;

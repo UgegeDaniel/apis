@@ -1,0 +1,687 @@
+{
+    "message": "We could not find what you asked for, but got you this",
+    "subject": "mathematics",
+    "status": 200,
+    "data": [
+        {
+            "id": 54,
+            "question": "Find the probability of selecting a figure which is parallelogram from a square, a rectangle, a rhombus, a kite and a trapezium  ",
+            "option": {
+                "a": "3/5 ",
+                "b": "2/5 ",
+                "c": "1/5 ",
+                "d": "1/5 ",
+                "e": "1/5 "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 22,
+            "question": "Which of the following specified sets of data is not necessarily sufficient for the construction of a triangle? ",
+            "option": {
+                "a": "three angles  ",
+                "b": "two sides and a right angle  ",
+                "c": "two sides and an included angle ",
+                "d": "three sides",
+                "e": "three sides"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 19,
+            "question": "A square tile measures 20cm by 20cm. How many of such tiles will cover a floor measuring 5m by 4m? ",
+            "option": {
+                "a": "500",
+                "b": "400",
+                "c": "320",
+                "d": "250",
+                "e": "250"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 33,
+            "question": "A cone has base radius 4cm and  height 3cm. The area of its curved surface is",
+            "option": {
+                "a": "12pcm2     ",
+                "b": "20pcm2",
+                "c": "24pcm2 ",
+                "d": "15cm2",
+                "e": "15cm2"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 63,
+            "question": "Find the probability that a number selected at random 40 to 50 is a prime number   ",
+            "option": {
+                "a": "3/11",
+                "b": "5/11",
+                "c": "5/10",
+                "d": "4/10",
+                "e": "4/10"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 1,
+            "question": "A regular polygon has each of it angles at 160. What is the number of sides of the polygon? ",
+            "option": {
+                "a": "36",
+                "b": "9",
+                "c": "18",
+                "d": "20",
+                "e": "20"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 52,
+            "question": "A sum of money was invested at 8% per annum simple interest. If after 4 years, the   money became ",
+            "option": {
+                "a": "N180 ",
+                "b": "N 165 ",
+                "c": "N15   ",
+                "d": "N 200",
+                "e": "N 200"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 37,
+            "question": "Dividing 2x3 – x2 – 5x + 1 by x  + 3 gives the remainder ",
+            "option": {
+                "a": ".-3",
+                "b": "47",
+                "c": "61",
+                "d": "-47",
+                "e": "-47"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 38,
+            "question": "The difference of two numbers is 10, while their product is 39. Find these numbers",
+            "option": {
+                "a": "– 3 and 10 or 13 and 10,",
+                "b": "3 and – 10 or 3 and 13,  ",
+                "c": "3 and – 3 or 3 and 13,     ",
+                "d": " – 3 and – 13 or   13 and  3 ",
+                "e": " – 3 and – 13 or   13 and  3 "
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 13,
+            "question": "The indefinite integral of the function f(x) = xcosx for any constant k, is ",
+            "option": {
+                "a": "–cos + sinx +k,  ",
+                "b": "xsinx-cosx,   ",
+                "c": "xsinx for any constant k,   ",
+                "d": "x+sinx+cosx+k",
+                "e": "x+sinx+cosx+k"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 32,
+            "question": "Factorize 16(3x +2y)2 -25(a+2b)2  ",
+            "option": {
+                "a": "(12x + 8y -5a-10b)(12x+8y-5a-10b)",
+                "b": "20(3x +2y-a-2b)(3x+2y+a+1-2b) ",
+                "c": "(12x +8y+5a+10b)(12x +8y-5a-10b)",
+                "d": "20(3x +2y+ a+2b)(3x + 2y+a+2b)",
+                "e": "20(3x +2y+ a+2b)(3x + 2y+a+2b)"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 51,
+            "question": "An (n-2)2 sided figure has n diagonal, find the number n of diagonal for a 25 sided Figure   ",
+            "option": {
+                "a": "8",
+                "b": "7",
+                "c": "6",
+                "d": "10",
+                "e": "10"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 9,
+            "question": "Factorize 16(3x+2y)2-25 (a+2b)2",
+            "option": {
+                "a": "(12x +8y+5a+10b)(12x+8y-5a-10b)    ",
+                "b": "(12x+8y-5a-10b) (12x+8y-5a-10b),    ",
+                "c": "20 (3x +2y-a-2b)(3x+2y+a+2b)  ",
+                "d": "20(3x+2y+a+2b) (3x+2y+a+2b).",
+                "e": "20(3x+2y+a+2b) (3x+2y+a+2b)."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 58,
+            "question": "Find the positive number n such that thrice its square is equal to twelve time the number ",
+            "option": {
+                "a": "1",
+                "b": "4",
+                "c": "2",
+                "d": "5",
+                "e": "5"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 15,
+            "question": "A bag contains 10 balls of which 3 are red and 7 are white. Two balls are drawn at random. Find the probability of none of the balls is red, if the draw is with replacement: ",
+            "option": {
+                "a": "0.9",
+                "b": "1",
+                "c": "0.47",
+                "d": "0.49",
+                "e": "0.49"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 27,
+            "question": "The journey from Lagos to Ibadan usually takes a motorist 1 hour 30 minutes. By increasing his average speed by 20km/hr, the motorist saves 15 minutes. His usual speed, in Km/hr is ",
+            "option": {
+                "a": "100",
+                "b": "90",
+                "c": "85",
+                "d": "80",
+                "e": "80"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 39,
+            "question": "The average age of x pupils in a class is 14 years 2 months. A pupils of 15years 2 months joins the class and  the average age is increased  by one month. Find x.      ",
+            "option": {
+                "a": "12, ",
+                "b": " 6, ",
+                "c": "11,",
+                "d": "14,",
+                "e": "14,"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 18,
+            "question": "All the vertices of an isosceles triangle lie on a circle and each of the base angles  of the triangle is 65o. The angle subtended at the centre of the circle by the base of the triangle is: ",
+            "option": {
+                "a": "130o  ",
+                "b": "115o  ",
+                "c": "50o  ",
+                "d": "65o",
+                "e": "65o"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 10,
+            "question": "1.3logx+logy =3. Then, y is  ",
+            "option": {
+                "a": "(10/x)3 ",
+                "b": "(x/10)3  ",
+                "c": "(x/10)-3 ",
+                "d": "(10/x)1-1/3 ",
+                "e": "(10/x)1-1/3 "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 23,
+            "question": "The average age of the three children in a family is 9 years. If the average age of their parent is 39 years, the average age of the whole family is: ",
+            "option": {
+                "a": "20 years  ",
+                "b": "21years  ",
+                "c": "24years  ",
+                "d": "27years",
+                "e": "27years"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 28,
+            "question": "The smallest section of a rod which can be cut 36cm in length is",
+            "option": {
+                "a": "90cm ",
+                "b": "180cm ",
+                "c": "360cm  ",
+                "d": "540cm.",
+                "e": "540cm."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 12,
+            "question": "Expand the expression (x2-2x-3)(x2+x+1).  ",
+            "option": {
+                "a": "x4-4x2-5x-3  ",
+                "b": "–x3-4x2+5x-3",
+                "c": "x4-x3-4x2-5x-3  ",
+                "d": "x4-4x2-5x -3",
+                "e": "x4-4x2-5x -3"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 20,
+            "question": "The volume of a certain sphere is numerically equal to twice its surface area. The diameter of the sphere is: ",
+            "option": {
+                "a": "6",
+                "b": "9",
+                "c": "12",
+                "d": "",
+                "e": ""
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 43,
+            "question": "The trigonometric expression cos2A + sin 2A can be written as:  ",
+            "option": {
+                "a": "cosA(cosA + sinA)  ",
+                "b": "B.cos2A + sin2A – 2sinAcosA,  ",
+                "c": "2sinAcosA + cos2A + sin2A,  ",
+                "d": "D.cos2A +sinA  – 2sinAcosA",
+                "e": "D.cos2A +sinA  – 2sinAcosA"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 46,
+            "question": "The fair coins are tossed simultaneously. What is the probability of obtaining at least 1 tail turns up? ",
+            "option": {
+                "a": "1/4",
+                "b": "3/4",
+                "c": "1/2",
+                "d": "1",
+                "e": "1"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 4,
+            "question": "In how many different ways can the letters of the word GEOLOGY be arranged in order? ",
+            "option": {
+                "a": "720",
+                "b": "1260",
+                "c": "2520",
+                "d": "5040",
+                "e": "5040"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 64,
+            "question": "If the length of the sides of a right angled triangle are (3x + 1)cm, (3x – 1)cm and xcm, what is x ? ",
+            "option": {
+                "a": "2",
+                "b": "6",
+                "c": "18",
+                "d": "12",
+                "e": "12"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 3,
+            "question": "How many different three digit numbers can be formed using the integers 1 to 6 if no integer 1 to 6 if no integer occurs twice in a number? ",
+            "option": {
+                "a": "720",
+                "b": "1260",
+                "c": "2520",
+                "d": "5040",
+                "e": "5040"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 41,
+            "question": "All the 120 pupils in a school learn Yoruba or Igbo or both. Given that 75 learn Yoruba and 60 learn Igbo. How many learn Igbo only?   ",
+            "option": {
+                "a": "45",
+                "b": "30",
+                "c": "15",
+                "d": "60",
+                "e": "60"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 59,
+            "question": "Given a regular hexagon, calculate each interior angle of the hexagon ",
+            "option": {
+                "a": "60",
+                "b": "30",
+                "c": "120",
+                "d": "15",
+                "e": "15"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 25,
+            "question": "When the price of egg was raised by N2 an egg, the number of eggs which can be bought for N 120 is reduced by 5. The present price of an egg is ",
+            "option": {
+                "a": "N 6. ",
+                "b": "N 7  ",
+                "c": "N 8",
+                "d": "N10",
+                "e": "N10"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 36,
+            "question": "The expression ax2 + bx takes the value 6 when x = 1 and 10 when x = 2. Find its value when  x = 5       ",
+            "option": {
+                "a": "10",
+                "b": "12",
+                "c": "6",
+                "d": ".-10",
+                "e": ".-10"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 24,
+            "question": "Evaluate x in base 3 if 41x-22x=17x. ",
+            "option": {
+                "a": "11",
+                "b": "8",
+                "c": "12",
+                "d": "22",
+                "e": "22"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 44,
+            "question": "With replacement ",
+            "option": {
+                "a": "0.9,",
+                "b": "1, ",
+                "c": "0.4,",
+                "d": "0.49",
+                "e": "0.49"
+            },
+            "section": "A bag contains 10 balls of which 3 are red 7 are white. Two balls are drawn at random. Find the probability   of none of the balls is red if the draw is",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        },
+        {
+            "id": 68,
+            "question": "What is the remainder when x3 +5x2-6x+1 is divided by x-1? ",
+            "option": {
+                "a": "-1",
+                "b": "2",
+                "c": "-2",
+                "d": "1",
+                "e": "1"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 49,
+            "question": "A sector circle of radius 7.2cm which subtends an angle of 3000 at the centre is used to   form a cone. What is the radius of the base of the cone?. ",
+            "option": {
+                "a": "6cm ",
+                "b": "7cm ",
+                "c": "8cm    ",
+                "d": "9cm      ",
+                "e": "9cm      "
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 55,
+            "question": "A man kept 6 black, 5 brown and 7 purple shirts in a drawer. What is the probability of his picking a purple shirt with his eyes close ",
+            "option": {
+                "a": "1/7",
+                "b": "7/18 ",
+                "c": "11/18 ",
+                "d": "7/11",
+                "e": "7/11"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 72,
+            "question": "Solve the equation 3x+1 = 271-x  ",
+            "option": {
+                "a": "1/2",
+                "b": "-1/2",
+                "c": "3/4",
+                "d": "-3/4",
+                "e": "-3/4"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2013"
+        },
+        {
+            "id": 8,
+            "question": "Solve for p in the following  equation given in base two  11(p+ 110) = 1001p   ",
+            "option": {
+                "a": "10",
+                "b": "11",
+                "c": "110",
+                "d": "111",
+                "e": "111"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2006"
+        },
+        {
+            "id": 31,
+            "question": "The expression a 3 + b 3 is equal  to ",
+            "option": {
+                "a": "(a2 +b)(a-ab+b2 )",
+                "b": "(a+b)(a2 –ab+b2 )  ",
+                "c": "(a-b2)(a2-  ab+b)",
+                "d": "(a­-b)(a2+ab+b2)",
+                "e": "(a­-b)(a2+ab+b2)"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "post-utme",
+            "examyear": "2008"
+        }
+    ]
+}

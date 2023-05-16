@@ -1,0 +1,669 @@
+{
+    "subject_id": "75ec97a7-0ef9-4709-ba9a-029fc273edff",
+    "status": 200,
+    "data": [
+        {
+            "id": 225,
+            "question": "In a cell, the genes are carried by  ",
+            "option": {
+                "a": "nuclear membranes",
+                "b": "chromatin threads  ",
+                "c": "lysosomes",
+                "d": "mitochondria",
+                "e": "mitochondria"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 244,
+            "question": "In freshwater  marshes and swamps, the most important abiotic factor that organisms have to",
+            "option": {
+                "a": "nature  of substratum  ",
+                "b": "high salinity  ",
+                "c": "high temperature  ",
+                "d": "low pH",
+                "e": "low pH"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 252,
+            "question": "A farmer’s assumption that the seed from a good harvest will produce a good yield is explained by the theory  of",
+            "option": {
+                "a": "evolution",
+                "b": "adaptation",
+                "c": "variation",
+                "d": "heredity",
+                "e": "heredity"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 242,
+            "question": "The association between bacteria residing I the caecum and the ruminant is  ",
+            "option": {
+                "a": "parasitism  ",
+                "b": "predation  ",
+                "c": "saprophytism  ",
+                "d": "mutalism",
+                "e": "mutalism"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 232,
+            "question": "Chewing the cud is an adaptation peculiar to",
+            "option": {
+                "a": "herbivores",
+                "b": "omnivores  ",
+                "c": "rodents   ",
+                "d": "ruminants",
+                "e": "ruminants"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 231,
+            "question": "Bird toes suitable for digging have claws that are  ",
+            "option": {
+                "a": "blunt",
+                "b": "curved  ",
+                "c": "hooked",
+                "d": "sharp",
+                "e": "sharp"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 238,
+            "question": "The axial  skeleton is found in the",
+            "option": {
+                "a": "skull , ribs, vertebral column and breast bone   ",
+                "b": "skull humerus, vertebral column and ribs  ",
+                "c": " breastbone, clavicle, rids and vertebral column",
+                "d": " femur, sternum, ulnae and skull",
+                "e": " femur, sternum, ulnae and skull"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 223,
+            "question": "What is the level of organization  of an onion bulb?",
+            "option": {
+                "a": "tissue  ",
+                "b": "organ",
+                "c": "systemic",
+                "d": "organism",
+                "e": "organism"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 250,
+            "question": "The uniqueness of an individual organism in a population is accounted for by",
+            "option": {
+                "a": "evolution",
+                "b": "variation  ",
+                "c": "adaptation",
+                "d": "mutation",
+                "e": "mutation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 261,
+            "question": "According to Darwin, the driving force behind evolutionary change is",
+            "option": {
+                "a": "atural selection",
+                "b": "genetic drift  ",
+                "c": "mutation",
+                "d": "gene flow",
+                "e": "gene flow"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 248,
+            "question": "I Onchocerciasis  II Schistosomiasis  \nIII Salmonellosis  IV Meningitis \nWhich of the diseases listed above are associated with water? \n",
+            "option": {
+                "a": "I and II only  ",
+                "b": "II, III and IV  ",
+                "c": "I, II and III  ",
+                "d": "II and IV",
+                "e": "II and IV"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 226,
+            "question": "Alternation of a sexual and sexual modes of reproduction is found in",
+            "option": {
+                "a": "blue-green algae  ",
+                "b": " Euglena",
+                "c": "fern",
+                "d": " maize",
+                "e": " maize"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 234,
+            "question": "The part of the alimentary system of a bird where food is  ground into small particles is the",
+            "option": {
+                "a": "cloaca  ",
+                "b": "stomach  ",
+                "c": "crop  ",
+                "d": "gizzard",
+                "e": "gizzard"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 247,
+            "question": "Mass of a crucible = 10g\n Mass of a crucible and soil before heating = -29g.\nMass of a crucible and sol after heating = 18g. From the information above, determine the percentage of wter in the given soil sample?  \n",
+            "option": {
+                "a": "20%",
+                "b": "25%",
+                "c": "40%",
+                "d": "50%",
+                "e": "50%"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 251,
+            "question": "A phenotypic character with intermediate forms that can be graded from one extreme to the other is referred to as",
+            "option": {
+                "a": "discontinous variation   ",
+                "b": "continuous variation",
+                "c": "a mutant",
+                "d": "a genome",
+                "e": "a genome"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 253,
+            "question": "In Mendelian inheritance, discontinuous characters are controlled by the",
+            "option": {
+                "a": "centromeres",
+                "b": "alleles",
+                "c": "chromosomes",
+                "d": "chromatids",
+                "e": "chromatids"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 233,
+            "question": "Which of the following is an example of a carnivorous plant?",
+            "option": {
+                "a": "Hydra",
+                "b": "Bladderwort",
+                "c": "Yeast",
+                "d": "Spirogyra",
+                "e": "Spirogyra"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 259,
+            "question": "The specialized pigment cells that are involved in colouration and colour change in animals are the",
+            "option": {
+                "a": "xanthophyl",
+                "b": "chromatophores",
+                "c": "chlorophyll",
+                "d": "mechanic",
+                "e": "mechanic"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 258,
+            "question": "Which of the following animals is most adapted for water conservation?",
+            "option": {
+                "a": "Earthworms  ",
+                "b": "mammals   ",
+                "c": "Flatworms  ",
+                "d": "Insects",
+                "e": "Insects"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 240,
+            "question": "In a bean seed, absorption of water at the beginning  of germination is through the  ",
+            "option": {
+                "a": "hilum",
+                "b": "micropyle  ",
+                "c": "testa  ",
+                "d": "plumule",
+                "e": "plumule"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 224,
+            "question": "A characteristic exhibited by all living organism is  ",
+            "option": {
+                "a": "sexual reproduction   ",
+                "b": "aerobic respiration  ",
+                "c": "the ability to move from one place to another  ",
+                "d": "the ability to remove unwanted substances.",
+                "e": "the ability to remove unwanted substances."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 245,
+            "question": "Which of the following biomass could be characterized by very low rainfall, cold nights, hardays and fast blooming plants?  ",
+            "option": {
+                "a": "Northern Guinea savanna",
+                "b": "southern Guinea savanna  ",
+                "c": "Tropical desert",
+                "d": " montane forest",
+                "e": " montane forest"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 235,
+            "question": "Which of the following describes the sequence of blood flow fro the heart to a tissue?",
+            "option": {
+                "a": "Heart_artery_arteriole _ tissue",
+                "b": "Heart_vein_venule _tissue",
+                "c": "Heart _ venule _vein_tissue",
+                "d": "Heart _arteriole _artery_tissue",
+                "e": "Heart _arteriole _artery_tissue"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 254,
+            "question": "A woman with the ability to roll her tongue (Tt) marries a man who cannot roll his tongue  (tt). What is the probability of each of their children being a tongue roller?",
+            "option": {
+                "a": "100%",
+                "b": "75%",
+                "c": "50%",
+                "d": "25%",
+                "e": "25%"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 257,
+            "question": "The part of a domestic fowl responsible  for preventing heat loss is the  ",
+            "option": {
+                "a": "filoplume ",
+                "b": "contour feather  ",
+                "c": " down feather",
+                "d": " quill",
+                "e": " quill"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 249,
+            "question": "The major cause of global warming is the",
+            "option": {
+                "a": "Burning of fossil fuel",
+                "b": "construction of dams",
+                "c": "use of electricity  ",
+                "d": "exploration of space",
+                "e": "exploration of space"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 227,
+            "question": "The first terrestrial vertebratese volved from",
+            "option": {
+                "a": "pisces  ",
+                "b": "Reptilia  ",
+                "c": "Amphibia  ",
+                "d": "Mammalia",
+                "e": "Mammalia"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 237,
+            "question": "In insects, the structure that performs  the same function as the kidney in man is the",
+            "option": {
+                "a": "nephridium",
+                "b": "flame cell  ",
+                "c": "malphigiann tubule",
+                "d": "trachea",
+                "e": "trachea"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 246,
+            "question": "The optimum temperature  for the growth of the organism is",
+            "option": {
+                "a": "25oC",
+                "b": "50oC",
+                "c": "75oC   ",
+                "d": "100oC",
+                "e": "100oC"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 239,
+            "question": "The reproductive  system of a male mammal is made up of  ",
+            "option": {
+                "a": "claspers, prostrate, gland, sperm duct and vas deferns",
+                "b": "testis, prostrate gland, sperm duct and vas deferns  ",
+                "c": "oviduct , urethra, testis and sperm  duct",
+                "d": "testis, uterus, prostrate gland and sperm duct.",
+                "e": "testis, uterus, prostrate gland and sperm duct."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 228,
+            "question": "In plants, the structures that play roles similar to the arteries and veins of animals are the  ",
+            "option": {
+                "a": "xylem and phloem",
+                "b": "root hairs and xylem  ",
+                "c": "lenticels and phloem  ",
+                "d": "roots and stems",
+                "e": "roots and stems"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 243,
+            "question": "A marine protozoan is likely to have no contractile acuole  mainly because the cytoplasm is  ",
+            "option": {
+                "a": "isotonic to sea water",
+                "b": "hypotonic to sea water",
+                "c": "hypertonic to sea water",
+                "d": "impervious to seas water",
+                "e": "impervious to seas water"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 256,
+            "question": "Plants that grow in an area that is neither too wet nor too dry are",
+            "option": {
+                "a": "xerophytes  ",
+                "b": "mesophytes  ",
+                "c": "epiphytes",
+                "d": "hydrophytes",
+                "e": "hydrophytes"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 229,
+            "question": "A blue-green alga is not a protophytes because",
+            "option": {
+                "a": "it is aquatic  ",
+                "b": "its cells are prokaryotic",
+                "c": "it cannot move",
+                "d": "it is not a green plant",
+                "e": "it is not a green plant"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 241,
+            "question": "The most important ecological factor in a terrestrial environment is",
+            "option": {
+                "a": "rainfall",
+                "b": " humidity",
+                "c": "wind",
+                "d": " soil",
+                "e": " soil"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 236,
+            "question": "The enzymes of the glycolytic pathway are located in  the",
+            "option": {
+                "a": "mitochondria  ",
+                "b": "gastric juice",
+                "c": "plasma",
+                "d": "cytoplasm",
+                "e": "cytoplasm"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 260,
+            "question": "During the dry season in the tropics, the body metabolism of some animals slows to a minimal level in a process referred to as",
+            "option": {
+                "a": "hibernation",
+                "b": "aestivation",
+                "c": "dormancy",
+                "d": "sense scense  ",
+                "e": "sense scense  "
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 255,
+            "question": "A health condition that isi known to have resulted from gene mutation is  ",
+            "option": {
+                "a": "heamophilia ",
+                "b": "colour blindeness  ",
+                "c": " sickle cell anaemia  ",
+                "d": " anaemia  ",
+                "e": " anaemia  "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        },
+        {
+            "id": 230,
+            "question": "The feature that makes locomotion in water easy for fish is the",
+            "option": {
+                "a": "scaly body",
+                "b": "slimy body  ",
+                "c": "steam lined body",
+                "d": "lateral line",
+                "e": "lateral line"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2009"
+        }
+    ]
+}

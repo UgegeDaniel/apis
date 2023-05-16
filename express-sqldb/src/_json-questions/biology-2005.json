@@ -1,0 +1,652 @@
+{
+    "subject_id": "75ec97a7-0ef9-4709-ba9a-029fc273edff",
+    "status": 200,
+    "data": [
+        {
+            "id": 100,
+            "question": "Excess water  in plants is excreted as water vapour and droplets respectively through  ",
+            "option": {
+                "a": "respiration and guttation  ",
+                "b": "transpiration and guttation",
+                "c": "photosynthesis and guttation",
+                "d": "guttation and condensation",
+                "e": "guttation and condensation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 89,
+            "question": "I. Rettus rattus   II. Agama agama  II Bufo regularis  IV. Tilapia Zill. The order of evolutionary advancement  of the above",
+            "option": {
+                "a": "I, II and III , IV  ",
+                "b": "I, IV, III, II  ",
+                "c": "II, III, IV, I",
+                "d": "IV, III, II, I",
+                "e": "IV, III, II, I"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 114,
+            "question": "Which of the following gis the best explanation for a child who is phenol-typically short and born of two tall parents?",
+            "option": {
+                "a": "The father possesses a gene for shortness  ",
+                "b": "The mother possesses a gene for shortness  ",
+                "c": "Nature makes the child short  ",
+                "d": "Both parents posses genes for shortness.",
+                "e": "Both parents posses genes for shortness."
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 115,
+            "question": "A yellow maize is crossed with the a white maize and the first filial generation produce yellow maize only. The white trait is said to exhibit  ",
+            "option": {
+                "a": "dominance",
+                "b": " recessiveness",
+                "c": "codominance  ",
+                "d": "Incomplete  dominance",
+                "e": "Incomplete  dominance"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 97,
+            "question": "The mammalian lung is made air light by the",
+            "option": {
+                "a": "pleural cavity  ",
+                "b": "mucous membrane",
+                "c": "pleural membrane  ",
+                "d": "diaphragm",
+                "e": "diaphragm"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 86,
+            "question": "Angiosperms and gymnosperms belong to the class",
+            "option": {
+                "a": "schizophyta  ",
+                "b": "spermatophyte  ",
+                "c": "pteridophyta  ",
+                "d": "bryophta",
+                "e": "bryophta"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 116,
+            "question": "The association in which one member benefits and the other is relatively unaffected by the interaction is termed  ",
+            "option": {
+                "a": "symbiosis",
+                "b": "parasitism",
+                "c": "commensalism  ",
+                "d": "Mutualism",
+                "e": "Mutualism"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 103,
+            "question": "Which of the following is a homeostatic response in humans?",
+            "option": {
+                "a": "withdrawing the hand from a hot object",
+                "b": "the mouth getting watery when food is lighted  ",
+                "c": "yawning owing to tiredness  ",
+                "d": "shivering in a cold environment",
+                "e": "shivering in a cold environment"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 102,
+            "question": "Hydrostatic skeleton is the type of supporting system found in",
+            "option": {
+                "a": "Mammals  ",
+                "b": "reptiles  ",
+                "c": "oligochaetes   ",
+                "d": "arthropods",
+                "e": "arthropods"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 92,
+            "question": "The transition from amphibians to mammals involves the limbs becoming arranged to support the weight  more effectively requiring modifications in the",
+            "option": {
+                "a": "collar bones and coccyx",
+                "b": "pectoral and pelvic girdles",
+                "c": "scapulae and clavicles   ",
+                "d": "vertebrae and sternum",
+                "e": "vertebrae and sternum"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 90,
+            "question": "The stage in the life history  of a moth responsible for the destruction of agricultural crops is the",
+            "option": {
+                "a": "nymph",
+                "b": "imago",
+                "c": "pupa   ",
+                "d": "caterpillar",
+                "e": "caterpillar"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 119,
+            "question": "The only caste in the termite colony whose members can feed themselves are the  ",
+            "option": {
+                "a": "reproductive",
+                "b": " workers  ",
+                "c": "nymhs  ",
+                "d": "soldiers",
+                "e": "soldiers"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 104,
+            "question": "The optimal temperature  for breeding cockroaches is",
+            "option": {
+                "a": "15oC",
+                "b": "19oC  ",
+                "c": "24oC  ",
+                "d": "33oC",
+                "e": "33oC"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 83,
+            "question": "The organelle common to both plant and animal cells is the",
+            "option": {
+                "a": "centriole",
+                "b": "plasmalemma  ",
+                "c": "cell wall",
+                "d": "chloroplast",
+                "e": "chloroplast"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 112,
+            "question": "The recycling method of solid waste disposal is unsuitable for",
+            "option": {
+                "a": "organic matter  ",
+                "b": "glass  ",
+                "c": "plastics",
+                "d": "metal scraps",
+                "e": "metal scraps"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 85,
+            "question": "The hyphal wall of fungi is rigid  owing to the presence of",
+            "option": {
+                "a": "cell wall",
+                "b": "lignin  ",
+                "c": "cellulose  ",
+                "d": "chitia",
+                "e": "chitia"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 88,
+            "question": "the leech and the earthworm belong to the",
+            "option": {
+                "a": "molluscs  ",
+                "b": "crustaceans",
+                "c": "arachnids  ",
+                "d": "annelids",
+                "e": "annelids"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 110,
+            "question": "Which of the following is used to test for the presence of lime in a soil sample? ",
+            "option": {
+                "a": "H2SO4(aq)  ",
+                "b": "NaOH(aq)",
+                "c": "Hcl(aq)  ",
+                "d": "HNO3(aq)",
+                "e": "HNO3(aq)"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 113,
+            "question": "A non-renewable alternative source of energy is",
+            "option": {
+                "a": "wind generators  ",
+                "b": "solar panels  ",
+                "c": "nuclear energy",
+                "d": "hydroelectric power",
+                "e": "hydroelectric power"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 108,
+            "question": "The population density of Tridax in an abandoned square farmland of side 200m was found to be 5 plants per m2. The population size of the plant on the farm is",
+            "option": {
+                "a": "40",
+                "b": "4000",
+                "c": "40000",
+                "d": "200000",
+                "e": "200000"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 107,
+            "question": "In Nigeria, the Guinea Savanna belt borders the",
+            "option": {
+                "a": "mangrove swamps and the Sahel  savanna  ",
+                "b": "rainforests and the Sudan savanna  ",
+                "c": "deserts and the Sudan savanna  ",
+                "d": "rainforests and the desert.",
+                "e": "rainforests and the desert."
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 117,
+            "question": "When a peacock displays its colourful  feathers, it is  ",
+            "option": {
+                "a": "ready for a fight  ",
+                "b": "protecting itself from predators  ",
+                "c": "protecting its mate from predator",
+                "d": "courting a female",
+                "e": "courting a female"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 120,
+            "question": "An evidence of a common ancestry for fishes, amphibians, reptiles, birds and mammals is the",
+            "option": {
+                "a": "possession of wings by bird and bats",
+                "b": "cold-bloodedness of fishes, amphibians and reptiles  ",
+                "c": "presence of gill clefts in vertebrate embryos",
+                "d": "",
+                "e": ""
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 87,
+            "question": "An example of a adially symmetrical organism is",
+            "option": {
+                "a": "planaria  ",
+                "b": "Hydra   ",
+                "c": "tapeworm  ",
+                "d": "roundworm",
+                "e": "roundworm"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 96,
+            "question": "The function of the fluid filled pericardium is to",
+            "option": {
+                "a": "reduce the friction caused by the pumping movements of the heart   ",
+                "b": "supply the heart with oxygen and nutrients  ",
+                "c": "prevent disease organisms from attacking the heart  ",
+                "d": "reduce the  intensity of the pumping action of the heart",
+                "e": "reduce the  intensity of the pumping action of the heart"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 98,
+            "question": "A test tube containing yeast in glucose solution was suspended in a converted conical flask containing alkaline pyrogallol. The  bubbles of carbon (IV) oxide produced indicate that the yeast cells are",
+            "option": {
+                "a": "respiring in the absence of oxygen  ",
+                "b": "librating oxygen  on their own",
+                "c": "living and consuming oxygen  ",
+                "d": "being killed by the alcohol produced",
+                "e": "being killed by the alcohol produced"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 106,
+            "question": "The mambilla plateau is a unique Nigeria biome located in",
+            "option": {
+                "a": "Plateau State  ",
+                "b": "Borno state  ",
+                "c": "Taraba state  ",
+                "d": "Benue state",
+                "e": "Benue state"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 95,
+            "question": "The only vein that caries pure oxygenated blood is the  ",
+            "option": {
+                "a": "renal vein  ",
+                "b": "Pulmonary vein  ",
+                "c": "hepatic vein",
+                "d": "sciatic vein",
+                "e": "sciatic vein"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 111,
+            "question": "The importance of practicing crop rotation  in agriculture is to",
+            "option": {
+                "a": "maintain soil fertility",
+                "b": "improve the nutritional value of crops   ",
+                "c": "control soil erosion   ",
+                "d": "ensure the growth of crops.",
+                "e": "ensure the growth of crops."
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 109,
+            "question": "Secondary succession is much faster then primary succession because",
+            "option": {
+                "a": "pioneer colonizers are more in number  ",
+                "b": "soil is already present  ",
+                "c": "Secondary series require less nutrients  ",
+                "d": "species competition is increased",
+                "e": "species competition is increased"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 99,
+            "question": "The urinary tubules of the kidney function through  ",
+            "option": {
+                "a": "osmosis and diffusion  ",
+                "b": "active transport and osmosis  ",
+                "c": "ultra filtration and selective re-absorption",
+                "d": "active transport and cytoplasmic streaming  ",
+                "e": "active transport and cytoplasmic streaming  "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 84,
+            "question": "Which of the following is likely to have a higher concentration of mitochondria? ",
+            "option": {
+                "a": " Sperm cell",
+                "b": " white blood cell  ",
+                "c": " Egg cell",
+                "d": "red blood cell",
+                "e": "red blood cell"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 94,
+            "question": "In the root vascular system, the stele is directly surrounding by the",
+            "option": {
+                "a": "pericycle  ",
+                "b": "cortex",
+                "c": "endodermis  ",
+                "d": "Parenchyma",
+                "e": "Parenchyma"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 101,
+            "question": "When bacteria swim from cold to warm regions, this is known as",
+            "option": {
+                "a": "negative chemotaxis  ",
+                "b": "positive thermotaxis  ",
+                "c": "positive phototaxis",
+                "d": "negative phototaxis",
+                "e": "negative phototaxis"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 93,
+            "question": "The main function of the caudal fin in tilapia  is to  ",
+            "option": {
+                "a": "propel it forward in water  ",
+                "b": "seer it while changing directions  ",
+                "c": "balance it in eater",
+                "d": "enable it to float in water",
+                "e": "enable it to float in water"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 105,
+            "question": "At which temperature will cockroaches not survive after 10 days?   ",
+            "option": {
+                "a": "15oC",
+                "b": "19oC  ",
+                "c": "24oC  ",
+                "d": "33oC",
+                "e": "33oC"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 118,
+            "question": "When an animal has a dark coloured dorsal surface and light coloured ventral surface, this is an adaptation called  ",
+            "option": {
+                "a": "concealment coloration  ",
+                "b": "countershading",
+                "c": "colour blending  ",
+                "d": "disruptive coloration",
+                "e": "disruptive coloration"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        },
+        {
+            "id": 91,
+            "question": "The blackly is a vector of",
+            "option": {
+                "a": "material",
+                "b": "trypanosomiasis",
+                "c": "onchocerciasis",
+                "d": "yellow fever",
+                "e": "yellow fever"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2005"
+        }
+    ]
+}

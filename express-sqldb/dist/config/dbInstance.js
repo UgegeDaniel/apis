@@ -84,8 +84,8 @@ class DatabaseInstance {
             this.schemas.forEach((schema) => {
                 const msg = 'running default querries ...';
                 schema.defaultQuery && DatabaseInstance.showConsoleMsg(msg);
-                schema.defaultQuery
-                    && schema.defaultQuery.forEach((defQuery) => {
+                schema.defaultQuery &&
+                    schema.defaultQuery.forEach((defQuery) => {
                         const values = `${[...Object.values(defQuery)].join("', '")}`;
                         const columnNames = [`${schema.name}_uid`, ...Object.keys(defQuery)];
                         const queryString = schema.defaultQuery

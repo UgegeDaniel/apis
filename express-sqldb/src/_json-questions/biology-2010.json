@@ -1,0 +1,686 @@
+{
+    "subject_id": "75ec97a7-0ef9-4709-ba9a-029fc273edff",
+    "status": 200,
+    "data": [
+        {
+            "id": 270,
+            "question": "When a mixture of a food substance fand Benedict’s solution was warmed, the solution changed from blue to brick red . This indicates the presence of",
+            "option": {
+                "a": "reducing  sugar",
+                "b": "fatty acid",
+                "c": "sucrose  ",
+                "d": "amino acid",
+                "e": "amino acid"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 282,
+            "question": "A food chain always begins with a  ",
+            "option": {
+                "a": "consumer  ",
+                "b": "decomposer  ",
+                "c": "producer",
+                "d": "primary  consumer",
+                "e": "primary  consumer"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 287,
+            "question": "The two halves of the pelvic girdle are jointed together at the  ",
+            "option": {
+                "a": "public  symphysis  ",
+                "b": "ilium  ",
+                "c": "pubis  ",
+                "d": "obturator foramen",
+                "e": "obturator foramen"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 269,
+            "question": "The mode of nutrition of sundew and bladderwort can be described as",
+            "option": {
+                "a": "autotrophic  ",
+                "b": "saprophytic  ",
+                "c": "holozoic   ",
+                "d": "chemosynthetic",
+                "e": "chemosynthetic"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 267,
+            "question": "Which of the following is true of the transverse section of a dicot stem?",
+            "option": {
+                "a": "The epidermis is completely encircled by the cortex",
+                "b": "The xylem is more interiorly located than the phloem",
+                "c": " The cambium lies between the cortex and the vascular bundles",
+                "d": "The vascular bundles are randomly scattered within the  cortex",
+                "e": "The vascular bundles are randomly scattered within the  cortex"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 264,
+            "question": "The dominant phase in the life cycle of a fern is the",
+            "option": {
+                "a": "gametophyte  ",
+                "b": " prothallus",
+                "c": "sporophyte  ",
+                "d": " antheridium",
+                "e": " antheridium"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 279,
+            "question": "Chemosynthetic organism are capable  of manufacturing their food  from simple inorganic substances through the process of",
+            "option": {
+                "a": "oxidation",
+                "b": "denitrification",
+                "c": "reduction",
+                "d": "phosphorylation",
+                "e": "phosphorylation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 286,
+            "question": "Which of the following organisms is mainly  found in the marine habitat?",
+            "option": {
+                "a": "Achatina  ",
+                "b": "Tilapia  ",
+                "c": "Dog fish  ",
+                "d": "Tortoise",
+                "e": "Tortoise"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 297,
+            "question": "The chromosome number of a cell before and after the process of meiosis is conventionally represented as",
+            "option": {
+                "a": "2n_2n   ",
+                "b": "n_n  ",
+                "c": "n-2n  ",
+                "d": "2n-n",
+                "e": "2n-n"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 285,
+            "question": "The blood component  that has the greatest affinity for oxygen is the ",
+            "option": {
+                "a": "lymphocytes",
+                "b": " leucocytes",
+                "c": "erythorocytes  ",
+                "d": "thromboytes",
+                "e": "thromboytes"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 290,
+            "question": "The average number of individuals of a species  per unit area of the habitat is the ",
+            "option": {
+                "a": " population density",
+                "b": "population frequency  ",
+                "c": "population size",
+                "d": "population distribution",
+                "e": "population distribution"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 278,
+            "question": "In the male reproductive system of a mammal, sperm is stored in the",
+            "option": {
+                "a": "van deferens  ",
+                "b": "urethra",
+                "c": "epididymis  ",
+                "d": "seminiferous tubules   ",
+                "e": "seminiferous tubules   "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 299,
+            "question": "At what stage in the life history of a mammal is the sex of an individual set?",
+            "option": {
+                "a": "At adolescence",
+                "b": "At puberty  ",
+                "c": "At birth  ",
+                "d": "At conception",
+                "e": "At conception"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 294,
+            "question": "A dilute solution of phenylthiocarbamide tastes bitter to some people  and is tasteless to others. This is an example of  ",
+            "option": {
+                "a": "taste bud variation",
+                "b": "discontinuous variation   ",
+                "c": "morphological variation",
+                "d": " continuous variation",
+                "e": " continuous variation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 298,
+            "question": "If both parents are heterozygous for trait, he probability that an offspring will be recessive for that trait is",
+            "option": {
+                "a": "¾   ",
+                "b": "½    ",
+                "c": "¼",
+                "d": "1",
+                "e": "1"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 284,
+            "question": "The barrier between maternal and foetal blood is the",
+            "option": {
+                "a": "placenta  ",
+                "b": "liver",
+                "c": "umbilical chord  ",
+                "d": "uterine wall",
+                "e": "uterine wall"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 295,
+            "question": "Throxne and adrenalin are examples of hormones which control",
+            "option": {
+                "a": "blood grouping",
+                "b": "tongue rolling  ",
+                "c": "behavioural patterns",
+                "d": "colour variation ",
+                "e": "colour variation "
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 274,
+            "question": "The sheet of muscle that separates the thoracic and the abdominal cavities is the ",
+            "option": {
+                "a": "diaphragm  ",
+                "b": "intercostal muscles",
+                "c": " pleural membrane   ",
+                "d": " pericardium",
+                "e": " pericardium"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 276,
+            "question": "The outer layer of the kidney where the Bowman’s capsules are found is the",
+            "option": {
+                "a": "cortex",
+                "b": "pelvis  ",
+                "c": "medulla",
+                "d": "pyramid",
+                "e": "pyramid"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 265,
+            "question": "Parental care is exhibited by",
+            "option": {
+                "a": "toads",
+                "b": "snails",
+                "c": " earthworms",
+                "d": " birds",
+                "e": " birds"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 273,
+            "question": "Yeast respires anaerobically  to covert simple sugar to carbon (IV) oxide and",
+            "option": {
+                "a": "alcohol  ",
+                "b": "acid",
+                "c": "oxygen",
+                "d": "water",
+                "e": "water"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 268,
+            "question": "Which of the following is lacking in the diet of a person with kwashiorkor?",
+            "option": {
+                "a": "Vitamins  ",
+                "b": "Proteins",
+                "c": "Carbohydrates  ",
+                "d": "Minerals",
+                "e": "Minerals"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 293,
+            "question": "The protozoan plasmodium falciparum is transmitted by",
+            "option": {
+                "a": "female anopheles mosquitoes  ",
+                "b": "female Aedes mosquitoes  ",
+                "c": "female Culex mosquitoes   ",
+                "d": "Female  blackfly",
+                "e": "Female  blackfly"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 301,
+            "question": "The flippers of a whale  and the fins of a fish are examples of",
+            "option": {
+                "a": "divergent evolution  ",
+                "b": "co evolution",
+                "c": "continuous variation",
+                "d": "convergent evolution",
+                "e": "convergent evolution"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 280,
+            "question": "The part of the human gut  that has an acidic  content is the",
+            "option": {
+                "a": "stomach  ",
+                "b": "duodenum  ",
+                "c": "ileum",
+                "d": "colon",
+                "e": "colon"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 266,
+            "question": "Which of the following groups of cells is devoid of true nuclei?",
+            "option": {
+                "a": "viruses",
+                "b": "algae  ",
+                "c": "Monera",
+                "d": "Fungi",
+                "e": "Fungi"
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 275,
+            "question": "The oily substance that lubricates the mammalian hair to keep it flexible ad water repellent is secreted by the",
+            "option": {
+                "a": "sweat glands",
+                "b": "sebaceous glands",
+                "c": "fatty  cells",
+                "d": "granular layer",
+                "e": "granular layer"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 291,
+            "question": "The loss of soil through erosion can be reduced by",
+            "option": {
+                "a": "watering",
+                "b": "crop rotation  ",
+                "c": "maturing  ",
+                "d": "irrigation",
+                "e": "irrigation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 292,
+            "question": "The vector for yellow fever is  ",
+            "option": {
+                "a": "edges mosquito  ",
+                "b": "anopheles mosquito  ",
+                "c": "tsetse fly  ",
+                "d": "blackly",
+                "e": "blackly"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 300,
+            "question": "The main distinguishing features between the soldier termite and other members of the caste are the",
+            "option": {
+                "a": "presence of wings, possession of a small head and large thorax",
+                "b": "presence of wings, possession of a large thorax  and a small head",
+                "c": "absence of wings, possession off strong mandibles and a large head",
+                "d": "absence of wings, possession of big head and the absence of mandible.",
+                "e": "absence of wings, possession of big head and the absence of mandible."
+            },
+            "section": "",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 263,
+            "question": "Which of the following is NOT a function of the nucleus of a cell?  ",
+            "option": {
+                "a": "it controls the life processes of the cell",
+                "b": "It translates genetic formation for   the manufacture of proteins",
+                "c": "it stores and carries hereditary information  ",
+                "d": "it sis a reservoir of energy for the cell",
+                "e": "it sis a reservoir of energy for the cell"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 271,
+            "question": "The primary structure responsible for pumping blood for circulation through the mammalian circulatory systems is the",
+            "option": {
+                "a": "veins  ",
+                "b": "right auricle  ",
+                "c": "arteries",
+                "d": "left ventricle",
+                "e": "left ventricle"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 281,
+            "question": "I. Stomata _ spirogyra   II alveoli _ earthworm  III malpighian tubule_mammal Iv.Contractile vacuole _protozoa \nWhich of the above structures is correctly matched with the organisms in which it is found? \n",
+            "option": {
+                "a": "III  ",
+                "b": "II   ",
+                "c": "I",
+                "d": "IV",
+                "e": "IV"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 288,
+            "question": "I. Adoption of appropriate nocturnal habits   II. Burrowing   III. adjusting their  internal body temperature   IV. Possession of many sweat pores.\nWhich of the above are ways in which desert animals adapt to extreme heat of environment?  \n",
+            "option": {
+                "a": "I and IV only  ",
+                "b": "II and III only  ",
+                "c": "I and II only  ",
+                "d": "I, II and III only",
+                "e": "I, II and III only"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 296,
+            "question": "A pair of genes that control a trait is referred to as",
+            "option": {
+                "a": "anallele",
+                "b": "recessive",
+                "c": "dominant  ",
+                "d": "ahybrid",
+                "e": "ahybrid"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 283,
+            "question": "Mycorrhizae promote plant growth by",
+            "option": {
+                "a": "absorbing inorganic ions from the soil  ",
+                "b": "protecting it from infection",
+                "c": "helping it to utilize atmospheric nitrogen",
+                "d": "serving as a growth regulator",
+                "e": "serving as a growth regulator"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 277,
+            "question": "Which of the following stimuli is likely to elicit a nastic response in an organism? ",
+            "option": {
+                "a": "Touch  ",
+                "b": "Light intensity  ",
+                "c": "Chemical substances  ",
+                "d": "gravity",
+                "e": "gravity"
+            },
+            "section": "",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 262,
+            "question": "Which of the following characterizes a mature plant cell?",
+            "option": {
+                "a": "The cytoplasm fills up the entire cell space",
+                "b": " The nucleus is pushed to the centre of the cell",
+                "c": " the cell wall is made up of cellulose",
+                "d": "The nucleus is small and irregular in shape",
+                "e": "The nucleus is small and irregular in shape"
+            },
+            "section": "",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 289,
+            "question": "Low annual rainfall, sparse vegetation, high dermal temperatures and cold nights are characteristics features of the",
+            "option": {
+                "a": "tropical  rainforest  ",
+                "b": "desert   ",
+                "c": "mundane forest",
+                "d": "guinea savanna",
+                "e": "guinea savanna"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        },
+        {
+            "id": 272,
+            "question": "Circulation of blood to all parts of the body except the lungs is through  ",
+            "option": {
+                "a": "the pulmonary artery  ",
+                "b": "systemic circulation",
+                "c": "the lymphatic system",
+                "d": "pulmonary circulation",
+                "e": "pulmonary circulation"
+            },
+            "section": "",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2010"
+        }
+    ]
+}

@@ -1,0 +1,686 @@
+{
+    "subject": "english",
+    "status": 200,
+    "data": [
+        {
+            "id": 359,
+            "question": "My father has been away on a journey but my mother  says she …...he …… this Friday.",
+            "option": {
+                "a": " expects/would arrive",
+                "b": "expected/win arrive ",
+                "c": "expects/will arrive",
+                "d": "expected/would arrive ",
+                "e": "expected/would arrive "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 360,
+            "question": "Kola was fined; ……….. thieves were given a jail sentence.",
+            "option": {
+                "a": "the rest of the",
+                "b": "rest ",
+                "c": "the rest",
+                "d": "rest off ",
+                "e": "rest off "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 354,
+            "question": "I look forward to ……. you next week.",
+            "option": {
+                "a": "seen ",
+                "b": "seeing  ",
+                "c": " be seeing ",
+                "d": "see ",
+                "e": "see "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 298,
+            "question": " He <i>deprecated</i> the attempts made to unseat him.",
+            "option": {
+                "a": "despised",
+                "b": "challenged    ",
+                "c": "resisted",
+                "d": "condemned",
+                "e": "condemned"
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 301,
+            "question": "The last criticism at the rally was made <i>in ignorance</i>",
+            "option": {
+                "a": "uniformed ",
+                "b": "objective ",
+                "c": "unimpeaccable",
+                "d": "impeccable ",
+                "e": "impeccable "
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 350,
+            "question": "Yesterday in the hall, Ola said that ...........  his watch.",
+            "option": {
+                "a": "he had mislaid ",
+                "b": "he had forgot ",
+                "c": "ne has misplaced  ",
+                "d": "he have lost ",
+                "e": "he have lost "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 320,
+            "question": "The man paid a large sum to <i>redeem</i> his mortgaged property ",
+            "option": {
+                "a": "ransom ",
+                "b": "acquire ",
+                "c": "pawn ",
+                "d": "recover.",
+                "e": "recover."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 305,
+            "question": "The rest of the boys admire Olu's <i>verve</i>",
+            "option": {
+                "a": "intelligence",
+                "b": "work  ",
+                "c": "handsomeness     ",
+                "d": " energy.",
+                "e": " energy."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 326,
+            "question": "The stadium was <i>seething</i> with people when we entered",
+            "option": {
+                "a": " filled ",
+                "b": " crowded ",
+                "c": "empty   ",
+                "d": "noisy.",
+                "e": "noisy."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 366,
+            "question": "Emeka hardly ever holds with my view on good governance.",
+            "option": {
+                "a": "Emeka sometimes opposes my idea of good governance.  ",
+                "b": "My view on what good Governance is conforms with that of Emeka.",
+                "c": "Emeka never really supports my opinion of good governance ",
+                "d": "Emeka may never hold a view which conflicts with mine on good governance.",
+                "e": "Emeka may never hold a view which conflicts with mine on good governance."
+            },
+            "section": "select the option that best explains the information conveyed in the sentence.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 353,
+            "question": "There was …………. any traffic as he drove home.",
+            "option": {
+                "a": " hardly ",
+                "b": " normally ",
+                "c": "usually  ",
+                "d": "no ",
+                "e": "no "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 361,
+            "question": "I………  to pursue my education.",
+            "option": {
+                "a": "did not chance   ",
+                "b": "did not have the opportunity",
+                "c": "was not chanced    ",
+                "d": "was not opportuned ",
+                "e": "was not opportuned "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 313,
+            "question": "shoe<u>s</u>",
+            "option": {
+                "a": "horse",
+                "b": "house",
+                "c": "loss",
+                "d": "reason",
+                "e": "reason"
+            },
+            "section": "choose the option that has the same consonant sound as the one represented by the letter(s) underlined.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 335,
+            "question": "association ",
+            "option": {
+                "a": "aSSociation    ",
+                "b": "associaTION",
+                "c": "associAtion   ",
+                "d": "Association.",
+                "e": "Association."
+            },
+            "section": "choose the appropriate stress pattern from the options. The syllables are written in capital letters.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 312,
+            "question": "Things may change soon, but at the moment our economic situation is <i>precarious.</i>",
+            "option": {
+                "a": " redeemable",
+                "b": "buoyant ",
+                "c": "uncertain   ",
+                "d": " unattractive.",
+                "e": " unattractive."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 327,
+            "question": "The Vice-Chancellor <i>relinquished</i> power at the end of busterm ",
+            "option": {
+                "a": "abandoned   ",
+                "b": "wielded  ",
+                "c": "gave up",
+                "d": " clung on to.",
+                "e": " clung on to."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 352,
+            "question": "The team has benefitted from the coach's ………. of experience. ",
+            "option": {
+                "a": "minefield ",
+                "b": "reservoir ",
+                "c": "wealth ",
+                "d": "world ",
+                "e": "world "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 307,
+            "question": "I visited Amina <i>umpteen times</i> in her college, but she never came to me",
+            "option": {
+                "a": "often   ",
+                "b": " seldom   ",
+                "c": " twice   ",
+                "d": "occasionally.",
+                "e": "occasionally."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 302,
+            "question": "The astute businessman neatly <i>fended</i> off questions off questions about his private life.",
+            "option": {
+                "a": "asked ",
+                "b": "explained ",
+                "c": "welcomed",
+                "d": "sidestepped.",
+                "e": "sidestepped."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 314,
+            "question": "E<u>ngs</u>lish",
+            "option": {
+                "a": "end",
+                "b": "thin",
+                "c": "think",
+                "d": "edge",
+                "e": "edge"
+            },
+            "section": "choose the option that has the same consonant sound as the one represented by the letter(s) underlined.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 343,
+            "question": "Because of his …… nature, Ayo was tricked out of his wrist watch. ",
+            "option": {
+                "a": "kind   ",
+                "b": "pliable  ",
+                "c": " uncompromising ",
+                "d": "uncalculating ",
+                "e": "uncalculating "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 318,
+            "question": "p<u>ears</u>",
+            "option": {
+                "a": "dear",
+                "b": "year",
+                "c": "there",
+                "d": "near",
+                "e": "near"
+            },
+            "section": "choose the option that has the same vowel sound as the letter(s) underlined.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 363,
+            "question": "He could not have rewarded them more handsomely.",
+            "option": {
+                "a": "He did not reward them very well,",
+                "b": "He rewarded them well, and he was also a good- looking man.",
+                "c": "He rewarded them very well.",
+                "d": "He spoke to them in a very generous way.",
+                "e": "He spoke to them in a very generous way."
+            },
+            "section": "select the option that best explains the information conveyed in the sentence.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 316,
+            "question": "p<u>os</u>table",
+            "option": {
+                "a": "paw",
+                "b": "pot",
+                "c": "port",
+                "d": "post",
+                "e": "post"
+            },
+            "section": "choose the option that has the same vowel sound as the letter(s) underlined.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 337,
+            "question": "",
+            "option": {
+                "a": " intact  ",
+                "b": " integral ",
+                "c": "negotiate ",
+                "d": "about.",
+                "e": "about."
+            },
+            "section": "choose the option that has the stress on the first syllable.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 357,
+            "question": "Making a phone call instead of paying a visit represents a …….  trend ",
+            "option": {
+                "a": " sudden new major social  ",
+                "b": " new social sudden major",
+                "c": " new sudden major social",
+                "d": "sudden social new major",
+                "e": "sudden social new major"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 338,
+            "question": "",
+            "option": {
+                "a": "conduce   ",
+                "b": " renewal ",
+                "c": "calendar ",
+                "d": "reproduce.",
+                "e": "reproduce."
+            },
+            "section": "choose the option that has the stress on the first syllable.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 311,
+            "question": "The noise across the road  <i>drowned</i> the sound of the keyboard in my room",
+            "option": {
+                "a": " neutralized ",
+                "b": " overshadowed",
+                "c": "balanced   ",
+                "d": "equalized.",
+                "e": "equalized."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 324,
+            "question": "The suggestions he made were very <i>unobtrusive</i>",
+            "option": {
+                "a": "forceful   ",
+                "b": "helpful ",
+                "c": "sincere    ",
+                "d": "reasonable.",
+                "e": "reasonable."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 351,
+            "question": "Government should invest more in …...   training.",
+            "option": {
+                "a": "teacher's  ",
+                "b": "teacher  ",
+                "c": "teachers  ",
+                "d": "teachers",
+                "e": "teachers"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 308,
+            "question": "The debt the company incurred became rather <i>intolerable</i>. ",
+            "option": {
+                "a": "inevitable   ",
+                "b": "unprecedented",
+                "c": "insupportable ",
+                "d": "dangerous.",
+                "e": "dangerous."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 358,
+            "question": "Our soldiers are starting to zero …………. the enemy.",
+            "option": {
+                "a": "at    ",
+                "b": "in on ",
+                "c": " unto ",
+                "d": "on at ",
+                "e": "on at "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 300,
+            "question": "The police are not happy with the growing number of <i>depraved</i> people around the politician.",
+            "option": {
+                "a": "violent ",
+                "b": "immoral ",
+                "c": "indolent ",
+                "d": "loquacious ",
+                "e": "loquacious "
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 310,
+            "question": " <i>Beads</i> of sweat ran down Ngozi's armpit",
+            "option": {
+                "a": "Pools",
+                "b": "Springs   ",
+                "c": "Ponds    ",
+                "d": "Rivulets.",
+                "e": "Rivulets."
+            },
+            "section": "choose the option nearest in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 345,
+            "question": "The idle steward could not see ....... on the wall, and he lost his job.",
+            "option": {
+                "a": "the writing",
+                "b": "what will be written ",
+                "c": "the handwriting",
+                "d": "what is written",
+                "e": "what is written"
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 317,
+            "question": "bl<u>ues</u>",
+            "option": {
+                "a": "book",
+                "b": "root",
+                "c": "foot",
+                "d": "look",
+                "e": "look"
+            },
+            "section": "choose the option that has the same vowel sound as the letter(s) underlined.",
+            "image": "",
+            "answer": "d",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 330,
+            "question": "The study he carried out of the problem was quite <i>comprehensive</i>",
+            "option": {
+                "a": "detailed ",
+                "b": " sketch  ",
+                "c": "inscrutable ",
+                "d": "complete.",
+                "e": "complete."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 344,
+            "question": "He says he ............. find me a job, but will accommodate me.",
+            "option": {
+                "a": "could not ",
+                "b": "was notable to",
+                "c": "is not able to",
+                "d": "cannot be able to ",
+                "e": "cannot be able to "
+            },
+            "section": "choose the option that best completes the gap(s).",
+            "image": "",
+            "answer": "a",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 322,
+            "question": "Is it necessary for us to go?' she asked in her <i>shrill</i> voice ",
+            "option": {
+                "a": "angry ",
+                "b": "quiet",
+                "c": " indistinct ",
+                "d": "aggressive.",
+                "e": "aggressive."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "c",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        },
+        {
+            "id": 329,
+            "question": "For anything to do with academic work, he has a great  a <i>version</i>",
+            "option": {
+                "a": "conversion ",
+                "b": "attention",
+                "c": "contempt  ",
+                "d": "predilection.",
+                "e": "predilection."
+            },
+            "section": "choose the option opposite in meaning to the word or phrase in italics.",
+            "image": "",
+            "answer": "b",
+            "solution": "",
+            "examtype": "utme",
+            "examyear": "2007"
+        }
+    ]
+}

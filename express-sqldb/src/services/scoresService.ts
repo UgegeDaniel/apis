@@ -4,6 +4,7 @@ export const saveStudentScoreService = async (
   userId: string,
   subjectId: string,
   score: number,
+  year: string,
 ) => {
   const timeOfTest = Date.now();
   const newScore = {
@@ -11,6 +12,7 @@ export const saveStudentScoreService = async (
     user_id: userId,
     subject_id: subjectId,
     score,
+    year,
   };
   const data = await ScoresModel.saveUserHistory(newScore);
   return data;

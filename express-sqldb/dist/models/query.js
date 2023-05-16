@@ -13,7 +13,7 @@ const query = async (queryString, options) => {
     }
     catch (err) {
         const apiError = new apiErrorType_1.ApiError(400, "Couldn't perform action");
-        logger_1.default.error(apiError.message);
+        logger_1.default.error(err);
         if (err?.code === '23505')
             throw apiError;
         throw new apiErrorType_1.ApiError(500, 'Something went wrong');
