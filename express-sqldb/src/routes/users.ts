@@ -2,6 +2,7 @@
 import express, { Application } from 'express';
 import {
   signUp,
+  verifyEmail,
   signIn,
   getStudentHistory,
   saveStudentScore,
@@ -19,12 +20,21 @@ const router = express.Router();
 router.post('/signup', signUpValidators, signUp);
 
 // METHOD: post
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.post(
+  '/signup/verifyEmail',
+  authMiddleware as express.RequestHandler,
+  verifyEmail as ApplicationGeneric<Record<string, any>>,
+);
+//DELETE FROM "public"."users" WHERE email='test2@gmail.com'
+// METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign in users
 router.post('/signin', signInValidators, signIn);
 
 // METHOD: get
-// ACCESS: Student
+// ACCESS: Authenticated User
 // DESCRIPTION: Get student history
 router.get(
   '/history',

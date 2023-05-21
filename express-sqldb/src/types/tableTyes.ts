@@ -3,6 +3,7 @@ export type DbUserType = {
   name?: string;
   password: string;
   users_uid: string;
+  verified: boolean;
 };
 
 export type questionType = {

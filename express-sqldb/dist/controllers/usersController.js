@@ -3,20 +3,41 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.saveStudentScore = exports.getStudentHistory = exports.signIn = exports.signUp = void 0;
+exports.saveStudentScore = exports.getStudentHistory = exports.signIn = exports.verifyEmail = exports.signUp = void 0;
 const authService_1 = __importDefault(require("../services/authService"));
 const scoresService_1 = require("../services/scoresService");
 const signUp = async (req, res, next) => {
     const { email, password, name } = req.body;
     try {
-        const { user, token } = await authService_1.default.signUp({ name, email, password });
-        return res.status(201).json({ success: true, user, token });
+        const { user, token } = await authService_1.default.signUp({
+            name,
+            email,
+            password,
+        });
+        return res.status(201).json({
+            success: true,
+            user,
+            token,
+            msg: `An email has been sent to ${email}, please verify`,
+        });
     }
     catch (e) {
         return next(e);
     }
 };
 exports.signUp = signUp;
+const verifyEmail = async (req, res, next) => {
+    const { userId } = req;
+    const { ref } = req.body;
+    try {
+        const { user } = await authService_1.default.verifyUserEmail(userId, ref);
+        return res.status(201).json({ success: true, user });
+    }
+    catch (e) {
+        return next(e);
+    }
+};
+exports.verifyEmail = verifyEmail;
 const signIn = async (req, res, next) => {
     const { email, password } = req.body;
     try {

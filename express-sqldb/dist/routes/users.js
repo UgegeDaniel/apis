@@ -14,11 +14,16 @@ const router = express_1.default.Router();
 // DESCRIPTION: sign up new users
 router.post('/signup', validation_1.signUpValidators, usersController_1.signUp);
 // METHOD: post
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.post('/signup/verifyEmail', auth_1.authMiddleware, usersController_1.verifyEmail);
+//DELETE FROM "public"."users" WHERE email='test2@gmail.com'
+// METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign in users
 router.post('/signin', validation_1.signInValidators, usersController_1.signIn);
 // METHOD: get
-// ACCESS: Student
+// ACCESS: Authenticated User
 // DESCRIPTION: Get student history
 router.get('/history', auth_1.authMiddleware, usersController_1.getStudentHistory);
 // METHOD: post

@@ -12,8 +12,21 @@ class DatabaseInstance {
             this.schemas.forEach((schema) => {
                 DatabaseInstance.showConsoleMsg(`creating table: ${schema.name} ...`);
                 const queryString = `
-        CREATE TABLE IF NOT EXISTS ${schema.name} (${DatabaseInstance.getSchema(schema)});`;
+        CREATE TABLE IF NOT EXISTS ${schema.name} (${DatabaseInstance.getColumnSchema(schema)});`;
                 this.queryStrings.push(queryString);
+            });
+        };
+        this.addExtraColumnsQueryString = () => {
+            this.schemas.forEach((schema) => {
+                const msg = 'adding extra columns...';
+                schema.extraColumns && DatabaseInstance.showConsoleMsg(msg);
+                schema.extraColumns
+                    && schema.extraColumns.forEach(() => {
+                        const queryString = schema.extraColumns
+                            ? `ALTER TABLE ${schema.name} ${DatabaseInstance.getColumnSchema(schema, true)};`
+                            : '';
+                        queryString && this.queryStrings.push(queryString);
+                    });
             });
         };
         this.addUniqueContraintQueryString = () => {
@@ -84,8 +97,8 @@ class DatabaseInstance {
             this.schemas.forEach((schema) => {
                 const msg = 'running default querries ...';
                 schema.defaultQuery && DatabaseInstance.showConsoleMsg(msg);
-                schema.defaultQuery &&
-                    schema.defaultQuery.forEach((defQuery) => {
+                schema.defaultQuery
+                    && schema.defaultQuery.forEach((defQuery) => {
                         const values = `${[...Object.values(defQuery)].join("', '")}`;
                         const columnNames = [`${schema.name}_uid`, ...Object.keys(defQuery)];
                         const queryString = schema.defaultQuery
@@ -102,15 +115,32 @@ class DatabaseInstance {
         this.getRootQueryString = () => this.queryStrings.join('');
         this.schemas = schemas;
         this.addCreateTableQueryString();
+        this.addExtraColumnsQueryString();
         this.addUniqueContraintQueryString();
         this.addRelationQueryString();
         this.addAllowedEntriesCheckQueryString();
         this.addDefaultQueryString();
     }
 }
-DatabaseInstance.getSchema = (schema) => schema.columns
-    .map((column) => `${column.name} ${column.type} ${column.constarint || ''}`)
-    .toString();
+DatabaseInstance.getColumnSchema = (schema, extraColumn) => {
+    if (extraColumn) {
+        return schema.extraColumns
+            ?.map((column) => `ADD IF NOT EXISTS ${column.name} ${column.type} ${column.constarint || ''}`)
+            .toString();
+    }
+    if (!extraColumn) {
+        return schema.columns
+            .map((column) => {
+            if (column.default) {
+                return `${column.name} ${column.type} 
+          'DEFAULT' ${column.default.defaultValue} ${column.constarint || ''}`;
+            }
+            if (!column.default)
+                return `${column.name} ${column.type} ${column.constarint || ''}`;
+        })
+            .toString();
+    }
+};
 DatabaseInstance.showConsoleMsg = (msg) => {
     logger_1.default.info(msg);
 };

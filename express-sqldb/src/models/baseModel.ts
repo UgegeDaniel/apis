@@ -30,12 +30,12 @@ class BaseModel {
   };
 
   findBy = async (searchContraints: {}, selectedColumns?: string[]) => {
-    const constraints = Object.keys(searchContraints)
-      .map((constraint, index) => `${constraint} = $${index + 1}`)
-      .join(' AND ');
     const columnsToReturn = selectedColumns
       ? `${[selectedColumns].join("', '")}`
       : '*';
+    const constraints = Object.keys(searchContraints)
+      .map((constraint, index) => `${constraint} = $${index + 1}`)
+      .join(' AND ');
     const queryString = `SELECT ${columnsToReturn} FROM ${this.tableName} WHERE ${constraints};`;
     logger.info(
       `Returning rows from ${this.tableName} table that match given constraint`,
@@ -56,6 +56,21 @@ class BaseModel {
       `Returning rows from ${this.tableName} table and ${secondaryTable} that match given constraint`,
     );
     const payload = await query(queryString);
+    return payload;
+  };
+
+  updateTable = async (
+    rowId: string,
+    updates: {},
+  ) => {
+    const columnsToUpdate = Object.keys(updates)
+      .map((update, index) => `${update} = $${index + 1}`)
+      .join(', ');
+    const queryString = `
+    UPDATE ${this.tableName}
+    SET ${columnsToUpdate}
+    WHERE ${this.tableName}_uid = '${rowId}' RETURNING *;`;
+    const payload = await query(queryString, Object.values(updates));
     return payload;
   };
 }

@@ -26,5 +26,15 @@ const UserSchema = {
             },
         },
     ],
+    extraColumns: [
+        {
+            name: 'verified',
+            type: 'boolean',
+            // constarint: 'NOT NULL',
+            default: {
+                defaultValue: 'false'
+            }
+        },
+    ],
 };
 exports.default = UserSchema;

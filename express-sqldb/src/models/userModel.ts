@@ -17,8 +17,16 @@ class BaseUserModel extends BaseModel {
       email,
       password,
       role_id: parsed.STUDENT_ROLE_ID,
+      verified: false,
     });
-    return newUser;
+    return newUser[0];
+  };
+
+  verifyEmail = async (userId: string) => {
+    const verifiedUser = await this.updateTable(userId, {
+      verified: true,
+    });
+    return verifiedUser[0];
   };
 
   findUser = async (email: string) => {

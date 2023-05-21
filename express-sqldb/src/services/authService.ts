@@ -4,6 +4,7 @@ import { UserModel } from '../models';
 import { createToken } from '../middlewares/auth';
 import { DbUserType } from '../types/tableTyes';
 import { UserType } from '../types/queryTypes';
+import transporter, { mailOptions } from './verifyEmail';
 
 const validatePassword = async (password: string, hashedPassword: string) => {
   const match = await bcrypt.compare(password, hashedPassword);
@@ -17,17 +18,35 @@ const hashPassword = async (password: string) => {
   return hash;
 };
 
+const sendEmailToUser = async (userId: string, email: string, name?: string) => {
+  const userMailOptions = await mailOptions(userId, email, name);
+  return transporter.sendMail(userMailOptions, (err: any) => {
+    if (err) {
+      throw new ApiError(500, 'Error verrifying your email');
+    }
+  });
+};
+
 const authService = {
   signUp: async (userToSignUp: UserType) => {
-    const { name, email, password } = userToSignUp;
+    const { password } = userToSignUp;
     const hashedPassword = await hashPassword(password);
     const user = await UserModel.createUser({
-      name,
-      email,
+      ...userToSignUp,
       password: hashedPassword,
     });
+    sendEmailToUser(user?.users_uid, userToSignUp.email, userToSignUp.name);
     const token = createToken({ userId: user?.users_uid, role: 'Student' });
     return { user, token };
+  },
+
+  verifyUserEmail: async (userId: string, ref: string) => {
+    if(await validatePassword(userId, ref)){
+      const user = await UserModel.verifyEmail(userId);
+      const token = createToken({ userId, role: 'Student' });
+      return { user, token };
+    }
+    throw new ApiError(400, 'Email Vefication Failed')
   },
 
   signIn: async (userToSignIn: UserType) => {

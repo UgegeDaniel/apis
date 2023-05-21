@@ -13,8 +13,32 @@ export const signUp = async (
 ) => {
   const { email, password, name } = req.body;
   try {
-    const { user, token } = await authService.signUp({ name, email, password });
-    return res.status(201).json({ success: true, user, token });
+    const { user, token } = await authService.signUp({
+      name,
+      email,
+      password,
+    });
+    return res.status(201).json({
+      success: true,
+      user,
+      token,
+      msg: `An email has been sent to ${email}, please verify`,
+    });
+  } catch (e: any) {
+    return next(e);
+  }
+};
+
+export const verifyEmail = async (
+  req: CustomRequest,
+  res: Response,
+  next: NextFunction,
+) => {
+  const { userId } = req;
+  const { ref } = req.body;
+  try {
+    const { user } = await authService.verifyUserEmail(userId, ref);
+    return res.status(201).json({ success: true, user });
   } catch (e: any) {
     return next(e);
   }

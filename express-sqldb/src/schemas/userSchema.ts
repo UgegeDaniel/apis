@@ -1,6 +1,6 @@
-import { SchemaType } from '../types/schemaTypes';
+import { WithExtraColumns } from '../types/schemaTypes';
 
-const UserSchema: SchemaType = {
+const UserSchema: WithExtraColumns = {
   name: 'users',
   columns: [
     { name: 'users_uid', type: 'uuid', constarint: 'PRIMARY KEY' },
@@ -26,6 +26,15 @@ const UserSchema: SchemaType = {
       },
     },
   ],
+  extraColumns: [
+    {
+      name: 'verified',
+      type: 'boolean',
+      // constarint: 'NOT NULL',
+      default: {
+        defaultValue: 'false'
+      }
+    },
+  ],
 };
-
 export default UserSchema;

@@ -16,8 +16,15 @@ class BaseUserModel extends baseModel_1.default {
                 email,
                 password,
                 role_id: parsed.STUDENT_ROLE_ID,
+                verified: false,
             });
-            return newUser;
+            return newUser[0];
+        };
+        this.verifyEmail = async (userId) => {
+            const verifiedUser = await this.updateTable(userId, {
+                verified: true,
+            });
+            return verifiedUser[0];
         };
         this.findUser = async (email) => {
             const payload = await this.findBy({ email });

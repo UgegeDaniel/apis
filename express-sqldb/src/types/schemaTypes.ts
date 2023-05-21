@@ -1,4 +1,7 @@
 export type columnType = {
+  default?: {
+    defaultValue: string;
+  };
   name: string;
   type: string;
   constarint?: string;
@@ -17,4 +20,9 @@ export interface SchemaType {
 
 export interface WithDefaultQuery<T> extends SchemaType {
   defaultQuery?: T[];
+  extraColumns?: columnType[];
+}
+
+export interface WithExtraColumns extends SchemaType {
+  extraColumns?: columnType[];
 }
