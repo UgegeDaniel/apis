@@ -63,13 +63,15 @@ const authService = {
         return { user, token };
     },
     verifyUserEmail: async (userId, ref) => {
-        if (await validatePassword(userId, ref)) {
+        const verifiedId = verifyEmail_1.referenceManager.verifyReference(ref);
+        if (verifiedId === userId) {
             const user = await models_1.UserModel.verifyEmail(userId);
             const token = (0, auth_1.createToken)({ userId, role: 'Student' });
             return { user, token };
         }
         throw new apiErrorType_1.ApiError(400, 'Email Vefication Failed');
     },
+    // Send Email Again
     signIn: async (userToSignIn) => {
         const { email, password } = userToSignIn;
         const user = await models_1.UserModel.findUser(email);

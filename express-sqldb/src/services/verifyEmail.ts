@@ -1,13 +1,12 @@
 /* eslint-disable linebreak-style */
 import nodemailer from 'nodemailer';
 import { emailVerificationText } from '../utils';
-import bcrypt from 'bcrypt';
+import ReferenceManager from './emailVerificationRefernce';
 
-const createReference = async (userId: string) => {
-  const salt = await bcrypt.genSalt(10);
-  const ref = await bcrypt.hash(userId, salt);
-  return ref;
-}
+// Example usage
+export const referenceManager = new ReferenceManager();
+const { parsed } = require('dotenv').config();
+const refExpiration = parsed.REF_EXPIRATION!;
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -20,13 +19,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const mailOptions = async (userId: string, userEmail: string, username?: string) => {
-  const ref = await createReference(userId);
-  return{
-  from: 'ugege62@gmail.com',
-  to: userEmail,
-  subject: 'Email Verification From Jakk',
-  html: `${emailVerificationText(ref, username)}`,
-}};
+export const mailOptions = async (
+  userId: string,
+  userEmail: string,
+  username?: string,
+) => {
+  const reference = referenceManager.createReference(userId, refExpiration);
+  return {
+    from: 'ugege62@gmail.com',
+    to: userEmail,
+    subject: 'Email Verification From Jakk',
+    html: `${emailVerificationText(reference.getReference(), username)}`,
+  };
+};
 
 export default transporter;
