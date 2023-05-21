@@ -12,7 +12,7 @@ class Reference {
     this.id = id;
     this.reference = this.hashId(id);
     this.expiresAt = new Date();
-    this.expiresAt.setMinutes(this.expiresAt.getSeconds() + expiresInMinutes);
+    this.expiresAt.setMinutes(this.expiresAt.getMinutes() + expiresInMinutes);
   }
 
   private hashId(id: string): string {
