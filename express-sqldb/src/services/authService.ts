@@ -50,13 +50,11 @@ const authService = {
     if (verifiedId === userId) {
       const user = await UserModel.verifyEmail(userId);
       const { email, name, verified } = user;
-      const token = createToken({ userId, role: 'Student' });
+      const token = createToken({ userId: user?.users_uid, role: 'Student' });
       return { user: { email, name, verified }, token };
     }
     throw new ApiError(400, 'Email Vefication Failed');
   },
-
-  // Send Email Again
 
   signIn: async (userToSignIn: UserType) => {
     const { email, password } = userToSignIn;

@@ -37,8 +37,8 @@ export const verifyEmail = async (
   const { userId } = req;
   const { ref } = req.body;
   try {
-    const { user } = await authService.verifyUserEmail(userId, ref);
-    return res.status(201).json({ success: true, user });
+    const { user, token } = await authService.verifyUserEmail(userId, ref);
+    return res.status(201).json({ success: true, user, token });
   } catch (e: any) {
     return next(e);
   }
