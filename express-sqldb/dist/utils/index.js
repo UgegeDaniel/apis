@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.emailVerificationText = exports.escapeSingleQuotes = void 0;
 /* eslint-disable linebreak-style */
-const appLink = process.env.FRONTEND_APP_URL;
+const appLink = process.env.ENVIRONMENT === 'production'
+    ? process.env.FRONTEND_APP_URL
+    : 'http://localhost:3000/';
 function escapeSingleQuotes(str) {
     return str.replace(/'/g, "''");
 }

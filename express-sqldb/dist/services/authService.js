@@ -46,7 +46,7 @@ const sendEmailToUser = async (userId, email, name) => {
     const userMailOptions = await (0, verifyEmail_1.mailOptions)(userId, email, name);
     return verifyEmail_1.default.sendMail(userMailOptions, (err) => {
         if (err) {
-            throw new apiErrorType_1.ApiError(500, 'Error verrifying your email');
+            throw new apiErrorType_1.ApiError(500, 'Error Sendng Email');
         }
     });
 };
@@ -58,16 +58,18 @@ const authService = {
             ...userToSignUp,
             password: hashedPassword,
         });
+        const { email, name, verified } = user;
         sendEmailToUser(user?.users_uid, userToSignUp.email, userToSignUp.name);
         const token = (0, auth_1.createToken)({ userId: user?.users_uid, role: 'Student' });
-        return { user, token };
+        return { user: { email, name, verified }, token };
     },
     verifyUserEmail: async (userId, ref) => {
         const verifiedId = verifyEmail_1.referenceManager.verifyReference(ref);
         if (verifiedId === userId) {
             const user = await models_1.UserModel.verifyEmail(userId);
+            const { email, name, verified } = user;
             const token = (0, auth_1.createToken)({ userId, role: 'Student' });
-            return { user, token };
+            return { user: { email, name, verified }, token };
         }
         throw new apiErrorType_1.ApiError(400, 'Email Vefication Failed');
     },
@@ -75,9 +77,10 @@ const authService = {
     signIn: async (userToSignIn) => {
         const { email, password } = userToSignIn;
         const user = await models_1.UserModel.findUser(email);
+        const { name, verified } = user;
         await validatePassword(password, user.password);
         const token = (0, auth_1.createToken)({ userId: user?.users_uid, role: 'Student' });
-        return { user, token };
+        return { user: { email, name, verified }, token };
     },
 };
 exports.default = authService;

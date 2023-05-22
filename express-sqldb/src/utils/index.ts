@@ -1,5 +1,7 @@
 /* eslint-disable linebreak-style */
-const appLink = process.env.FRONTEND_APP_URL!;
+const appLink = process.env.ENVIRONMENT! === 'production'
+? process.env.FRONTEND_APP_URL! 
+: 'http://localhost:3000/'
 
 export function escapeSingleQuotes(str: string): string {
   return str.replace(/'/g, "''");

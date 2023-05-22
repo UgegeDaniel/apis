@@ -26,7 +26,7 @@ const sendEmailToUser = async (
   const userMailOptions = await mailOptions(userId, email, name);
   return transporter.sendMail(userMailOptions, (err: any) => {
     if (err) {
-      throw new ApiError(500, 'Error verrifying your email');
+      throw new ApiError(500, 'Error Sendng Email');
     }
   });
 };
@@ -39,17 +39,19 @@ const authService = {
       ...userToSignUp,
       password: hashedPassword,
     });
+    const { email, name, verified } = user;
     sendEmailToUser(user?.users_uid, userToSignUp.email, userToSignUp.name);
     const token = createToken({ userId: user?.users_uid, role: 'Student' });
-    return { user, token };
+    return { user: { email, name, verified }, token };
   },
 
   verifyUserEmail: async (userId: string, ref: string) => {
     const verifiedId = referenceManager.verifyReference(ref);
     if (verifiedId === userId) {
       const user = await UserModel.verifyEmail(userId);
+      const { email, name, verified } = user;
       const token = createToken({ userId, role: 'Student' });
-      return { user, token };
+      return { user: { email, name, verified }, token };
     }
     throw new ApiError(400, 'Email Vefication Failed');
   },
@@ -59,9 +61,10 @@ const authService = {
   signIn: async (userToSignIn: UserType) => {
     const { email, password } = userToSignIn;
     const user: DbUserType = await UserModel.findUser(email);
+    const { name, verified } = user;
     await validatePassword(password, user.password);
     const token = createToken({ userId: user?.users_uid, role: 'Student' });
-    return { user, token };
+    return { user: { email, name, verified }, token };
   },
 };
 
