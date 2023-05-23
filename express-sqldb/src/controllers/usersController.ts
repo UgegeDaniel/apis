@@ -44,6 +44,25 @@ export const verifyEmail = async (
   }
 };
 
+export const resendEmail = async (
+  req: CustomRequest,
+  res: Response,
+  next: NextFunction,
+) => {
+  const { email, name } = req.body;
+  try {
+    const { user, token } = await authService.resendEmail(name, email);
+    return res.status(204).json({
+      success: true,
+      user,
+      token,
+      msg: `An email has been re-sent to ${email}, please verify`,
+    });
+  } catch (e: any) {
+    return next(e);
+  }
+};
+
 export const signIn = async (
   req: Request,
   res: Response,

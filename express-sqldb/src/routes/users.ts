@@ -6,6 +6,7 @@ import {
   signIn,
   getStudentHistory,
   saveStudentScore,
+  resendEmail,
 } from '../controllers/usersController';
 import { signUpValidators, signInValidators } from '../middlewares/validation';
 import { authMiddleware } from '../middlewares/auth';
@@ -27,6 +28,16 @@ router.post(
   authMiddleware as express.RequestHandler,
   verifyEmail as ApplicationGeneric<Record<string, any>>,
 );
+
+// METHOD: post
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.post(
+  '/signup/resendEmail',
+  authMiddleware as express.RequestHandler,
+  resendEmail as ApplicationGeneric<Record<string, any>>,
+);
+
 //DELETE FROM "public"."users" WHERE email='test2@gmail.com'
 // METHOD: post
 // ACCESS: public

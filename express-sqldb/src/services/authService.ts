@@ -45,6 +45,14 @@ const authService = {
     return { user: { email, name, verified }, token };
   },
 
+  resendEmail: async (email: string, name: string) => {
+    const user: DbUserType = await UserModel.findUser(email);
+    const { verified } = user;
+    sendEmailToUser(user?.users_uid, email, name);
+    const token = createToken({ userId: user?.users_uid, role: 'Student' });
+    return { user: { email, name, verified }, token };
+  },
+
   verifyUserEmail: async (userId: string, ref: string) => {
     const verifiedId = referenceManager.verifyReference(ref);
     if (verifiedId === userId) {
