@@ -2,6 +2,10 @@ import logger from '../logger';
 import { ConstraintType } from '../types/queryTypes';
 import query from './query';
 
+const getRowNames = (constaraintObj: {}, joinBy: string) => Object.keys(constaraintObj)
+  .map((constraint, index) => `${constraint} = $${index + 1}`)
+  .join(`${joinBy}`);
+
 class BaseModel {
   public tableName: string;
 
@@ -33,9 +37,7 @@ class BaseModel {
     const columnsToReturn = selectedColumns
       ? `${[selectedColumns].join("', '")}`
       : '*';
-    const constraints = Object.keys(searchContraints)
-      .map((constraint, index) => `${constraint} = $${index + 1}`)
-      .join(' AND ');
+    const constraints = getRowNames(searchContraints, ' AND ');
     const queryString = `SELECT ${columnsToReturn} FROM ${this.tableName} WHERE ${constraints};`;
     logger.info(
       `Returning rows from ${this.tableName} table that match given constraint`,
@@ -58,19 +60,34 @@ class BaseModel {
     const payload = await query(queryString);
     return payload;
   };
-
-  updateTable = async (
-    rowId: string,
-    updates: {},
-  ) => {
+  
+  updateTable = async (constraint: {}, updates: {}) => {
     const columnsToUpdate = Object.keys(updates)
-      .map((update, index) => `${update} = $${index + 1}`)
-      .join(', ');
+    .map((update, index) => `${update} = $${index + 1}`)
+    .join(', ');
+    const constraintName = Object.keys(constraint).join(', ');
+    const constraintValue = Object.values(constraint).join(', ');
     const queryString = `
     UPDATE ${this.tableName}
     SET ${columnsToUpdate}
-    WHERE ${this.tableName}_uid = '${rowId}' RETURNING *;`;
+    WHERE ${constraintName} = '${constraintValue}' RETURNING *;`;
+    logger.info(
+      `Updating ${this.tableName} table matching ${constraintName}`,
+    );
     const payload = await query(queryString, Object.values(updates));
+    return payload;
+  };
+  
+  deleteRowFromTable = async (constraint: {}) => {
+    const constraintName = Object.keys(constraint).join(', ');
+    const constraintValue = Object.values(constraint).join(', ');
+    const queryString = `
+    DELETE FROM ${this.tableName}
+    WHERE ${constraintName} = '${constraintValue}' RETURNING *;`;
+    logger.info(
+      `Deleting ${this.tableName} table matching ${constraintName}`,
+    );
+    const payload = await query(queryString);
     return payload;
   };
 }

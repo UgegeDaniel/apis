@@ -1,18 +1,14 @@
 /* eslint-disable linebreak-style */
 import nodemailer from 'nodemailer';
 import { emailVerificationText } from '../utils';
-import ReferenceManager from './emailVerificationRefernce';
 
-// Example usage
-export const referenceManager = new ReferenceManager();
 const { parsed } = require('dotenv').config();
-const refExpiration = parsed.REF_EXPIRATION!;
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'ugege62@gmail.com',
-    pass: 'tlbmqqlouaugyctt',
+    pass: parsed.NODE_MAILER_PASS,
   },
   tls: {
     rejectUnauthorized: false,
@@ -20,17 +16,14 @@ const transporter = nodemailer.createTransport({
 });
 
 export const mailOptions = async (
-  userId: string,
+  ref: string,
   userEmail: string,
   username?: string,
-) => {
-  const reference = referenceManager.createReference(userId, refExpiration);
-  return {
-    from: 'ugege62@gmail.com',
-    to: userEmail,
-    subject: 'Email Verification From Jakk',
-    html: `${emailVerificationText(reference.getReference(), username)}`,
-  };
-};
+) => ({
+  from: 'ugege62@gmail.com',
+  to: userEmail,
+  subject: 'Email Verification From Jakk',
+  html: `${emailVerificationText(ref, username)}`,
+});
 
 export default transporter;

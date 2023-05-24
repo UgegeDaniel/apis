@@ -5,7 +5,9 @@ const logger = createLogger({
   format: format.combine(
     format.colorize(),
     format.timestamp(),
-    format.printf(({ level, message }) => `${level}: ${message}`),
+    format.printf(
+      ({ level, message, timestamp }) => `[${timestamp}] ${level}: ${message}`,
+    ),
   ),
   defaultMeta: {
     service: 'Express-PsqlDB',

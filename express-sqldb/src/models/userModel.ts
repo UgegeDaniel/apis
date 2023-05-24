@@ -23,14 +23,17 @@ class BaseUserModel extends BaseModel {
   };
 
   verifyEmail = async (userId: string) => {
-    const verifiedUser = await this.updateTable(userId, {
-      verified: true,
-    });
+    const verifiedUser = await this.updateTable(
+      { users_uid: userId },
+      {
+        verified: true,
+      },
+    );
     return verifiedUser[0];
   };
 
-  findUser = async (email: string) => {
-    const payload = await this.findBy({ email });
+  findUser = async (userId: string) => {
+    const payload = await this.findBy({ users_uid: userId });
     const user = payload[0];
     if (!user) throw new ApiError(400, 'Invalid credentials');
     return user;

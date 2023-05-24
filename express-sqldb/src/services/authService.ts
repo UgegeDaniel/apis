@@ -1,35 +1,16 @@
-import bcrypt from 'bcrypt';
 import { ApiError } from '../types/apiErrorType';
-import { UserModel } from '../models';
+import { ReferenceModel, UserModel } from '../models';
 import { createToken } from '../middlewares/auth';
 import { DbUserType } from '../types/tableTyes';
 import { UserType } from '../types/queryTypes';
-import transporter, { mailOptions, referenceManager } from './verifyEmail';
+import ReferenceManager from './emailVerificationRefernce';
+import {
+  hashPassword,
+  sendEmailToUser,
+  validatePassword,
+} from '../utils/authUtils';
 
-const validatePassword = async (password: string, hashedPassword: string) => {
-  const match = await bcrypt.compare(password, hashedPassword);
-  if (!match) throw new ApiError(400, 'Incorrect credentials');
-  return match;
-};
-
-const hashPassword = async (password: string) => {
-  const salt = await bcrypt.genSalt(10);
-  const hash = await bcrypt.hash(password, salt);
-  return hash;
-};
-
-const sendEmailToUser = async (
-  userId: string,
-  email: string,
-  name?: string,
-) => {
-  const userMailOptions = await mailOptions(userId, email, name);
-  return transporter.sendMail(userMailOptions, (err: any) => {
-    if (err) {
-      throw new ApiError(500, 'Error Sendng Email');
-    }
-  });
-};
+export const referenceManager = new ReferenceManager();
 
 const authService = {
   signUp: async (userToSignUp: UserType) => {
@@ -40,25 +21,30 @@ const authService = {
       password: hashedPassword,
     });
     const { email, name, verified } = user;
-    sendEmailToUser(user?.users_uid, userToSignUp.email, userToSignUp.name);
-    const token = createToken({ userId: user?.users_uid, role: 'Student' });
+    const newRef = await referenceManager.createReference(user.users_uid);
+    const ref = newRef.getReference();
+    sendEmailToUser(await ref)(userToSignUp.email, userToSignUp.name);
+    const token = createToken({ userId: user.users_uid, role: 'Student' });
     return { user: { email, name, verified }, token };
   },
 
-  resendEmail: async (email: string, name: string) => {
-    const user: DbUserType = await UserModel.findUser(email);
-    const { verified } = user;
-    sendEmailToUser(user?.users_uid, email, name);
-    const token = createToken({ userId: user?.users_uid, role: 'Student' });
+  resendEmail: async (userId: string) => {
+    const user: DbUserType = await UserModel.findUser(userId);
+    const { verified, email, name } = user;
+    const updatedRef = await referenceManager.updateReference(user.users_uid);
+    const ref = await updatedRef.getReference();
+    sendEmailToUser(ref)(user.email, user.name);
+    const token = createToken({ userId: user.users_uid, role: 'Student' });
     return { user: { email, name, verified }, token };
   },
 
   verifyUserEmail: async (userId: string, ref: string) => {
-    const verifiedId = referenceManager.verifyReference(ref);
+    const verifiedId = await referenceManager.verifyReference(ref);
     if (verifiedId === userId) {
       const user = await UserModel.verifyEmail(userId);
+      await ReferenceModel.deleteRefernce(userId);
       const { email, name, verified } = user;
-      const token = createToken({ userId: user?.users_uid, role: 'Student' });
+      const token = createToken({ userId: user.users_uid, role: 'Student' });
       return { user: { email, name, verified }, token };
     }
     throw new ApiError(400, 'Email Vefication Failed');
@@ -69,7 +55,7 @@ const authService = {
     const user: DbUserType = await UserModel.findUser(email);
     const { name, verified } = user;
     await validatePassword(password, user.password);
-    const token = createToken({ userId: user?.users_uid, role: 'Student' });
+    const token = createToken({ userId: user.users_uid, role: 'Student' });
     return { user: { email, name, verified }, token };
   },
 };

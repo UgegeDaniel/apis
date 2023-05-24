@@ -1,63 +1,64 @@
-import { createHash } from 'crypto';
+// import { createHash } from 'crypto';
+import bcrypt from 'bcrypt';
 import { ApiError } from '../types/apiErrorType';
+import { ReferenceModel } from '../models';
 
+const { parsed } = require('dotenv').config();
+
+const refExpiration = parsed.REF_EXPIRATION! * 60000;
 class Reference {
-  private id: string;
+  public userId: string;
 
-  private reference: string;
+  private reference: Promise<string>;
 
-  private expiresAt: Date;
-
-  constructor(id: string, expiresInMinutes: number) {
-    this.id = id;
-    this.reference = this.hashId(id);
-    this.expiresAt = new Date();
-    this.expiresAt.setMinutes(this.expiresAt.getMinutes() + expiresInMinutes);
+  constructor(userId: string) {
+    this.userId = userId;
+    this.reference = this.hashId(userId);
   }
 
-  private hashId(id: string): string {
-    const hash = createHash('sha256');
-    hash.update(id);
-    return hash.digest('hex');
+  private async hashId(userId: string): Promise<string> {
+    const salt = await bcrypt.genSalt(10);
+    const hash = await bcrypt.hash(userId, salt);
+    return hash;
   }
 
-  public getId(): string {
-    return this.id;
-  }
-
-  public getReference(): string {
-    return this.reference;
-  }
-
-  public hasExpired(): boolean {
-    return new Date() >= this.expiresAt;
+  public async getReference(): Promise<string> {
+    return await this.reference;
   }
 }
 
 export default class ReferenceManager {
-  private references: Reference[];
+  constructor() {}
 
-  constructor() {
-    this.references = [];
-  }
+  public createReference = async (id: string): Promise<Reference> => {
+    const newReference = new Reference(id);
+    const reference = await newReference.getReference();
+    const expiration = new Date().getTime() + refExpiration;
+    await ReferenceModel.saveReference(id, reference, expiration);
+    return newReference;
+  };
 
-  public createReference(id: string, expiresInMinutes: number): Reference {
-    const reference = new Reference(id, expiresInMinutes);
-    this.references.push(reference);
-    return reference;
-  }
+  public updateReference = async (id: string): Promise<Reference> => {
+    const newReference = new Reference(id);
+    const reference = await newReference.getReference();
+    const expiration = new Date().getTime() + refExpiration;
+    await ReferenceModel.updateReference(id, reference, expiration);
+    return newReference;
+  };
 
-  public verifyReference(reference: string): string | null {
-    const foundReference = this.references.find(
-      (ref) => ref.getReference() === reference,
-    );
-    if (foundReference?.hasExpired() === undefined) {
-      throw new ApiError(400, 'Invalid Refernce');
+  public async verifyReference(reference: string): Promise<string | null> {
+    const searchRef = await ReferenceModel.getReference(reference);
+    const foundInDb = await searchRef[0];
+    const isExpired = foundInDb?.expiry_time - new Date().getTime() < 0;
+    if (!foundInDb) {
+      throw new ApiError(400, 'Invalid Reference');
     }
-    if (foundReference) {
-      return foundReference.getId();
+    if (foundInDb && isExpired) {
+      throw new ApiError(400, 'Expired Reference');
     }
-
-    return null;
+    if (foundInDb && !isExpired) {
+      return await foundInDb.user_id;
+    }
+    throw new ApiError(400, 'Invalid Reference');
   }
 }

@@ -29,16 +29,16 @@ router.post(
   verifyEmail as ApplicationGeneric<Record<string, any>>,
 );
 
-// METHOD: post
+// METHOD: get
 // ACCESS: Authenticated User
 // DESCRIPTION: Verify user email
-router.post(
+router.get(
   '/signup/resendEmail',
   authMiddleware as express.RequestHandler,
   resendEmail as ApplicationGeneric<Record<string, any>>,
 );
 
-//DELETE FROM "public"."users" WHERE email='test2@gmail.com'
+// DELETE FROM "public"."users" WHERE email='test2@gmail.com'
 // METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign in users

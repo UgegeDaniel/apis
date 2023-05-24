@@ -24,7 +24,9 @@ class DatabaseInstance {
     if (extraColumn) {
       return schema.extraColumns
         ?.map(
-          (column) => `ADD IF NOT EXISTS ${column.name} ${column.type} ${column.constarint || ''}`,
+          (column) => `ADD IF NOT EXISTS ${column.name} ${column.type} ${
+            column.constarint || ''
+          }`,
         )
         .toString();
     }

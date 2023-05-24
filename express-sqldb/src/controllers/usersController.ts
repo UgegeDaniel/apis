@@ -22,7 +22,6 @@ export const signUp = async (
       success: true,
       user,
       token,
-      msg: `An email has been sent to ${email}, please verify`,
     });
   } catch (e: any) {
     return next(e);
@@ -38,7 +37,11 @@ export const verifyEmail = async (
   const { ref } = req.body;
   try {
     const { user, token } = await authService.verifyUserEmail(userId, ref);
-    return res.status(201).json({ success: true, user, token });
+    return res.status(201).json({
+      success: true,
+      user,
+      token,
+    });
   } catch (e: any) {
     return next(e);
   }
@@ -49,14 +52,13 @@ export const resendEmail = async (
   res: Response,
   next: NextFunction,
 ) => {
-  const { email, name } = req.body;
+  const { userId } = req;
   try {
-    const { user, token } = await authService.resendEmail(name, email);
-    return res.status(204).json({
+    const { user, token } = await authService.resendEmail(userId);
+    return res.status(200).json({
       success: true,
       user,
       token,
-      msg: `An email has been re-sent to ${email}, please verify`,
     });
   } catch (e: any) {
     return next(e);
