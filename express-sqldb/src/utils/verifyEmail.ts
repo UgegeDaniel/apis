@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import nodemailer from 'nodemailer';
-import { emailVerificationText } from '../utils';
+import { emailVerificationText } from '.';
 
 const { parsed } = require('dotenv').config();
 

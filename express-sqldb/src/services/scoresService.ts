@@ -26,5 +26,16 @@ export const getStudentHistoryService = async (userId: string) => {
     columOnSecondaryTable: 'subjects_uid',
   };
   const history = await ScoresModel.getUserHistory(constraint);
-  return history;
+  const historySortedByTime = history.sort(
+    (historyItem, nextHistoryItem) =>  nextHistoryItem.time_of_test - historyItem.time_of_test,
+  );
+  const userHistory = historySortedByTime.map((historyItem)=>(
+    {
+      timeOfTtest: historyItem.time_of_test,
+      score: historyItem.score,
+      year: historyItem.year,
+      subject: historyItem.name,
+    }
+  ))
+  return userHistory;
 };

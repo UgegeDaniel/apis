@@ -19,6 +19,7 @@ class BaseUserModel extends BaseModel {
       role_id: parsed.STUDENT_ROLE_ID,
       verified: false,
     });
+    if (!newUser) throw new ApiError(400, 'Invalid credentials');
     return newUser[0];
   };
 
@@ -32,8 +33,8 @@ class BaseUserModel extends BaseModel {
     return verifiedUser[0];
   };
 
-  findUser = async (userId: string) => {
-    const payload = await this.findBy({ users_uid: userId });
+  findUser = async (param: {}) => {
+    const payload = await this.findBy(param);
     const user = payload[0];
     if (!user) throw new ApiError(400, 'Invalid credentials');
     return user;

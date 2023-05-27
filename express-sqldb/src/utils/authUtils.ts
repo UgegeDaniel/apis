@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import transporter, { mailOptions } from '../services/verifyEmail';
+import transporter, { mailOptions } from './verifyEmail';
 import { ApiError } from '../types/apiErrorType';
 
 export const validatePassword = async (

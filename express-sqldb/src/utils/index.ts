@@ -7,7 +7,7 @@ export function escapeSingleQuotes(str: string): string {
   return str.replace(/'/g, "''");
 }
 
-export const emailVerificationText = (ref: string, username?: string) => `
+export const emailVerificationText = (ref: string, username?: string): string => `
 <div style="padding: 20px; background-color: rgb(255, 255, 255);">
   <div style="color: rgb(0, 0, 0); text-align: left;">
     <h1 style="margin: 1rem 0">Hello, ${username} 😊...</h1>
@@ -15,7 +15,7 @@ export const emailVerificationText = (ref: string, username?: string) => `
       Thank you for signing up to Jakk, click the link to verify your account.
     </p>
     <p style="padding-bottom: 16px">
-      <a href="${appLink}verifyEmail/${ref}" target="_blank" 
+      <a href="${appLink}verifyEmail?ref=${ref}" target="_blank" 
       style="padding: 12px 24px; border-radius: 4px; color: #FFF; 
       background: #2B52F5;display: inline-block;margin: 0.5rem 0; 
       text-decoration: none;">

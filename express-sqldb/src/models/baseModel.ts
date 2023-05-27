@@ -13,7 +13,7 @@ class BaseModel {
     this.tableName = tableName;
   }
 
-  getAll = async (): Promise<any> => {
+  getAll = async <T>(): Promise<T[]> => {
     const queryString = `SELECT * FROM ${this.tableName};`;
     logger.info(`Fetching all rows from ${this.tableName} table`);
     const payload = await query(queryString);
@@ -49,7 +49,10 @@ class BaseModel {
   // Combine two tables together to create a single table
   // which satisfies a constraint and a condition
   // while optionally adding an additional column in the return
-  innerJoin = async (secondaryTable: string, constraint: ConstraintType) => {
+  innerJoin = async <T>(
+    secondaryTable: string,
+    constraint: ConstraintType,
+  ): Promise<T[]> => {
     const queryString = `SELECT * FROM ${this.tableName} 
     INNER JOIN ${secondaryTable}
     ON ${this.tableName}.${constraint.secondaryColumn} = ${secondaryTable}.${constraint.columOnSecondaryTable}
@@ -60,33 +63,29 @@ class BaseModel {
     const payload = await query(queryString);
     return payload;
   };
-  
+
   updateTable = async (constraint: {}, updates: {}) => {
     const columnsToUpdate = Object.keys(updates)
-    .map((update, index) => `${update} = $${index + 1}`)
-    .join(', ');
+      .map((update, index) => `${update} = $${index + 1}`)
+      .join(', ');
     const constraintName = Object.keys(constraint).join(', ');
     const constraintValue = Object.values(constraint).join(', ');
     const queryString = `
     UPDATE ${this.tableName}
     SET ${columnsToUpdate}
     WHERE ${constraintName} = '${constraintValue}' RETURNING *;`;
-    logger.info(
-      `Updating ${this.tableName} table matching ${constraintName}`,
-    );
+    logger.info(`Updating ${this.tableName} table matching ${constraintName}`);
     const payload = await query(queryString, Object.values(updates));
     return payload;
   };
-  
+
   deleteRowFromTable = async (constraint: {}) => {
     const constraintName = Object.keys(constraint).join(', ');
     const constraintValue = Object.values(constraint).join(', ');
     const queryString = `
     DELETE FROM ${this.tableName}
     WHERE ${constraintName} = '${constraintValue}' RETURNING *;`;
-    logger.info(
-      `Deleting ${this.tableName} table matching ${constraintName}`,
-    );
+    logger.info(`Deleting ${this.tableName} table matching ${constraintName}`);
     const payload = await query(queryString);
     return payload;
   };

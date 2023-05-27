@@ -7,9 +7,10 @@ import { escapeSingleQuotes } from '../utils';
 export const getAvailableYearsService = async (subjectId: string) => {
   if (!subjectId) throw new ApiError(400, 'SubjectId required');
   const data = await QuestionModel.getYears(subjectId);
-  const years = Array.from(
+  const years: number[] = Array.from(
     new Set(data.map((item: { examyear: number }) => item.examyear)),
   );
+  const sortedYears = years.sort((year, nextYear) => year - nextYear);
   return years;
 };
 

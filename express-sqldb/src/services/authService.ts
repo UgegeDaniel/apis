@@ -15,21 +15,22 @@ export const referenceManager = new ReferenceManager();
 const authService = {
   signUp: async (userToSignUp: UserType) => {
     const { password } = userToSignUp;
-    const hashedPassword = await hashPassword(password);
-    const user = await UserModel.createUser({
+    const user: DbUserType = await UserModel.createUser({
       ...userToSignUp,
-      password: hashedPassword,
+      password: await hashPassword(password),
     });
     const { email, name, verified } = user;
     const newRef = await referenceManager.createReference(user.users_uid);
-    const ref = newRef.getReference();
-    sendEmailToUser(await ref)(userToSignUp.email, userToSignUp.name);
+    sendEmailToUser(await newRef.getReference())(
+      userToSignUp.email,
+      userToSignUp.name,
+    );
     const token = createToken({ userId: user.users_uid, role: 'Student' });
     return { user: { email, name, verified }, token };
   },
 
   resendEmail: async (userId: string) => {
-    const user: DbUserType = await UserModel.findUser(userId);
+    const user: DbUserType = await UserModel.findUser({ users_uid: userId });
     const { verified, email, name } = user;
     const updatedRef = await referenceManager.updateReference(user.users_uid);
     const ref = await updatedRef.getReference();
@@ -52,7 +53,7 @@ const authService = {
 
   signIn: async (userToSignIn: UserType) => {
     const { email, password } = userToSignIn;
-    const user: DbUserType = await UserModel.findUser(email);
+    const user: DbUserType = await UserModel.findUser({ email });
     const { name, verified } = user;
     await validatePassword(password, user.password);
     const token = createToken({ userId: user.users_uid, role: 'Student' });

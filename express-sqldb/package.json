@@ -6,7 +6,6 @@
   "scripts": {
     "server": "node dist/index.js",
     "ts-dev": "ts-node-dev --respawn src/index.ts",
-    "update-db": "ts-node-dev dist/index.js",
     "lint": "eslint src/**/*.ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "build": "tsc --outDir ./dist"

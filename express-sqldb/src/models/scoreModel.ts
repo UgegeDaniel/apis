@@ -9,8 +9,13 @@ class BaseScoreModel extends BaseModel {
   }
 
   getUserHistory = async (constraint: ConstraintType) => {
-    const data = await this.innerJoin('subjects', constraint);
-    return data;
+    const userHistory: {
+      time_of_test: number;
+      score: number;
+      year: number;
+      name: string;
+    }[] = await this.innerJoin('subjects', constraint);
+    return userHistory;
   };
 
   saveUserHistory = async (score: scoreType) => {
