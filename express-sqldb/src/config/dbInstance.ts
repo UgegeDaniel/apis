@@ -164,7 +164,8 @@ class DatabaseInstance {
             ? `INSERT INTO ${schema.name} (${columnNames})
               SELECT uuid_generate_v4(), '${values}'
               WHERE NOT EXISTS (
-                  SELECT name FROM ${schema.name} WHERE name = '${defQuery.name}'
+                  SELECT ${Object.keys(defQuery)[0]} FROM ${schema.name}
+                  WHERE ${Object.keys(defQuery)[0]} = '${Object.values(defQuery)[0]}'
               );`
             : '';
           queryString && this.queryStrings.push(queryString);

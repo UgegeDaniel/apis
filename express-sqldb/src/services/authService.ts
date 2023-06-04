@@ -10,6 +10,8 @@ import {
   validatePassword,
 } from '../utils/authUtils';
 
+const { parsed } = require('dotenv').config();
+
 export const referenceManager = new ReferenceManager();
 
 const authService = {
@@ -18,25 +20,44 @@ const authService = {
     const user: DbUserType = await UserModel.createUser({
       ...userToSignUp,
       password: await hashPassword(password),
+      role_id: parsed[userToSignUp.role!.toUpperCase()],
     });
-    const { email, name, verified, payment_ref } = user;
+    const {
+      email, name, verified, payment_ref, users_uid,
+    } = user;
     const newRef = await referenceManager.createReference(user.users_uid);
     sendEmailToUser(await newRef.getReference())(
       userToSignUp.email,
       userToSignUp.name,
     );
-    const token = createToken({ userId: user.users_uid, role: 'Student' });
-    return { user: { email, name, verified, payment_ref }, token };
+    return {
+      user: {
+        email,
+        name,
+        verified,
+        payment_ref,
+        users_uid,
+      },
+    };
   },
 
   resendEmail: async (userId: string) => {
     const user: DbUserType = await UserModel.findUser({ users_uid: userId });
-    const { verified, email, name, payment_ref } = user;
+    const {
+      verified, email, name, payment_ref, users_uid,
+    } = user;
     const updatedRef = await referenceManager.updateReference(user.users_uid);
     const ref = await updatedRef.getReference();
     sendEmailToUser(ref)(user.email, user.name);
-    const token = createToken({ userId: user.users_uid, role: 'Student' });
-    return { user: { email, name, verified, payment_ref }, token };
+    return {
+      user: {
+        email,
+        name,
+        verified,
+        payment_ref,
+        users_uid,
+      },
+    };
   },
 
   verifyUserEmail: async (userId: string, ref: string) => {
@@ -44,20 +65,40 @@ const authService = {
     if (verifiedId === userId) {
       const user = await UserModel.verifyEmail(userId);
       await ReferenceModel.deleteRefernce(userId);
-      const { email, name, verified, payment_ref } = user;
-      const token = createToken({ userId: user.users_uid, role: 'Student' });
-      return { user: { email, name, verified, payment_ref }, token };
+      const {
+        email, name, verified, payment_ref, users_uid,
+      } = user;
+      return {
+        user: {
+          email,
+          name,
+          verified,
+          payment_ref,
+          users_uid,
+        },
+      };
     }
     throw new ApiError(400, 'Email Vefication Failed');
   },
 
-  signIn: async (userToSignIn: UserType) => {
+  signIn: async (userToSignIn: UserType, role: string) => {
     const { email, password } = userToSignIn;
     const user: DbUserType = await UserModel.findUser({ email });
-    const { name, verified, payment_ref } = user;
+    const {
+      name, verified, payment_ref, users_uid, role_name
+    } = user;
     await validatePassword(password, user.password);
-    const token = createToken({ userId: user.users_uid, role: 'Student' });
-    return { user: { email, name, verified, payment_ref }, token };
+    if(role_name !== role) throw new ApiError(400, 'Invalid Credentials')
+    return {
+      user: {
+        email,
+        name,
+        verified,
+        payment_ref,
+        users_uid,
+        role_name
+      },
+    };
   },
 };
 

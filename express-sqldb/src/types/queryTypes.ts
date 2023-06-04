@@ -11,4 +11,6 @@ export type UserType = {
   password: string;
   verrified?: boolean;
   payment_ref?: string | null;
+  role?: 'Student' | 'Tutor',
+  role_id?: string
 };

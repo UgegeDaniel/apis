@@ -17,32 +17,23 @@ const router = express.Router();
 
 // METHOD: post
 // ACCESS: public
-// DESCRIPTION: sign up new users
-router.post('/signup', signUpValidators, signUp);
+// DESCRIPTION: sign up new student
+router.post('/signup/student', signUpValidators, signUp('Student'));
 
-// METHOD: post
-// ACCESS: Authenticated User
-// DESCRIPTION: Verify user email
-router.post(
-  '/signup/verifyEmail',
-  authMiddleware as express.RequestHandler,
-  verifyEmail as ApplicationGeneric<Record<string, any>>,
-);
-
-// METHOD: get
-// ACCESS: Authenticated User
-// DESCRIPTION: Verify user email
-router.get(
-  '/signup/resendEmail',
-  authMiddleware as express.RequestHandler,
-  resendEmail as ApplicationGeneric<Record<string, any>>,
-);
-
-// DELETE FROM "public"."users" WHERE email='test2@gmail.com'
 // METHOD: post
 // ACCESS: public
-// DESCRIPTION: sign in users
-router.post('/signin', signInValidators, signIn);
+// DESCRIPTION: sign up new tutors
+router.post('/signup/tutor', signUpValidators, signUp('Tutor'));
+
+// METHOD: post
+// ACCESS: public
+// DESCRIPTION: sign in student
+router.post('/signin/student', signInValidators, signIn('Student'));
+
+// METHOD: post
+// ACCESS: public
+// DESCRIPTION: sign in tutor
+router.post('/signin/tutor', signInValidators, signIn('Tutor'));
 
 // METHOD: get
 // ACCESS: Authenticated User
@@ -50,7 +41,7 @@ router.post('/signin', signInValidators, signIn);
 router.get(
   '/history',
   authMiddleware as express.RequestHandler,
-  getStudentHistory as ApplicationGeneric<Record<string, any>>,
+  getStudentHistory('Student') as ApplicationGeneric<Record<string, any>>,
 );
 
 // METHOD: post
@@ -59,6 +50,42 @@ router.get(
 router.post(
   '/score/save',
   authMiddleware as express.RequestHandler,
-  saveStudentScore as ApplicationGeneric<Record<string, any>>,
+  saveStudentScore('Student') as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: post
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.post(
+  '/signup/student/verifyEmail',
+  authMiddleware as express.RequestHandler,
+  verifyEmail('Student') as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: post
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.post(
+  '/signup/tutor/verifyEmail',
+  authMiddleware as express.RequestHandler,
+  verifyEmail('Tutor') as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: get
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.get(
+  '/signup/resendEmail',
+  authMiddleware as express.RequestHandler,
+  resendEmail('Student') as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: get
+// ACCESS: Authenticated User
+// DESCRIPTION: Verify user email
+router.get(
+  '/signup/resendEmail',
+  authMiddleware as express.RequestHandler,
+  resendEmail('Tutor') as ApplicationGeneric<Record<string, any>>,
 );
 export default router;

@@ -7,5 +7,6 @@ interface RequestTypeExtension {
   userId: string;
   role: string;
 }
+export type roleType = 'Student' | 'Tutor'
 
 export type CustomRequest = Request & RequestTypeExtension;

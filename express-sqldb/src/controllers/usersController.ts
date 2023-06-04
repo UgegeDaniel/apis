@@ -1,25 +1,30 @@
 import { NextFunction, Request, Response } from 'express';
-import { CustomRequest } from '../types/requestType';
+import { CustomRequest, roleType } from '../types/requestType';
 import authService from '../services/authService';
 import {
   getStudentHistoryService,
   saveStudentScoreService,
 } from '../services/scoresService';
+import { createToken } from '../middlewares/auth';
+import { ApiError } from '../types/apiErrorType';
 
-export const signUp = async (
+export const signUp = (role: roleType) => async (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
   const { email, password, name } = req.body;
   try {
-    const { user, token } = await authService.signUp({
+    const { user } = await authService.signUp({
       name,
       email,
       password,
+      role
     });
+    const token = createToken({ userId: user.users_uid, role });
     return res.status(201).json({
       success: true,
+      role,
       user,
       token,
     });
@@ -28,7 +33,7 @@ export const signUp = async (
   }
 };
 
-export const verifyEmail = async (
+export const verifyEmail = (role: roleType) => async (
   req: CustomRequest,
   res: Response,
   next: NextFunction,
@@ -36,9 +41,11 @@ export const verifyEmail = async (
   const { userId } = req;
   const { ref } = req.body;
   try {
-    const { user, token } = await authService.verifyUserEmail(userId, ref);
+    const token = createToken({ userId, role });
+    const { user } = await authService.verifyUserEmail(userId, ref);
     return res.status(201).json({
       success: true,
+      role,
       user,
       token,
     });
@@ -47,16 +54,18 @@ export const verifyEmail = async (
   }
 };
 
-export const resendEmail = async (
+export const resendEmail = (role: roleType) => async (
   req: CustomRequest,
   res: Response,
   next: NextFunction,
 ) => {
   const { userId } = req;
   try {
-    const { user, token } = await authService.resendEmail(userId);
+    const token = createToken({ userId, role });
+    const { user } = await authService.resendEmail(userId);
     return res.status(200).json({
       success: true,
+      role,
       user,
       token,
     });
@@ -65,44 +74,49 @@ export const resendEmail = async (
   }
 };
 
-export const signIn = async (
+export const signIn = (role: roleType) => async (
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
   const { email, password } = req.body;
   try {
-    const { user, token } = await authService.signIn({ email, password });
-    return res.status(200).json({ success: true, user, token });
+    const { user } = await authService.signIn({ email, password }, role);
+    const token = createToken({ userId: user.users_uid, role });
+    return res.status(200).json({ success: true, user, token, role });
   } catch (e) {
     return next(e);
   }
 };
 
-export const getStudentHistory = async (
+export const getStudentHistory = (role: roleType) => async (
   req: CustomRequest,
   res: Response,
   next: NextFunction,
 ) => {
   const { userId } = req;
   try {
+    if(role !== 'Student') throw new ApiError(400, 'Access Denied')
     const userHistory = await getStudentHistoryService(userId);
-    return res.status(200).json({ success: true, userHistory });
+    const token = createToken({ userId, role });
+    return res.status(200).json({ success: true, userHistory, token, role });
   } catch (e) {
     return next(e);
   }
 };
 
-export const saveStudentScore = async (
+export const saveStudentScore = (role: roleType) => async (
   req: CustomRequest,
   res: Response,
   next: NextFunction,
 ) => {
   const { subjectId, score, year } = req.body;
   const { userId } = req;
-  saveStudentScoreService(userId, subjectId, score, year);
   try {
-    return res.status(201).json({ success: true });
+    if(role !== 'Student') throw new ApiError(400, 'Access Denied')
+    saveStudentScoreService(userId, subjectId, score, year);
+    const token = createToken({ userId, role });
+    return res.status(201).json({ success: true, token, role });
   } catch (e) {
     return next(e);
   }

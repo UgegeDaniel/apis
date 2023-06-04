@@ -10,7 +10,7 @@ const UserSchema: WithExtraColumns = {
       constarint: 'NOT NULL',
       unique: true,
     },
-    { name: 'name', type: 'character varying(150)', constarint: 'NOT NULL' },
+    { name: 'user_name', type: 'character varying(150)', constarint: 'NOT NULL' },
     {
       name: 'password',
       type: 'character varying(150)',
