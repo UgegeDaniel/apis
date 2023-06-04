@@ -4,6 +4,7 @@ import RoleSchema from './roleSchema';
 import ScoreSchema from './scoreSchema';
 import SubjectSchema from './subjectSchema';
 import ReferenceSchema from './referenceSchema';
+import ClassSchema from './classSchema';
 
 const schemas = [
   QuestionSchema,
@@ -11,7 +12,8 @@ const schemas = [
   UserSchema,
   RoleSchema,
   ScoreSchema,
-  ReferenceSchema
+  ReferenceSchema,
+  ClassSchema
 ];
 
 export default schemas;
