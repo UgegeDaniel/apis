@@ -16,18 +16,18 @@ const router = express.Router();
 // METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign up new tutors
-router.post('/signup/tutor', signUpValidators, signUp('Tutor'));
+router.post('/signup', signUpValidators, signUp('Tutor'));
 
 // METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign in tutor
-router.post('/signin/tutor', signInValidators, signIn('Tutor'));
+router.post('/signin', signInValidators, signIn('Tutor'));
 
 // METHOD: post
 // ACCESS: Authenticated User
 // DESCRIPTION: Verify user email
 router.post(
-  '/signup/tutor/verifyEmail',
+  '/signup/verifyEmail',
   authMiddleware as express.RequestHandler,
   verifyEmail('Tutor') as ApplicationGeneric<Record<string, any>>,
 );

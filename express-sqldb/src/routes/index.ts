@@ -9,8 +9,8 @@ const router = express.Router();
 
 router.use('/questions', questionRouter);
 router.use('/subjects', subjectRouter);
-router.use('/users', tutorRouter);
-router.use('/users', studentRouter);
+router.use('/tutor', tutorRouter);
+router.use('/student', studentRouter);
 router.use('/paystack', paymentRouter);
 
 export default router;

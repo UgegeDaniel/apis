@@ -13,18 +13,18 @@ const router = express.Router();
 // METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign up new student
-router.post('/signup/student', signUpValidators, signUp('Student'));
+router.post('/signup', signUpValidators, signUp('Student'));
 
 // METHOD: post
 // ACCESS: public
 // DESCRIPTION: sign in student
-router.post('/signin/student', signInValidators, signIn('Student'));
+router.post('/signin', signInValidators, signIn('Student'));
 
 // METHOD: post
 // ACCESS: Authenticated User
 // DESCRIPTION: Verify user email
 router.post(
-  '/signup/student/verifyEmail',
+  '/signup/verifyEmail',
   authMiddleware as express.RequestHandler,
   verifyEmail('Student') as ApplicationGeneric<Record<string, any>>,
 );
