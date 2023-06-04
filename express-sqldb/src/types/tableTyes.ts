@@ -4,6 +4,7 @@ export type DbUserType = {
   password: string;
   users_uid: string;
   verified: boolean;
+  payment_ref: string;
 };
 
 export type questionType = {

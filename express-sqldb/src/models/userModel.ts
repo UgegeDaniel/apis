@@ -17,6 +17,7 @@ class BaseUserModel extends BaseModel {
       email,
       password,
       role_id: parsed.STUDENT_ROLE_ID,
+      payment_ref: null,
       verified: false,
     });
     if (!newUser) throw new ApiError(400, 'Invalid credentials');
@@ -31,6 +32,14 @@ class BaseUserModel extends BaseModel {
       },
     );
     return verifiedUser[0];
+  };
+
+  savePaymentRef = async (userId: string, payment_ref: string) => {
+    const paidUser = await this.updateTable(
+      { users_uid: userId },
+      { payment_ref },
+    );
+    return paidUser[0];
   };
 
   findUser = async (param: {}) => {

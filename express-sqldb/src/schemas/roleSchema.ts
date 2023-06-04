@@ -8,11 +8,11 @@ const RoleSchema: WithDefaultQuery<{ name: string }> = {
       name: 'name',
       type: 'character varying(150)',
       constarint: 'NOT NULL',
-      allowedEntries: ['Admin', 'Student'],
+      allowedEntries: ['Admin', 'Tutor', 'Student'],
       unique: true,
     },
   ],
-  defaultQuery: [{ name: 'Admin' }, { name: 'Student' }],
+  defaultQuery: [{ name: 'Admin' }, { name: 'Tutor' }, { name: 'Student' }],
 };
 
 export default RoleSchema;

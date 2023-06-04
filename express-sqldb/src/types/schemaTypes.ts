@@ -1,6 +1,6 @@
 export type columnType = {
   default?: {
-    defaultValue: string;
+    defaultValue: string | null;
   };
   name: string;
   type: string;

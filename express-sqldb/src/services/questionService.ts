@@ -11,7 +11,7 @@ export const getAvailableYearsService = async (subjectId: string) => {
     new Set(data.map((item: { examyear: number }) => item.examyear)),
   );
   const sortedYears = years.sort((year, nextYear) => year - nextYear);
-  return years;
+  return sortedYears;
 };
 
 export const getQuestionsService = async (

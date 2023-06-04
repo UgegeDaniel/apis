@@ -30,10 +30,16 @@ const UserSchema: WithExtraColumns = {
     {
       name: 'verified',
       type: 'boolean',
-      // constarint: 'NOT NULL',
       default: {
-        defaultValue: 'false'
-      }
+        defaultValue: 'false',
+      },
+    },
+    {
+      name: 'payment_ref',
+      type: 'character varying(150)',
+      default: {
+        defaultValue: null,
+      },
     },
   ],
 };

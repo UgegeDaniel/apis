@@ -19,24 +19,24 @@ const authService = {
       ...userToSignUp,
       password: await hashPassword(password),
     });
-    const { email, name, verified } = user;
+    const { email, name, verified, payment_ref } = user;
     const newRef = await referenceManager.createReference(user.users_uid);
     sendEmailToUser(await newRef.getReference())(
       userToSignUp.email,
       userToSignUp.name,
     );
     const token = createToken({ userId: user.users_uid, role: 'Student' });
-    return { user: { email, name, verified }, token };
+    return { user: { email, name, verified, payment_ref }, token };
   },
 
   resendEmail: async (userId: string) => {
     const user: DbUserType = await UserModel.findUser({ users_uid: userId });
-    const { verified, email, name } = user;
+    const { verified, email, name, payment_ref } = user;
     const updatedRef = await referenceManager.updateReference(user.users_uid);
     const ref = await updatedRef.getReference();
     sendEmailToUser(ref)(user.email, user.name);
     const token = createToken({ userId: user.users_uid, role: 'Student' });
-    return { user: { email, name, verified }, token };
+    return { user: { email, name, verified, payment_ref }, token };
   },
 
   verifyUserEmail: async (userId: string, ref: string) => {
@@ -44,9 +44,9 @@ const authService = {
     if (verifiedId === userId) {
       const user = await UserModel.verifyEmail(userId);
       await ReferenceModel.deleteRefernce(userId);
-      const { email, name, verified } = user;
+      const { email, name, verified, payment_ref } = user;
       const token = createToken({ userId: user.users_uid, role: 'Student' });
-      return { user: { email, name, verified }, token };
+      return { user: { email, name, verified, payment_ref }, token };
     }
     throw new ApiError(400, 'Email Vefication Failed');
   },
@@ -54,10 +54,10 @@ const authService = {
   signIn: async (userToSignIn: UserType) => {
     const { email, password } = userToSignIn;
     const user: DbUserType = await UserModel.findUser({ email });
-    const { name, verified } = user;
+    const { name, verified, payment_ref } = user;
     await validatePassword(password, user.password);
     const token = createToken({ userId: user.users_uid, role: 'Student' });
-    return { user: { email, name, verified }, token };
+    return { user: { email, name, verified, payment_ref }, token };
   },
 };
 

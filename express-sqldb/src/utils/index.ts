@@ -1,13 +1,16 @@
 /* eslint-disable linebreak-style */
 const appLink = process.env.ENVIRONMENT! === 'production'
-? process.env.FRONTEND_APP_URL! 
-: 'http://localhost:3000/'
+  ? process.env.FRONTEND_APP_URL!
+  : 'http://localhost:3000/';
 
 export function escapeSingleQuotes(str: string): string {
   return str.replace(/'/g, "''");
 }
 
-export const emailVerificationText = (ref: string, username?: string): string => `
+export const emailVerificationText = (
+  ref: string,
+  username?: string,
+): string => `
 <div style="padding: 20px; background-color: rgb(255, 255, 255);">
   <div style="color: rgb(0, 0, 0); text-align: left;">
     <h1 style="margin: 1rem 0">Hello, ${username} 😊...</h1>
@@ -29,3 +32,12 @@ export const emailVerificationText = (ref: string, username?: string): string =>
   </div>
 </div>
 `;
+
+export const snakeToCamelCase = (str: string): string => str.replace(/([-_][a-z0-9])/gi, ($1) => $1.toUpperCase().replace('-', '').replace('_', ''));
+
+export const convertObjectFromSnakeToCamelCase = <T>(
+  obj: Record<string, any>,
+) => Object.keys(obj).reduce(
+  (prev, cur) => ({ ...prev, [snakeToCamelCase(cur)]: obj[cur] }),
+  {},
+) as T;

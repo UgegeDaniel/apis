@@ -125,16 +125,26 @@ class DatabaseInstance {
         const msg = `running checks on ${column.name}...`;
         column.allowedEntries && DatabaseInstance.showConsoleMsg(msg);
         const queryString = column.allowedEntries
-          ? `
-          DO $$
-            BEGIN
-              IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = '${schema.name}_type') THEN
-                ALTER TABLE ONLY ${schema.name} 
-                  ADD CONSTRAINT ${schema.name}_type 
-                    CHECK(${column.name} = '${column.allowedEntries[0]}'
-                      OR ${column.name}= '${column.allowedEntries[1]}');
-              END IF;
-            END;
+          ? `DO $$
+          BEGIN
+            IF EXISTS (
+              SELECT 1
+              FROM pg_constraint
+              WHERE conname = '${schema.name}_type'
+                AND conrelid = '${schema.name}'::regclass
+            ) THEN
+              ALTER TABLE ONLY ${schema.name}
+              DROP CONSTRAINT ${schema.name}_type;
+            END IF;
+            
+            ALTER TABLE ONLY ${schema.name}
+            ADD CONSTRAINT ${schema.name}_type
+            CHECK (
+              ${column.name} = '${column.allowedEntries[0]}' OR
+              ${column.name} = '${column.allowedEntries[1]}' OR
+              ${column.name} = '${column.allowedEntries[2]}'
+            );
+          END;
           $$;`
           : '';
         queryString && this.queryStrings.push(queryString);
