@@ -1,7 +1,10 @@
 import express, { Application } from 'express';
 import { authMiddleware } from '../middlewares/auth';
 import {
+  getAllStudentsTutors,
+  getAvailableTutors,
   getStudentHistory,
+  joinClass,
   saveStudentScore,
 } from '../controllers/studentController';
 import { signInValidators, signUpValidators } from '../middlewares/validation';
@@ -44,7 +47,34 @@ router.get(
 router.get(
   '/history',
   authMiddleware as express.RequestHandler,
-  getStudentHistory('Student') as ApplicationGeneric<Record<string, any>>,
+  getStudentHistory as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: get
+// ACCESS: Authenticated Student
+// DESCRIPTION: Get all available tutors
+router.get(
+  '/tutors',
+  authMiddleware as express.RequestHandler,
+  getAvailableTutors  as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: get
+// ACCESS: Authenticated Student
+// DESCRIPTION: Get all students' tutors
+router.get(
+  '/myTutors',
+  authMiddleware as express.RequestHandler,
+  getAllStudentsTutors as ApplicationGeneric<Record<string, any>>,
+);
+
+// METHOD: post
+// ACCESS: Authenticated Student
+// DESCRIPTION: Join a class
+router.get(
+  '/joinClass',
+  authMiddleware as express.RequestHandler,
+  joinClass as ApplicationGeneric<Record<string, any>>,
 );
 
 // METHOD: post
@@ -53,7 +83,7 @@ router.get(
 router.post(
   '/score/save',
   authMiddleware as express.RequestHandler,
-  saveStudentScore('Student') as ApplicationGeneric<Record<string, any>>,
+  saveStudentScore as ApplicationGeneric<Record<string, any>>,
 );
 
 export default router;

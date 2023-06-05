@@ -16,6 +16,10 @@ export type columnType = {
 export interface SchemaType {
   name: string;
   columns: columnType[];
+  uniqueRows?: {
+    name: string,
+    columns: string[]
+  }
 }
 
 export interface WithDefaultQuery<T> extends SchemaType {

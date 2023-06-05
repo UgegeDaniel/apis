@@ -1,17 +1,12 @@
-import { NextFunction, Request, Response } from 'express';
-import { CustomRequest } from '../types/requestType';
 import {
   addQuestionService,
   getAvailableYearsService,
   getQuestionsService,
 } from '../services/questionService';
 import { ApiError } from '../types/apiErrorType';
+import { Controller, CustomController } from '../types/requestType';
 
-export const addNewQuestions = async (
-  req: CustomRequest,
-  res: Response,
-  next: NextFunction,
-) => {
+export const addNewQuestions: CustomController = async (req, res, next) => {
   const { role } = req;
   if (role !== 'Student') throw new ApiError(401, 'You have no access');
   try {
@@ -22,11 +17,7 @@ export const addNewQuestions = async (
   }
 };
 
-export const getAvailableYears = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const getAvailableYears: Controller = async (req, res, next) => {
   const { subjectId } = req.query;
   const subjectIdToString = subjectId?.toString()!;
   try {
@@ -37,11 +28,7 @@ export const getAvailableYears = async (
   }
 };
 
-export const getQuestions = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const getQuestions: Controller = async (req, res, next) => {
   const { subjectId, year } = req.query;
   const subjectIdToString = subjectId?.toString()!;
   const yearToNumber = Number(year?.toString());

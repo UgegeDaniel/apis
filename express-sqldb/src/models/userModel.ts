@@ -2,6 +2,7 @@ import BaseModel from './baseModel';
 import { ApiError } from '../types/apiErrorType';
 import { UserType } from '../types/queryTypes';
 import { DbUserType } from '../types/tableTyes';
+const { parsed } = require('dotenv').config();
 
 class BaseUserModel extends BaseModel {
   constructor(tableName: string) {
@@ -53,6 +54,13 @@ class BaseUserModel extends BaseModel {
     const user: DbUserType = payload[0];
     if (!user) throw new ApiError(400, 'Invalid credentials');
     return user;
+  };
+
+  getAllTutors = async () => {
+    const allTutors = await this.findBy( {
+      role_id: parsed.TUTOR,
+    });
+    return allTutors;
   };
 }
 export default BaseUserModel;

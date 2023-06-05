@@ -8,6 +8,7 @@ import {
 } from '../controllers/usersController';
 import { signUpValidators, signInValidators } from '../middlewares/validation';
 import { authMiddleware } from '../middlewares/auth';
+import { getAllStudentsForTutor } from '../controllers/tutorController';
 
 interface ApplicationGeneric<T> extends Application {}
 
@@ -40,4 +41,14 @@ router.get(
   authMiddleware as express.RequestHandler,
   resendEmail('Tutor') as ApplicationGeneric<Record<string, any>>,
 );
+
+// METHOD: get
+// ACCESS: Authenticated Tutor
+// DESCRIPTION: Get all Tutors Students
+router.get(
+  '/myStudents',
+  authMiddleware as express.RequestHandler,
+  getAllStudentsForTutor('Tutor') as ApplicationGeneric<Record<string, any>>,
+);
+
 export default router;

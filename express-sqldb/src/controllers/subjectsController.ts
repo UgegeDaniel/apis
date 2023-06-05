@@ -1,11 +1,7 @@
-import { NextFunction, Request, Response } from 'express';
 import { SubjectModel } from '../models/index';
+import { Controller } from '../types/requestType';
 
-export const getAllSubjects = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const getAllSubjects: Controller = async (req, res, next) => {
   try {
     const allSubjects = await SubjectModel.getAllSubjects();
     return res.status(200).json({ success: true, allSubjects });
@@ -14,11 +10,7 @@ export const getAllSubjects = async (
   }
 };
 
-export const addNewSubject = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const addNewSubject: Controller = async (req, res, next) => {
   try {
     const { subject } = req.body;
     const newSubject = await SubjectModel.saveNewSubject(subject);

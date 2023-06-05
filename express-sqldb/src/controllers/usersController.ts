@@ -1,20 +1,18 @@
-import { NextFunction, Request, Response } from 'express';
-import { CustomRequest, roleType } from '../types/requestType';
+import {
+  ControllerWithRole,
+  CustomControllerWithRole,
+} from '../types/requestType';
 import authService from '../services/authService';
 import { createToken } from '../middlewares/auth';
 
-export const signUp = (role: roleType) => async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const signUp: ControllerWithRole = (role) => async (req, res, next) => {
   const { email, password, name } = req.body;
   try {
     const { user } = await authService.signUp({
       name,
       email,
       password,
-      role
+      role,
     });
     const token = createToken({ userId: user.users_uid, role });
     return res.status(201).json({
@@ -28,11 +26,7 @@ export const signUp = (role: roleType) => async (
   }
 };
 
-export const verifyEmail = (role: roleType) => async (
-  req: CustomRequest,
-  res: Response,
-  next: NextFunction,
-) => {
+export const verifyEmail: CustomControllerWithRole = (role) => async (req, res, next) => {
   const { userId } = req;
   const { ref } = req.body;
   try {
@@ -49,11 +43,7 @@ export const verifyEmail = (role: roleType) => async (
   }
 };
 
-export const resendEmail = (role: roleType) => async (
-  req: CustomRequest,
-  res: Response,
-  next: NextFunction,
-) => {
+export const resendEmail: CustomControllerWithRole = (role) => async (req, res, next) => {
   const { userId } = req;
   try {
     const token = createToken({ userId, role });
@@ -69,19 +59,18 @@ export const resendEmail = (role: roleType) => async (
   }
 };
 
-export const signIn = (role: roleType) => async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const signIn: ControllerWithRole = (role) => async (req, res, next) => {
   const { email, password } = req.body;
   try {
     const { user } = await authService.signIn({ email, password }, role);
     const token = createToken({ userId: user.users_uid, role });
-    return res.status(200).json({ success: true, user, token, role });
+    return res.status(200).json({
+      success: true,
+      user,
+      token,
+      role,
+    });
   } catch (e) {
     return next(e);
   }
 };
-
-

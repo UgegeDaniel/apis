@@ -1,7 +1,7 @@
 import { SchemaType } from '../types/schemaTypes';
 
 const ClassSchema: SchemaType = {
-  name: 'refs',
+  name: 'class',
   columns: [
     { name: 'class_uid', type: 'uuid', constarint: 'PRIMARY KEY' },
     {
@@ -23,6 +23,10 @@ const ClassSchema: SchemaType = {
       },
     },
   ],
+  uniqueRows: {
+    name: 'student_teacher',
+    columns: ['teacher_id', 'student_id'],
+  }
 };
 
 export default ClassSchema;

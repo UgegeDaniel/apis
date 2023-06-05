@@ -12,6 +12,7 @@ class DatabaseInstance {
     this.addCreateTableQueryString();
     this.addExtraColumnsQueryString();
     this.addUniqueContraintQueryString();
+    this.addUniqueRowContraintQueryString();
     this.addRelationQueryString();
     this.addAllowedEntriesCheckQueryString();
     this.addDefaultQueryString();
@@ -97,6 +98,28 @@ class DatabaseInstance {
     });
   };
 
+  private addUniqueRowContraintQueryString = () => {
+    this.schemas.forEach((schema) => {
+      const msg = `adding unique constraint to rows in ${schema.name}...`;
+      schema.uniqueRows && DatabaseInstance.showConsoleMsg(msg);
+        const queryString = schema.uniqueRows
+          ? `
+          DO $$
+          BEGIN
+            IF NOT EXISTS (SELECT 1 FROM pg_constraint 
+              WHERE conname = '${schema.name}_${schema.uniqueRows.name}_unique_key') THEN
+              ALTER TABLE ONLY ${schema.name} 
+                ADD CONSTRAINT ${schema.name}_${schema.uniqueRows.name}_unique_key 
+                UNIQUE(${schema.uniqueRows.columns[0], schema.uniqueRows.columns[1]});
+            END IF;
+          END;
+          $$;`
+          : '';
+        queryString && this.queryStrings.push(queryString);
+      });
+
+  };
+
   private addRelationQueryString = () => {
     this.schemas.forEach((schema) => {
       schema.columns.forEach((column) => {
@@ -165,7 +188,9 @@ class DatabaseInstance {
               SELECT uuid_generate_v4(), '${values}'
               WHERE NOT EXISTS (
                   SELECT ${Object.keys(defQuery)[0]} FROM ${schema.name}
-                  WHERE ${Object.keys(defQuery)[0]} = '${Object.values(defQuery)[0]}'
+                  WHERE ${Object.keys(defQuery)[0]} = '${
+  Object.values(defQuery)[0]
+}'
               );`
             : '';
           queryString && this.queryStrings.push(queryString);
