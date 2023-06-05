@@ -33,7 +33,6 @@ export const initializePayment: Controller = async (req, res, next) => {
 export const verifyPayment: CustomController = async (req, res, next) => {
   const { reference } = req.query;
   const { userId } = req;
-
   if (!reference) {
     throw new ApiError(400, 'Missing transaction reference');
   }

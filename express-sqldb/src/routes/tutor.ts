@@ -48,7 +48,7 @@ router.get(
 router.get(
   '/myStudents',
   authMiddleware as express.RequestHandler,
-  getAllStudentsForTutor('Tutor') as ApplicationGeneric<Record<string, any>>,
+  getAllStudentsForTutor as ApplicationGeneric<Record<string, any>>,
 );
 
 export default router;

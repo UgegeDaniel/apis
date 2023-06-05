@@ -1,12 +1,12 @@
-import { ApiError } from '../types/apiErrorType';
 import { createToken } from '../middlewares/auth';
 import { getAllStudentsService } from '../services/classService';
-import { CustomControllerWithRole } from '../types/requestType';
+import { CustomController } from '../types/requestType';
+import { checkTutorAccess } from '../utils/roleAccess';
 
-export const getAllStudentsForTutor: CustomControllerWithRole = (role) => async (req, res, next) => {
-  const { userId } = req;
+export const getAllStudentsForTutor: CustomController = async (req, res, next) => {
+  const { userId, role } = req;
   try {
-    if (role !== 'Tutor') throw new ApiError(400, 'Access Denied');
+    checkTutorAccess(role)
     const allStudents = await getAllStudentsService(userId);
     const token = createToken({ userId, role });
     return res.status(201).json({
