@@ -17,11 +17,12 @@ export type questionType = {
   optionc: string;
   optiond: string;
   optione: string;
-  answer: string;
+  answer: string | null;
   image: string;
   subjectId: string;
   contributor_id: string;
   examType: string;
+  userAnswer?: string | null;
 };
 
 export type apiQuestionType = {

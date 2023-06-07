@@ -5,7 +5,7 @@ import {
   getAvailableTutors,
   getStudentHistory,
   joinClass,
-  saveStudentScore,
+  submitStudentTest,
 } from '../controllers/studentController';
 import { signInValidators, signUpValidators } from '../middlewares/validation';
 import { resendEmail, signIn, signUp, verifyEmail } from '../controllers/usersController';
@@ -81,9 +81,9 @@ router.get(
 // ACCESS: Student
 // DESCRIPTION: Save Student scores
 router.post(
-  '/score/save',
+  '/submitTest',
   authMiddleware as express.RequestHandler,
-  saveStudentScore as ApplicationGeneric<Record<string, any>>,
+  submitStudentTest as ApplicationGeneric<Record<string, any>>,
 );
 
 export default router;

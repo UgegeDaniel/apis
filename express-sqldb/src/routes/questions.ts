@@ -19,11 +19,11 @@ router.post('/new', addNewQuestions as ApplicationGeneric<Record<string, any>>);
 // METHOD: get
 // ACCESS: authenticated user
 // DESCRIPTION: get all available years for subjects
-router.get('/availableyears', getAvailableYears);
+router.get('/availableyears', getAvailableYears as ApplicationGeneric<Record<string, any>>);
 
 // METHOD: get
 // ACCESS: authenticated user
 // DESCRIPTION: get questions for a particular year and subject
-router.get('/', getQuestions);
+router.get('/', getQuestions as ApplicationGeneric<Record<string, any>>);
 
 export default router;

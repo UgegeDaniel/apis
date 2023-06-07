@@ -40,6 +40,7 @@ export const getQuestions: CustomController = async (req, res, next) => {
     const questions = await getQuestionsService(
       subjectIdToString,
       yearToNumber,
+      false
     );
     return res.status(200).json({ success: true, questions });
   } catch (e) {

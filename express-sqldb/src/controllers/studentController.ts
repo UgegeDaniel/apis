@@ -2,7 +2,7 @@ import { CustomController } from '../types/requestType';
 import { ApiError } from '../types/apiErrorType';
 import {
   getStudentHistoryService,
-  saveStudentScoreService,
+  markStudentTestService,
 } from '../services/scoresService';
 import { createToken } from '../middlewares/auth';
 import {
@@ -70,14 +70,21 @@ export const getAllStudentsTutors: CustomController = async (
   }
 };
 
-export const saveStudentScore: CustomController = async (req, res, next) => {
-  const { subjectId, score, year } = req.body;
+export const submitStudentTest: CustomController = async (req, res, next) => {
+  const { subjectId, year, userQuestions } = req.body;
   const { userId, role } = req;
   try {
     checkStudentAccess(role);
-    saveStudentScoreService(userId, subjectId, score, year);
+    const result = await markStudentTestService(
+      userId,
+      subjectId,
+      year,
+      userQuestions,
+    );
     const token = createToken({ userId, role });
-    return res.status(201).json({ success: true, token, role });
+    return res.status(201).json({
+      success: true, result, token, role,
+    });
   } catch (e) {
     return next(e);
   }

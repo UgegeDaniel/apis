@@ -17,6 +17,7 @@ export const getAvailableYearsService = async (subjectId: string) => {
 export const getQuestionsService = async (
   subjectId: string,
   examyear: number,
+  submitted: boolean,
 ) => {
   if (!subjectId || !examyear) {
     throw new ApiError(400, 'SubjectId and exam year required');
@@ -25,12 +26,16 @@ export const getQuestionsService = async (
     subjectId,
     examyear,
   );
-  const questions = [
+  const uniqueQuestions = [
     ...new Map(
       data.map((item: questionType) => [item.question, item]),
     ).values(),
   ];
-  return questions;
+  const unansweredQuestions = uniqueQuestions.map((question) => ({
+    ...question,
+    answer: null,
+  }))
+  return submitted ? uniqueQuestions : unansweredQuestions;
 };
 
 export const addQuestionService = async (req: CustomRequest) => {
